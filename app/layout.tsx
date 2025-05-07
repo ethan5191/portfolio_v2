@@ -28,8 +28,10 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
         <header>
+            <a href="#home" className="header-home-link">
+                Home
+            </a>
             <nav>
-                <h3>Full-Stack Java Developer</h3>
                 <div>
                     <span>evanderbur3@gmail.com</span> |
                     <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
