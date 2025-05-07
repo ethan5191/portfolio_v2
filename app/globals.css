@@ -13,43 +13,53 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #C0C0C0;
-  border-bottom: 1px solid #C0C0C0;
+/* *** Styles for the HEADER element itself (the fixed bar) *** */
+/* Moving fixed positioning and background here from nav */
+header {
+  /* Positioning for the fixed bar at the top */
   position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0; /* Ensure it spans from the left edge */
+  z-index: 1000; /* Ensure it stays above other content */
   width: 100%;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; /* Include padding and border in the element's total width */
 
-nav h3 {
-  font-size: 2em;
-}
+  /* Solid black background */
+  background-color: #000000;
 
-nav div {
+  /* Bottom border to separate it */
+  border-bottom: 1px solid #C0C0C0; /* Adjust color/thickness */
+
+  /* Flexbox to arrange its direct children (the Home Link and the Nav) */
   display: flex;
-  gap: 2em;
+  flex-direction: row; /* Arrange children side-by-side horizontally */
+  align-items: center; /* Vertically center direct children (Home Link and Nav) */
+  justify-content: space-between; /* Push Home Link to one side, Nav to the other */
+
+  /* Add padding to the header itself to give it height and space around content */
+  padding: 10px 20px; /* Adjust as needed */
+
+  /* Set a default text color for all content inside the header */
+  color: #C0C0C0;
 }
 
-/*:root {*/
-/*  --background: #ffffff;*/
-/*  --foreground: #171717;*/
-/*}*/
+/* *** Styles for the NAV element (content *inside* the header) *** */
+/* Remove positioning, background, and bottom border as they are on header now */
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
 
-/*@theme inline {*/
-/*  --color-background: var(--background);*/
-/*  --color-foreground: var(--foreground);*/
-/*  --font-sans: var(--font-geist-sans);*/
-/*  --font-mono: var(--font-geist-mono);*/
-/*}*/
+header nav div {
+  display: flex; /* Use flexbox for internal layout */
+  gap: 2em; /* Space between email, linkedin, phone */
+  align-items: center;
+}
 
-/*@media (prefers-color-scheme: dark) {*/
-/*  :root {*/
-/*    --background: #0a0a0a;*/
-/*    --foreground: #ededed;*/
-/*  }*/
-/*}*/
+.header-home-link {
+  text-decoration: none; /* Remove default underline */
+  font-size: 1.2em; /* Adjust size */
+  padding: 0 20px; /* Add some space around the link */
+}

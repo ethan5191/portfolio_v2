@@ -19,24 +19,15 @@
 .mainContentAndHome {
     flex-grow: 1; /* Allows this column to take up the remaining horizontal space */
     margin-right: 12%; /* This creates the gap for the sidebar */
-
-    /* Content inside this div will stack normally (block layout) */
-    /* Ensure it does NOT restrict overflow or height */
-    /* overflow: visible; */ /* Explicitly set visible if needed */
 }
 
-
-/* Styles for the .home section (now the first part of the scrolling column) */
 .home {
     text-align: left;
     color: #C0C0C0;
     padding: 20px;
     margin-bottom: 0;
     margin-left: 1em;
-
-    /* *** Add Minimum Height Here *** */
-    /* Calculate height needed to fill viewport below the header, accounting for padding */
-    /* 100vh (viewport height) - header height - top padding - bottom padding */
+    scroll-margin-top: 150px;
     min-height: calc(100vh - 100px - (2 * 20px));
 }
 
@@ -46,9 +37,6 @@
     font-family: "Monotype Corsiva", cursive;
 }
 
-
-/* Styles for the sticky right sidebar navigation */
-/* Renamed from .secondSection */
 .sidebarNav {
     /* This element is a direct flex item sibling of .mainContentAndHome */
     width: 10%; /* **REQUIRED**: Set a fixed width for the sidebar */
@@ -70,20 +58,15 @@
     text-align: right; /* Align link text */
     margin-top: 7.5em;
     margin-right: 2em;
-
-    /* IMPORTANT: Ensure this sticky element's parent (.pageBodyWrapper) does NOT restrict overflow or height */
-    /* The parent must be a scrolling container (like the body) or taller than the sticky content */
 }
 
 
-/* Common styles for all your content sections (About, Work, Skills, Contact) */
 .section {
     padding: 60px 0; /* Add vertical space between sections */
     color: #333; /* Example text color for content sections */
     margin-bottom: 0; /* Remove default margin */
     scroll-margin-top: 60px;
     min-height: calc(100vh - 100px - (2 * 20px));
-    /* These sections are now direct children of .mainContentAndHome */
 }
 
 .section h2 {

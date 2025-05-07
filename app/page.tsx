@@ -10,7 +10,7 @@ export default function Home() {
 
                 <section id="home" className={styles.home}>
                     <h1>Ethan Vanderbur</h1>
-                    <span>Experienced developer working with Java, Spring, SQL, and Soap web services.</span>
+                    <span>Experienced full-stack Java web developer working with Java, Spring, SQL, and Soap web services.</span>
                 </section>
 
                 {/* All your other sections go here, stacked vertically below the home section */}
