@@ -58,8 +58,30 @@ header nav div {
   align-items: center;
 }
 
+header nav div a {
+  color: inherit; /* Should inherit color from the parent nav/header */
+  text-decoration: none; /* Remove default underline */
+
+  /* Add a smooth transition for the color change */
+  transition: color 0.3s ease;
+}
+
+header nav div a:hover {
+  color: #000000;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #C0C0C0;
+}
+
 .header-home-link {
   text-decoration: none; /* Remove default underline */
   font-size: 1.2em; /* Adjust size */
   padding: 0 20px; /* Add some space around the link */
+  transition: color 0.3s ease;
+}
+
+.header-home-link:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
 }

@@ -58,11 +58,8 @@ export default function Home() {
 
             </div> {/* End .mainContentAndHome */}
 
-            {/* This is your sticky right sidebar navigation */}
             {/* It's a sibling of the main scrolling column */}
-            {/* Using <aside> for semantic correctness */}
             <aside className={styles.sidebarNav}>
-                {/* Content previously in .secondSection */}
                 <div><a href="#about">ABOUT</a></div>
                 <div><a href="#work">WORK</a></div>
                 <div><a href="#skills">SKILLS</a></div>
