@@ -1,0 +1,51 @@
+/* Styles for the parent container */
+.container {
+    display: flex; /* Enable Flexbox */
+    flex-direction: row; /* Arrange children side-by-side (this is the default, but good to be explicit) */
+
+    /* Optional: Control how items align vertically */
+    align-items: center; /* Align items vertically in the center of the container */
+    /* Or align-items: flex-start; to align to the top */
+    /* Or align-items: flex-end; to align to the bottom */
+
+    /* Optional: Control how space is distributed horizontally */
+    /* justify-content: space-between; */ /* Puts space between the two divs */
+    /* justify-content: flex-start; */ /* Aligns items to the start (left) */
+
+    /* Ensure container spans full width and takes up vertical space */
+    min-height: 100vh; /* Or adjust with calc() as before if needed */
+    width: 100%;
+    padding: 0 20px; /* Add some horizontal padding so content doesn't hit the edges */
+    box-sizing: border-box;
+}
+
+/* Styles for the .home section (your header text) */
+.home {
+    flex: 1;
+    text-align: left; /* Keep text centered within the .home div */
+    color: #C0C0C0;
+    /* Optional: add some padding */
+    padding: 20px;
+    /* Optional: limit max width if needed */
+    max-width: 800px;
+    width: 100%; /* Ensure it takes full width up to max-width */
+    margin-top: -10em;
+}
+
+.home h1 {
+    font-size: 6em;
+    margin-bottom: -.25em;
+    font-family: "Monotype Corsiva", cursive;
+}
+
+.secondSection {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    gap: 10px; /* Add space BETWEEN the child divs (ABOUT, WORK, etc.) */
+
+    text-align: right; /* Keep text aligned right inside this div */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: 2.5%;
+    color: #C0C0C0;
+}
