@@ -5,7 +5,7 @@ export default function Home() {
         <div className={styles.container}>
             <div className={styles.home}>
                 <h1>Ethan Vanderbur</h1>
-                <h3>Full-Stack Java web developer</h3>
+                <span>Experienced developer in Java, Spring, SQL, and Soap web services.</span>
             </div>
             <div className={styles.secondSection}>
                 <div>ABOUT</div>
