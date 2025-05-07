@@ -1,35 +1,43 @@
-/* Styles for the parent container */
-.container {
-    display: flex; /* Enable Flexbox */
-    flex-direction: row; /* Arrange children side-by-side (this is the default, but good to be explicit) */
-
-    /* Optional: Control how items align vertically */
-    align-items: center; /* Align items vertically in the center of the container */
-    /* Or align-items: flex-start; to align to the top */
-    /* Or align-items: flex-end; to align to the bottom */
-
-    /* Optional: Control how space is distributed horizontally */
-    /* justify-content: space-between; */ /* Puts space between the two divs */
-    /* justify-content: flex-start; */ /* Aligns items to the start (left) */
-
-    /* Ensure container spans full width and takes up vertical space */
-    min-height: 100vh; /* Or adjust with calc() as before if needed */
+.pageBodyWrapper {
+    display: flex; /* Use Flexbox to put the two columns side-by-side */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: flex-start; /* Align items to the top */
     width: 100%;
-    padding: 0 20px; /* Add some horizontal padding so content doesn't hit the edges */
+    padding: 0 20px; /* Add side padding here for the whole row */
     box-sizing: border-box;
+    margin-top: 10%;
+
+    /* IMPORTANT: Ensure this wrapper does NOT restrict overflow or height */
+    /* It should allow its content (the main column) to define its height */
+    /* min-height: 100vh; */ /* Remove or be cautious with this */
+    /* overflow: visible; */ /* Explicitly set visible if needed */
 }
 
-/* Styles for the .home section (your header text) */
+
+/* This is the main column that contains ALL your sections (Home, About, Work, etc.) and will scroll */
+/* It sits on the left side and takes up the available space */
+.mainContentAndHome {
+    flex-grow: 1; /* Allows this column to take up the remaining horizontal space */
+    margin-right: 12%; /* This creates the gap for the sidebar */
+
+    /* Content inside this div will stack normally (block layout) */
+    /* Ensure it does NOT restrict overflow or height */
+    /* overflow: visible; */ /* Explicitly set visible if needed */
+}
+
+
+/* Styles for the .home section (now the first part of the scrolling column) */
 .home {
-    flex: 1;
-    text-align: left; /* Keep text centered within the .home div */
+    text-align: left;
     color: #C0C0C0;
-    /* Optional: add some padding */
     padding: 20px;
-    /* Optional: limit max width if needed */
-    max-width: 800px;
-    width: 100%; /* Ensure it takes full width up to max-width */
-    margin-top: -15em;
+    margin-bottom: 0;
+    margin-left: 1em;
+
+    /* *** Add Minimum Height Here *** */
+    /* Calculate height needed to fill viewport below the header, accounting for padding */
+    /* 100vh (viewport height) - header height - top padding - bottom padding */
+    min-height: calc(100vh - 100px - (2 * 20px));
 }
 
 .home h1 {
@@ -38,14 +46,51 @@
     font-family: "Monotype Corsiva", cursive;
 }
 
-.secondSection {
-    display: flex;
-    flex-direction: column; /* Stack the children vertically */
-    gap: 10px; /* Add space BETWEEN the child divs (ABOUT, WORK, etc.) */
 
-    text-align: right; /* Keep text aligned right inside this div */
-    padding: 20px;
-    margin-left: auto;
-    margin-right: 2.5%;
-    color: #C0C0C0;
+/* Styles for the sticky right sidebar navigation */
+/* Renamed from .secondSection */
+.sidebarNav {
+    /* This element is a direct flex item sibling of .mainContentAndHome */
+    width: 10%; /* **REQUIRED**: Set a fixed width for the sidebar */
+    padding: 20px; /* Add padding inside the sidebar */
+    box-sizing: border-box; /* Include padding in the width */
+    color: #C0C0C0; /* Text color for the nav links */
+
+    position: fixed;
+    /* Use 'right' to position it from the right edge */
+    right: 20px; /* Stick to the right edge, matching container padding */
+
+    /* Ensure it stays above other content */
+    z-index: 999; /* Less than header's z-index (1000) */
+
+    /* Arrange internal links vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between links */
+    text-align: right; /* Align link text */
+    margin-top: 7.5em;
+    margin-right: 2em;
+
+    /* IMPORTANT: Ensure this sticky element's parent (.pageBodyWrapper) does NOT restrict overflow or height */
+    /* The parent must be a scrolling container (like the body) or taller than the sticky content */
+}
+
+
+/* Common styles for all your content sections (About, Work, Skills, Contact) */
+.section {
+    padding: 60px 0; /* Add vertical space between sections */
+    color: #333; /* Example text color for content sections */
+    margin-bottom: 0; /* Remove default margin */
+    scroll-margin-top: 60px;
+    min-height: calc(100vh - 100px - (2 * 20px));
+    /* These sections are now direct children of .mainContentAndHome */
+}
+
+.section h2 {
+    color: #111;
+    margin-top: 0;
+}
+
+.section:last-child {
+    min-height: calc(100vh);
 }
