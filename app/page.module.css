@@ -63,15 +63,24 @@
 
 .section {
     padding: 60px 0; /* Add vertical space between sections */
-    color: #333; /* Example text color for content sections */
+    color:#C0C0C0;
     margin-bottom: 0; /* Remove default margin */
     scroll-margin-top: 60px;
     min-height: calc(100vh - 100px - (2 * 20px));
 }
 
 .section h2 {
-    color: #111;
+    color: #000000;
     margin-top: 0;
+    font-size: 2.5em;
+}
+
+.section p {
+    line-height: 1.6; /* Adjust the multiplier (1.5 to 1.8 is common) */
+    margin-bottom: 20px; /* Adjust as needed */
+    max-width: 900px; /* Set a maximum width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section:last-child {
@@ -95,4 +104,9 @@
     color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 7px;
+}
+
+.aboutContent {
+    max-width: 900px;
+    margin: auto;
 }
