@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+body {
+  /* Use background-image for the gradient */
+  background-image: linear-gradient(to bottom right, #4f4f4f, #000000);
+
+  /* Optional: ensure the gradient covers the entire viewport */
+  min-height: 100vh;
+  margin: 0;
+
+  /* Optional: keep the background fixed if the user scrolls */
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,10 +30,4 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
