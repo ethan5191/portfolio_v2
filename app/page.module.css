@@ -75,6 +75,10 @@
     font-size: 2.5em;
 }
 
+.section h3 {
+    font-style: italic;
+}
+
 .section p {
     line-height: 1.6; /* Adjust the multiplier (1.5 to 1.8 is common) */
     margin-bottom: 20px; /* Adjust as needed */
