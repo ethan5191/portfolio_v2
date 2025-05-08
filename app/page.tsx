@@ -103,6 +103,7 @@ export default function Home() {
                             responsibilities of a senior developer, I am most energized by hands-on problem-solving
                             within the code itself, a type of work I have had less opportunity to engage in during
                             recent senior roles.</p>
+                        <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
                     </div>
                 </section>
 
@@ -171,6 +172,7 @@ export default function Home() {
                             <p>Phone: 812-701-6110</p>
                             <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
                             <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
+                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download Resume PDF</a></p>
                         </div>
                     </div>
                 </section>
