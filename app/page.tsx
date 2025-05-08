@@ -115,10 +115,48 @@ export default function Home() {
                 {/* Skills Section */}
                 <section id="skills" className={styles.section}>
                     <h2>Skills</h2>
-                    {/* Content for your Skills section */}
-                    <p>List your technical skills.</p>
-                    <div style={{height: '400px', backgroundColor: '#eee', margin: '20px', padding: '20px'}}>
-                        Skills Content Placeholder
+                    <div className={styles.projectsGrid}>
+                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                            <h3>Programming Languages</h3>
+                            <ul>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                            <h3>Frameworks & Libraries</h3>
+                            <ul>
+                                <li>Spring MVC</li>
+                                <li>Struts 1.1</li>
+                                <li>Hibernate/JPA</li>
+                                <li>Soap Web Services</li>
+                                <li>jQuery</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                            <h3>Tools</h3>
+                            <ul>
+                                <li>IntelliJ</li>
+                                <li>Git</li>
+                                <li>Subversion</li>
+                                <li>Maven</li>
+                                <li>Fortify</li>
+                                <li>GitLab</li>
+                                <li>JIRA</li>
+                                <li>JasperSoft Studios</li>
+                                <li>Soap UI</li>
+                            </ul>
+                        </div>
+                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                            <h3>Methodologies</h3>
+                            <ul>
+                                <li>Agile</li>
+                                <li>Scrum</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
