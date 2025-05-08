@@ -321,3 +321,47 @@
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+.skillCategoryCard {
+    padding: 20px;
+
+    /* Optional: Ensure uniform height if desired, although skill lists might vary */
+    /* height: 100%; */
+}
+
+/* Styles for the category heading (h3) within the skill category card */
+.skillCategoryCard h3 {
+    color: #C0C0C0;
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 15px; /* Space below the category heading */
+    font-size: 1.4em; /* Adjust size */
+    line-height: 1.3;
+    /* Optional: Center the heading within the card */
+    /* text-align: center; */
+}
+
+/* Styles for the skill list (ul) within the category card */
+.skillCategoryCard ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default left padding */
+    margin: 0; /* Remove default top/bottom margin */
+
+    /* Use flexbox to display list items (skills) in rows that wrap */
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap to the next line */
+    gap: 10px; /* Space between individual skill items */
+}
+
+/* Styles for individual skill list items (li) */
+.skillCategoryCard li {
+    /* Style individual skills like tags, similar to the tech tags in project cards */
+    background-color: #eee; /* Light background for the tag */
+    color: #333; /* Dark text */
+    padding: 5px 10px; /* Padding inside the tag */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 0.9em; /* Smaller text size */
+    white-space: nowrap; /* Prevent skill names from breaking onto multiple lines */
+
+    /* If using flex on ul, margin is controlled by gap, so remove individual margin */
+    /* margin-bottom: 8px; */ /* Remove if using gap on ul */
+}
