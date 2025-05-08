@@ -148,6 +148,7 @@ export default function Home() {
                                 <li>JIRA</li>
                                 <li>JasperSoft Studios</li>
                                 <li>Soap UI</li>
+                                <li>WebStorm</li>
                             </ul>
                         </div>
                         <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
@@ -163,14 +164,16 @@ export default function Home() {
                 {/* Contact Section */}
                 <section id="contact" className={styles.section}>
                     <h2>Contact</h2>
-                    {/* Content for your Contact section */}
-                    <p>How to get in touch.</p>
-                    <div style={{height: '400px', backgroundColor: '#ddd', margin: '20px', padding: '20px'}}>
-                        Contact Content Placeholder
+                    <div className={`${styles.contactContent} ${styles.infoContent}`}>
+                        <p>Ethan Vanderbur</p>
+                        <p>Columbus, Indiana</p>
+                        <div className={styles.contactMethods}>
+                            <p>Phone: 812-701-6110</p>
+                            <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
+                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
+                        </div>
                     </div>
-                    {/* Add some padding to the bottom of the last section so the last content isn't hidden by a potential footer */}
                 </section>
-
             </div>
             {/* End .mainContentAndHome */}
 
