@@ -71,6 +71,7 @@
 
 .section h2 {
     color: #000000;
+    font-style: italic;
     margin-top: 0;
     font-size: 2.5em;
     max-width: 1000px;
@@ -106,6 +107,14 @@
     border-radius: 7px;
 }
 
+.infoContent {
+    background-color: #000000;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 .aboutContent {
     max-width: 1000px;
     margin: auto;
@@ -113,13 +122,16 @@
 
 .projectsGrid {
     display: grid; /* Turns the container into a grid */
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
 
     /* Defines the columns: automatically fit as many columns as possible */
     /* Each column will be at least 300px wide, but no more than 1 fraction of the available space */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     /* Adds space between the grid items (the project cards) */
-    gap: 30px; /* Adjust spacing between cards */
+    gap: 20px; /* Adjust spacing between cards */
 
     /* Optional: Center the grid if the total width of the columns is less than the container's width */
     justify-content: center;
@@ -127,18 +139,10 @@
     /* Optional: Add some top/bottom padding to the grid area itself */
     padding: 20px 0;
     max-width: 1000px;
-    margin: auto;
 }
 
 .projectCard {
-    /* Add visual separation and structure to the card */
-    background-color: #ffffff; /* Light background for contrast with body gradient */
-    border: 1px solid #ddd; /* Subtle border */
-    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */ /* Optional subtle shadow */
-    border-radius: 8px; /* Rounded corners for the card */
     padding: 20px; /* Internal padding within the card */
-    box-sizing: border-box; /* Ensure padding/border are included in the element's total size */
-
     /* *** Ensure all cards in a row have the same height *** */
     /* This makes the grid look cleaner */
     height: 100%;
@@ -153,7 +157,7 @@
 }
 
 .projectCard h3 {
-    color: #111; /* Dark color for readability against light background */
+    color: #C0C0C0; /* Dark color for readability against light background */
     margin-top: 0; /* Remove default h3 margin */
     margin-bottom: 10px; /* Space below the title */
     font-size: 1.5em; /* Adjust size */
@@ -162,10 +166,9 @@
 
 /* Styles for general paragraphs within the project card (description, role, impact) */
 .projectCard p {
-    color: #555; /* Slightly lighter text color */
+    color: #ffffff; /* Slightly lighter text color */
     line-height: 1.5; /* Space between lines */
     margin-bottom: 15px; /* Space between paragraphs */
-    /* Remove the max-width/auto margins that were applied to general .section p */
     max-width: none;
     margin-left: 0;
     margin-right: 0;

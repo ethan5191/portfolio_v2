@@ -76,7 +76,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({project, onClose}) => {
                 {/* Display the brief description too, or just the full details */}
                 <p>{project.description}</p>
 
-                <p className={styles.projectRole}>**My Role:** {project.role}</p> {/* Full Role */}
+                <p className={styles.projectRole}>My Role: {project.role}</p> {/* Full Role */}
 
 
                 <div className={styles.projectImpact}>

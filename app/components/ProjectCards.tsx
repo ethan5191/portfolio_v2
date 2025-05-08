@@ -55,7 +55,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({projects}) => {
                     // Add the onClick handler to open the modal with this project's data
                     <article
                         key={project.id} // Use a unique key for React list rendering
-                        className={styles.projectCard}
+                        className={`${styles.projectCard} ${styles.infoContent}`}
                         onClick={() => openModal(project)} // *** Add onClick handler here ***
                         role="button" // Indicate this element is interactive
                         tabIndex={0} // Make it focusable for keyboard navigation

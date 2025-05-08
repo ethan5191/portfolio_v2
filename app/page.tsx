@@ -74,9 +74,6 @@ const myProjects: Project[] = [
 export default function Home() {
     return (
         <div className={styles.pageBodyWrapper}>
-
-            {/* This is the main column that contains ALL your sections (Home, About, Work, etc.) and will scroll */}
-            {/* It sits on the left side and takes up the primary content area */}
             <div className={styles.mainContentAndHome}>
 
                 <section id="home" className={styles.home}>
@@ -84,12 +81,10 @@ export default function Home() {
                     <span>Experienced full-stack Java web developer working with Java, Spring, SQL, and Soap web services.</span>
                 </section>
 
-                {/* All your other sections go here, stacked vertically below the home section */}
-
                 {/* About Me Section */}
                 <section id="about" className={styles.section}>
-                    <div className={styles.aboutContent}>
-                        <h2>About Me</h2>
+                    <h2>About Me</h2>
+                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
                         <p>I transitioned to software development in my sophomore year of college. Having realized
                             graphic design wasn't my path, my high school experience with Visual Basic led me to explore
                             Java and C/C#. I was immediately drawn to coding, finding my stride particularly with
@@ -114,7 +109,7 @@ export default function Home() {
                 {/* Projects Section */}
                 <section id="work" className={styles.section}>
                     <h2>My Work / Projects</h2>
-                    <ProjectCards projects={myProjects} /> {/* Pass your project data here */}
+                    <ProjectCards projects={myProjects}/> {/* Pass your project data here */}
                 </section>
 
                 {/* Skills Section */}
