@@ -63,7 +63,7 @@
 
 .section {
     padding: 60px 0; /* Add vertical space between sections */
-    color:#C0C0C0;
+    color: #C0C0C0;
     margin-bottom: 0; /* Remove default margin */
     scroll-margin-top: 60px;
     min-height: calc(100vh);
@@ -116,7 +116,7 @@
 }
 
 .aboutContent {
-    max-width: 80%;
+    max-width: 75%;
     margin: auto;
 }
 
@@ -138,7 +138,7 @@
 
     /* Optional: Add some top/bottom padding to the grid area itself */
     padding: 20px 0;
-    max-width: 80%;
+    max-width: 75%;
 }
 
 .projectCard {
@@ -238,7 +238,7 @@
     /* Add a subtle animation for when the modal appears (optional) */
     transform: scale(0.9);
     opacity: 0;
-     animation: scaleUp 0.3s ease-in-out forwards;
+    animation: scaleUp 0.3s ease-in-out forwards;
 }
 
 /* Style for the close button (positioned relative to .modalContent) */
@@ -317,8 +317,14 @@
 
 /* Optional: Animation for modal appearance */
 @keyframes scaleUp {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .skillCategoryCard {
@@ -405,10 +411,15 @@
     text-decoration: none; /* Remove default underline */
 
     /* Add hover effect - can reuse global link hover or define here */
-     transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .contactMethods a:hover {
     text-decoration: underline; /* Add underline on hover */
-     color: #ffffff;
+    color: #ffffff;
+}
+
+.aboutContent a:hover {
+    text-decoration: underline;
+    color: #ffffff;
 }
