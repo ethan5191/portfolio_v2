@@ -163,26 +163,8 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Contact Section */}
-                <section id="contact" className={styles.section}>
-                    <h2>Contact</h2>
-                    <div className={`${styles.contactContent} ${styles.infoContent}`}>
-                        <p>Ethan Vanderbur</p>
-                        <p>Columbus, Indiana</p>
-                        <div className={styles.contactMethods}>
-                            <p>Phone: 812-701-6110</p>
-                            <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
-                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
-                                            target="_blank"
-                                            rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
-                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
-                                Resume PDF</a></p>
-                        </div>
-                    </div>
-                </section>
-
                 <section id="mrows" className={styles.section}>
-                    <h2>MROWS web application</h2>
+                    <h2>MROWS</h2>
                     <div className={`${styles.aboutContent} ${styles.infoContent}`}>
                         <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
                             certification of orders for reserve Marines.</p>
@@ -214,8 +196,54 @@ export default function Home() {
                 </section>
 
                 <section id="mcpdt" className={styles.section}>
-                    <h2>MCPDT web application</h2>
+                    <h2>MCPDT</h2>
                     <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                        <p>MCPDT is a Java 8 web application that owns multiple web services that are called by other
+                            TSO owned systems. It is used to calculate per diem and travel funding lines for PCS and PCA
+                            orders.</p>
+                        <h4>Related Projects:</h4>
+                        <ul className={styles.accomplishmentsList}>
+                            <li><span className={styles.accomplishmentTitle}>End of Year:</span>
+                                <span className={styles.accomplishmentDetails}>End of fiscal year process involves the creation
+                                    of numerous database scripts to ensure the next FYs funding lines were properly setup.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>DAI Reconciliation:</span>
+                                <span className={styles.accomplishmentDetails}>Created a new web service in MCPDT to take in
+                                    financial data from DTMS and send a reconciliation funding line to DAI. This improves
+                                    MCPDTs financial auditability.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Updates for MROWS PCS travel:</span>
+                                <span className={styles.accomplishmentDetails}>The 'MROWS - Separation Requests (PCS Travel)'
+                                    project also caused changes in MCPDT. I updated the application to handle the new logic
+                                    flow that existed due to this new process, this was an update to the existing web service.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Report changes:</span>
+                                <span className={styles.accomplishmentDetails}>Yearly report changes to build new tabs
+                                    on an excel spreadsheet for the new fiscal year to assist with accounting and estimation of funds.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Low cost funding changes:</span>
+                                <span className={styles.accomplishmentDetails}>Added new funding types to properly account
+                                    for low cost order types. This improved financial auditability and estimation of funds.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Contact Section */}
+                <section id="contact" className={styles.section}>
+                    <h2>Contact</h2>
+                    <div className={`${styles.contactContent} ${styles.infoContent}`}>
+                        <p>Ethan Vanderbur</p>
+                        <p>Columbus, Indiana</p>
+                        <div className={styles.contactMethods}>
+                            <p>Phone: 812-701-6110</p>
+                            <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
+                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
+                                            target="_blank"
+                                            rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
+                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
+                                Resume PDF</a></p>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -226,9 +254,9 @@ export default function Home() {
                 <div><a href="#about">ABOUT</a></div>
                 <div><a href="#work">WORK</a></div>
                 <div><a href="#skills">SKILLS</a></div>
-                <div><a href="#contact">CONTACT</a></div>
                 <div><a href="#mrows">MROWS</a></div>
                 <div><a href="#mcpdt">MCPDT</a></div>
+                <div><a href="#contact">CONTACT</a></div>
             </aside>
 
         </div>
