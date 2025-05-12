@@ -103,7 +103,8 @@ export default function Home() {
                             responsibilities of a senior developer, I am most energized by hands-on problem-solving
                             within the code itself, a type of work I have had less opportunity to engage in during
                             recent senior roles.</p>
-                        <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                        <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank"
+                                                                rel="noopener noreferrer">here</a>.</p>
                     </div>
                 </section>
 
@@ -162,6 +163,72 @@ export default function Home() {
                     </div>
                 </section>
 
+                <section id="mrows" className={styles.section}>
+                    <h2>MROWS</h2>
+                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                        <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
+                            certification of orders for reserve Marines.</p>
+                        <h4>Related Projects:</h4>
+                        <ul className={styles.accomplishmentsList}>
+                            <li><span className={styles.accomplishmentTitle}>HP Fortify findings:</span>
+                                <span className={styles.accomplishmentDetails}>Remediated numerous findings to improve
+                                    application security.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Struts 1 to Spring 5:</span>
+                                <span className={styles.accomplishmentDetails}>Led the migration from Struts 1 to
+                                    Spring 5 to improve performance and application security.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Permissions system refactor:</span>
+                                <span className={styles.accomplishmentDetails}>Changed the static Java based permissions system into a
+                                    database driven system, allowing for easier and quicker permissions updates.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>jQuery inbox migration:</span>
+                                <span className={styles.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
+                                    JavaScript jQuery framework to improve application performance and reduce duplicate
+                                    code.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Report migration:</span>
+                                <span className={styles.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
+                                    Studio improving our report compile times.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mcpdt" className={styles.section}>
+                    <h2>MCPDT</h2>
+                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                        <p>MCPDT is a Java 8 web application that owns multiple web services that are called by other
+                            TSO owned systems. It is used to calculate per diem and travel funding lines for PCS and PCA
+                            orders.</p>
+                        <h4>Related Projects:</h4>
+                        <ul className={styles.accomplishmentsList}>
+                            <li><span className={styles.accomplishmentTitle}>End of Year:</span>
+                                <span className={styles.accomplishmentDetails}>End of fiscal year process involves the creation
+                                    of numerous database scripts to ensure the next FYs funding lines were properly setup.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>DAI Reconciliation:</span>
+                                <span className={styles.accomplishmentDetails}>Created a new web service in MCPDT to take in
+                                    financial data from DTMS and send a reconciliation funding line to DAI. This improves
+                                    MCPDTs financial auditability.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Updates for MROWS PCS travel:</span>
+                                <span className={styles.accomplishmentDetails}>The 'MROWS - Separation Requests (PCS Travel)'
+                                    project also caused changes in MCPDT. I updated the application to handle the new logic
+                                    flow that existed due to this new process, this was an update to the existing web service.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Report changes:</span>
+                                <span className={styles.accomplishmentDetails}>Yearly report changes to build new tabs
+                                    on an excel spreadsheet for the new fiscal year to assist with accounting and estimation of funds.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Low cost funding changes:</span>
+                                <span className={styles.accomplishmentDetails}>Added new funding types to properly account
+                                    for low cost order types. This improved financial auditability and estimation of funds.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
                 {/* Contact Section */}
                 <section id="contact" className={styles.section}>
                     <h2>Contact</h2>
@@ -171,8 +238,11 @@ export default function Home() {
                         <div className={styles.contactMethods}>
                             <p>Phone: 812-701-6110</p>
                             <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
-                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
-                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download Resume PDF</a></p>
+                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
+                                            target="_blank"
+                                            rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
+                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
+                                Resume PDF</a></p>
                         </div>
                     </div>
                 </section>
@@ -184,6 +254,8 @@ export default function Home() {
                 <div><a href="#about">ABOUT</a></div>
                 <div><a href="#work">WORK</a></div>
                 <div><a href="#skills">SKILLS</a></div>
+                <div><a href="#mrows">MROWS</a></div>
+                <div><a href="#mcpdt">MCPDT</a></div>
                 <div><a href="#contact">CONTACT</a></div>
             </aside>
 
