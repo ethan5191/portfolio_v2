@@ -103,7 +103,8 @@ export default function Home() {
                             responsibilities of a senior developer, I am most energized by hands-on problem-solving
                             within the code itself, a type of work I have had less opportunity to engage in during
                             recent senior roles.</p>
-                        <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                        <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank"
+                                                                rel="noopener noreferrer">here</a>.</p>
                     </div>
                 </section>
 
@@ -171,9 +172,50 @@ export default function Home() {
                         <div className={styles.contactMethods}>
                             <p>Phone: 812-701-6110</p>
                             <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
-                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
-                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download Resume PDF</a></p>
+                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
+                                            target="_blank"
+                                            rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
+                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
+                                Resume PDF</a></p>
                         </div>
+                    </div>
+                </section>
+
+                <section id="mrows" className={styles.section}>
+                    <h2>MROWS web application</h2>
+                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                        <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
+                            certification of orders for reserve Marines.</p>
+                        <h4>Related Projects:</h4>
+                        <ul className={styles.accomplishmentsList}>
+                            <li><span className={styles.accomplishmentTitle}>HP Fortify findings:</span>
+                                <span className={styles.accomplishmentDetails}>Remediated numerous findings to improve
+                                    application security.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Struts 1 to Spring 5:</span>
+                                <span className={styles.accomplishmentDetails}>Led the migration from Struts 1 to
+                                    Spring 5 to improve performance and application security.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Permissions system refactor:</span>
+                                <span className={styles.accomplishmentDetails}>Changed the static Java based permissions system into a
+                                    database driven system, allowing for easier and quicker permissions updates.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>jQuery inbox migration:</span>
+                                <span className={styles.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
+                                    JavaScript jQuery framework to improve application performance and reduce duplicate
+                                    code.</span>
+                            </li>
+                            <li><span className={styles.accomplishmentTitle}>Report migration:</span>
+                                <span className={styles.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
+                                    Studio improving our report compile times.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mcpdt" className={styles.section}>
+                    <h2>MCPDT web application</h2>
+                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
                     </div>
                 </section>
             </div>
@@ -185,6 +227,8 @@ export default function Home() {
                 <div><a href="#work">WORK</a></div>
                 <div><a href="#skills">SKILLS</a></div>
                 <div><a href="#contact">CONTACT</a></div>
+                <div><a href="#mrows">MROWS</a></div>
+                <div><a href="#mcpdt">MCPDT</a></div>
             </aside>
 
         </div>
