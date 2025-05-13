@@ -95,11 +95,13 @@
     margin: -5px; /* Compensate the padding with a negative margin to maintain spacing set by gap */
     /* Add a smooth transition for the color change */
     transition: color 0.3s ease;
+    border: 1px solid transparent;
+    border-radius: 7px;
 }
 
 .sidebarNav div a:hover {
     color: #ffffff;
-    border: 1px solid #ffffff;
+    border-color: #ffffff;
     border-radius: 7px;
 }
 
