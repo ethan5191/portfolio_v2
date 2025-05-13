@@ -75,13 +75,24 @@ header nav div a:hover {
 
 .header-home-link {
   text-decoration: none; /* Remove default underline */
-  font-size: 1.2em; /* Adjust size */
   padding: 0 20px; /* Add some space around the link */
   transition: color 0.3s ease;
+}
+
+.header-home-link i {
+  font-size: 1.25em;
 }
 
 .header-home-link:hover {
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 7px;
+}
+
+.linkedin-link i {
+  font-size: 1.25em;
+}
+
+.phoneNum i {
+  font-size: .75em;
 }
