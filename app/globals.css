@@ -96,3 +96,55 @@ header nav div a:hover {
 .phoneNum i {
   font-size: .75em;
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+    height: auto;
+    width: 100%;
+  }
+
+  header .header-home-link {
+    margin-bottom: 10px;
+    margin-right: 0;
+    align-self: flex-start;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  header nav div {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+  header nav div .separator {
+    display: none;
+  }
+
+  header nav div a i,
+  .header-home-link i,
+  header nav div span i {
+    margin-right: 5px;
+    /* Ensure vertical alignment is good */
+    vertical-align: middle;
+  }
+
+  header nav div a[href^="mailto:"] {
+    font-size: 1em;
+    /* Allow the email address to break onto multiple lines if needed */
+    word-break: break-word;
+    text-align: left;
+  }
+
+  header nav div span {
+    text-align: left;
+  }
+}
