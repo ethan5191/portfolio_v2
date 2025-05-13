@@ -2,6 +2,8 @@ import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import {Analytics} from "@vercel/analytics/next"
 import "./globals.css";
+import React from "react";
+import styles from "@/app/page.module.css";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -44,19 +46,23 @@ export default function RootLayout({
             </a>
             <nav>
                 <div>
-                    <a href="mailto:evanderbur3@gmail.com"><i
-                        className="fas fa-envelope"></i> E.Vanderbur.3@gmail.com</a>
-                    <span className="separator"> | </span>
-                    <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260" target="_blank"
-                       rel="noopener noreferrer" className="linkedin-link">
-                        <i className="fab fa-linkedin-in"></i></a>
-                    <span className="separator"> | </span>
-                    <span className="phoneNum"><i className="fas fa-phone"></i> 812-701-6110</span>
+                    <a href="#about">ABOUT</a>
+                    <a href="#mrows">MROWS</a>
+                    <a href="#mcpdt">MCPDT</a>
+                    <a href="#work">WORK</a>
+                    <a href="#skills">SKILLS</a>
+                    <a href="#contact">CONTACT</a>
                 </div>
             </nav>
         </header>
         {children}
         <Analytics/>
+        <footer className={styles.footer}>
+            <blockquote className={styles.footerQuote}>
+                "The winner ain't the one with the fastest car, it's the one who refuses to lose."
+                <cite>- Dale Earnhardt</cite>
+            </blockquote>
+        </footer>
         </body>
         </html>
     );
