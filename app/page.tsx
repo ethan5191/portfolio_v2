@@ -2,6 +2,7 @@ import styles from './page.module.css';
 import ProjectCards from './components/projects/ProjectCards';
 import React from "react";
 import AboutSection from "../app/components/aboutMe/AboutSection";
+import MrowsSection from "../app/components/mrows/MrowsSection";
 
 // Define a type for your project data structure
 interface Project {
@@ -85,38 +86,7 @@ export default function Home() {
 
                     {/* About Me Section */}
                     <AboutSection/>
-
-                    <section id="mrows" className={styles.section}>
-                        <h2>Marine Resource Order Writing System (MROWS)</h2>
-                        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
-                            <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
-                                certification of orders for reserve Marines.</p>
-                            <h4>Related Projects:</h4>
-                            <ul className={styles.accomplishmentsList}>
-                                <li><span className={styles.accomplishmentTitle}>HP Fortify findings:</span>
-                                    <span className={styles.accomplishmentDetails}>Remediated numerous findings to improve
-                                    application security.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Struts 1 to Spring 5:</span>
-                                    <span className={styles.accomplishmentDetails}>Led the migration from Struts 1 to
-                                    Spring 5 to improve performance and application security.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Permissions system refactor:</span>
-                                    <span className={styles.accomplishmentDetails}>Changed the static Java based permissions system into a
-                                    database driven system, allowing for easier and quicker permissions updates.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>jQuery inbox migration:</span>
-                                    <span className={styles.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
-                                    JavaScript jQuery framework to improve application performance and reduce duplicate
-                                    code.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Report migration:</span>
-                                    <span className={styles.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
-                                    Studio improving our report compile times.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+                    <MrowsSection/>
 
                     <section id="mcpdt" className={styles.section}>
                         <h2>Marine Corps Permanent Duty Travel (MCPDT)</h2>
