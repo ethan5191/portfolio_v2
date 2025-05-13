@@ -2,9 +2,9 @@
 'use client';
 
 import React, {useState} from 'react';
-import styles from '../../page.module.css';
 import cardGrid from "../shared/cardGrid.module.css";
 import projectStyles from "./projectSection.module.css";
+import sectionStyles from "../shared/sectionContent.module.css";
 import ProjectModal from './ProjectModal';
 
 // Define a type for your project data structure
@@ -57,7 +57,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({projects}) => {
                     // Add the onClick handler to open the modal with this project's data
                     <article
                         key={project.id} // Use a unique key for React list rendering
-                        className={`${projectStyles.projectCard} ${styles.infoContent}`}
+                        className={`${projectStyles.projectCard} ${sectionStyles.infoContent}`}
                         onClick={() => openModal(project)} // *** Add onClick handler here ***
                         role="button" // Indicate this element is interactive
                         tabIndex={0} // Make it focusable for keyboard navigation

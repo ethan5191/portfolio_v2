@@ -1,4 +1,4 @@
-import styles from "@/app/page.module.css";
+import sectionStyles from "../shared/sectionContent.module.css";
 import ProjectCards from "@/app/components/projects/ProjectCards";
 import React from "react";
 
@@ -72,7 +72,7 @@ const myProjects: Project[] = [
 ];
 
 export default function ProjectsSection() {
-    return (<section id="work" className={styles.section}>
+    return (<section id="work" className={sectionStyles.section}>
             <h2>My Work / Projects</h2>
             <ProjectCards projects={myProjects}/>
         </section>);

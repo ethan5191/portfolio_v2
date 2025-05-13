@@ -1,11 +1,11 @@
-import styles from "@/app/page.module.css";
 import contact from "./contactSection.module.css";
+import sectionStyles from "../shared/sectionContent.module.css";
 import React from "react";
 
 export default function ContactSection() {
-    return (<section id="contact" className={styles.section}>
+    return (<section id="contact" className={sectionStyles.section}>
             <h2>Contact</h2>
-            <div className={`${contact.contactContent} ${styles.infoContent}`}>
+            <div className={`${contact.contactContent} ${sectionStyles.infoContent}`}>
                 <h3>Ethan Vanderbur</h3>
                 <p>Columbus, Indiana</p>
                 <div className={contact.contactMethods}>

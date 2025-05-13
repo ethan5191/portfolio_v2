@@ -44,32 +44,6 @@
     margin-right: 2em;
 }
 
-
-.section {
-    padding: 60px 0; /* Add vertical space between sections */
-    color: #C0C0C0;
-    margin-bottom: 0; /* Remove default margin */
-    scroll-margin-top: 40px;
-    min-height: calc(100vh);
-}
-
-.section h2 {
-    color: #000000;
-    font-style: italic;
-    margin-top: 0;
-    font-size: 2.5em;
-    text-align: left;
-}
-
-.section p {
-    line-height: 1.6; /* Adjust the multiplier (1.5 to 1.8 is common) */
-    margin-bottom: 20px; /* Adjust as needed */
-}
-
-.section:last-child {
-    min-height: calc(84vh);
-}
-
 .sidebarNav div a {
     /* Ensure links in sidebar have base style if needed */
     color: inherit; /* Should inherit color from the parent .sidebarNav */
@@ -89,28 +63,6 @@
     color: #ffffff;
     border-color: #ffffff;
     border-radius: 7px;
-}
-
-.infoContent {
-    background-color: #000000;
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-.sectionContentWrapper {
-    max-width: 75%;
-}
-
-.sectionContentWrapper a {
-    font-weight: bold;
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.sectionContentWrapper a:hover {
-    color: #ffffff;
 }
 
 .footer {
@@ -156,20 +108,5 @@
     .pageBodyWrapper {
         padding: 0 10px;
         flex-direction: column;
-    }
-
-    /* Adjust section padding if needed on mobile */
-    .section {
-        padding: 40px 0;
-    }
-
-    /* Adjust section heading size on mobile */
-    .section h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-
-    .sectionContentWrapper {
-        max-width: 95vw;
     }
 }
