@@ -130,18 +130,12 @@
 .projectsGrid {
     display: grid; /* Turns the container into a grid */
     margin-top: -20px;
-    margin-left: auto;
-    margin-right: auto;
-
     /* Defines the columns: automatically fit as many columns as possible */
     /* Each column will be at least 300px wide, but no more than 1 fraction of the available space */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     /* Adds space between the grid items (the project cards) */
     gap: 20px; /* Adjust spacing between cards */
-
-    /* Optional: Center the grid if the total width of the columns is less than the container's width */
-    justify-content: center;
 
     /* Optional: Add some top/bottom padding to the grid area itself */
     padding: 20px 0;
