@@ -2,7 +2,7 @@
 'use client';
 
 import React, {useState} from 'react';
-import styles from '../page.module.css';
+import styles from '../../page.module.css';
 import ProjectModal from './ProjectModal';
 
 // Define a type for your project data structure
