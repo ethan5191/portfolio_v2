@@ -235,7 +235,7 @@ export default function Home() {
                     <section id="contact" className={styles.section}>
                         <h2>Contact</h2>
                         <div className={`${styles.contactContent} ${styles.infoContent}`}>
-                            <p>Ethan Vanderbur</p>
+                            <h3>Ethan Vanderbur</h3>
                             <p>Columbus, Indiana</p>
                             <div className={styles.contactMethods}>
                                 <p>Phone: 812-701-6110</p>
