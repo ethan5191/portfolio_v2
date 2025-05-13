@@ -74,9 +74,7 @@
     font-style: italic;
     margin-top: 0;
     font-size: 2.5em;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
 }
 
 .section p {
@@ -117,7 +115,16 @@
 
 .aboutContent {
     max-width: 75%;
-    margin: auto;
+}
+
+.aboutContent a {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.aboutContent a:hover {
+    color: #ffffff;
 }
 
 .projectsGrid {
@@ -372,18 +379,10 @@
 }
 
 .contactContent {
-    max-width: 40%; /* Adjust width as needed, can be narrower than about/projects */
-    margin: 0 auto; /* Center the container */
-
-    /* Optional: Add internal padding */
-    /* padding: 0 20px; */
-
-    /* Ensure text colors are readable (inherits from .section, but can override) */
-    /* color: #333; */
+    max-width: 40%;
 }
 
 .contactContent p {
-    /* Adjust margins if different from general section paragraphs */
     text-align: center; /* Center name and location */
     margin-bottom: 5px; /* Less space between name and location */
 }
@@ -401,26 +400,19 @@
 }
 
 .contactMethods p {
-    margin-bottom: 0; /* Remove default margin-bottom if using gap on parent flexbox */
-    text-align: center; /* Ensure text is centered if parent is centered */
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .contactMethods a {
-    /* Inherit color from parent or set explicitly */
-    color: inherit; /* Or use a link color like #007bff */
-    text-decoration: none; /* Remove default underline */
-
+    color: inherit;
+    font-weight: bold;
+    font-style: italic;
     /* Add hover effect - can reuse global link hover or define here */
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .contactMethods a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: #ffffff;
-}
-
-.aboutContent a:hover {
-    text-decoration: underline;
     color: #ffffff;
 }
 
