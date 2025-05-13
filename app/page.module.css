@@ -58,6 +58,7 @@
     margin-right: 2em;
 }
 
+
 .section {
     padding: 60px 0; /* Add vertical space between sections */
     color: #C0C0C0;
@@ -110,6 +111,20 @@
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px;
+}
+
+.aboutContent {
+    max-width: 75%;
+}
+
+.aboutContent a {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.aboutContent a:hover {
+    color: #ffffff;
 }
 
 .projectsGrid {
