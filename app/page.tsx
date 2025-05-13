@@ -79,7 +79,7 @@ export default function Home() {
 
                     <section id="home" className={styles.home}>
                         <h1>Ethan Vanderbur</h1>
-                        <span>Experienced full-stack Java web developer working with Java, Spring, SQL, and Soap web services.</span>
+                        <span>Experienced full-stack web developer working with Java, Spring, SQL, and Soap web services.</span>
                     </section>
 
                     {/* About Me Section */}
@@ -109,8 +109,9 @@ export default function Home() {
                                 responsibilities of a senior developer, I am most energized by hands-on problem-solving
                                 within the code itself, a type of work I have had less opportunity to engage in during
                                 recent senior roles.</p>
-                            <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank"
-                                                                    rel="noopener noreferrer">here</a>.</p>
+                            <p>You can <b><i><u><a href="/VanderburEthan_2025.pdf" target="_blank"
+                                                   rel="noopener noreferrer">Download my
+                                Resume PDF</a></u></i></b>.</p>
                         </div>
                     </section>
 
@@ -250,8 +251,9 @@ export default function Home() {
                                                 target="_blank"
                                                 rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a>
                                 </p>
-                                <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
-                                    Resume PDF</a></p>
+                                <p>Resume: <b><i><u><a href="/VanderburEthan_2025.pdf" target="_blank"
+                                                       rel="noopener noreferrer">
+                                    Download my Resume PDF</a></u></i></b></p>
                             </div>
                         </div>
                     </section>
