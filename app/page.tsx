@@ -73,192 +73,203 @@ const myProjects: Project[] = [
 
 export default function Home() {
     return (
-        <div className={styles.pageBodyWrapper}>
-            <div className={styles.mainContentAndHome}>
+        <>
+            <div className={styles.pageBodyWrapper}>
+                <div className={styles.mainContentAndHome}>
 
-                <section id="home" className={styles.home}>
-                    <h1>Ethan Vanderbur</h1>
-                    <span>Experienced full-stack Java web developer working with Java, Spring, SQL, and Soap web services.</span>
-                </section>
+                    <section id="home" className={styles.home}>
+                        <h1>Ethan Vanderbur</h1>
+                        <span>Experienced full-stack Java web developer working with Java, Spring, SQL, and Soap web services.</span>
+                    </section>
 
-                {/* About Me Section */}
-                <section id="about" className={styles.section}>
-                    <h2>About Me</h2>
-                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
-                        <p>I transitioned to software development in my sophomore year of college. Having realized
-                            graphic design wasn't my path, my high school experience with Visual Basic led me to explore
-                            Java and C/C#. I was immediately drawn to coding, finding my stride particularly with
-                            Java.</p>
-                        <p>My subsequent experience as a full-stack Java developer in the United States Marine Corps has
-                            deeply reinforced what I value most in software development: solving challenging problems,
-                            building effective systems, and contributing to a meaningful cause. The systems my team
-                            supports directly impact Marines by ensuring accurate and timely pay, a mission I find
-                            particularly rewarding.</p>
-                        <p>My role provided opportunities to apply my growing expertise across various impactful
-                            projects, from developing new modules to facilitating critical system transitions. These
-                            experiences were instrumental in deepening my proficiency with Java, Spring 5, Oracle SQL,
-                            and Soap web services.</p>
-                        <p>In my next position, I am seeking a mid-level engineer role where I can focus extensively on
-                            daily development with Java, Spring, and SQL. Although I am fully comfortable with the
-                            responsibilities of a senior developer, I am most energized by hands-on problem-solving
-                            within the code itself, a type of work I have had less opportunity to engage in during
-                            recent senior roles.</p>
-                        <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank"
-                                                                rel="noopener noreferrer">here</a>.</p>
-                    </div>
-                </section>
-
-                {/* Projects Section */}
-                <section id="work" className={styles.section}>
-                    <h2>My Work / Projects</h2>
-                    <ProjectCards projects={myProjects}/> {/* Pass your project data here */}
-                </section>
-
-                {/* Skills Section */}
-                <section id="skills" className={styles.section}>
-                    <h2>Skills</h2>
-                    <div className={styles.projectsGrid}>
-                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                            <h3>Programming Languages</h3>
-                            <ul>
-                                <li>Java</li>
-                                <li>JavaScript</li>
-                                <li>SQL</li>
-                                <li>MySQL</li>
-                            </ul>
+                    {/* About Me Section */}
+                    <section id="about" className={styles.section}>
+                        <h2>About Me</h2>
+                        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                            <p>I transitioned to software development in my sophomore year of college. Having realized
+                                graphic design wasn't my path, my high school experience with Visual Basic led me to
+                                explore
+                                Java and C/C#. I was immediately drawn to coding, finding my stride particularly with
+                                Java.</p>
+                            <p>My subsequent experience as a full-stack Java developer in the United States Marine Corps
+                                has
+                                deeply reinforced what I value most in software development: solving challenging
+                                problems,
+                                building effective systems, and contributing to a meaningful cause. The systems my team
+                                supports directly impact Marines by ensuring accurate and timely pay, a mission I find
+                                particularly rewarding.</p>
+                            <p>My role provided opportunities to apply my growing expertise across various impactful
+                                projects, from developing new modules to facilitating critical system transitions. These
+                                experiences were instrumental in deepening my proficiency with Java, Spring 5, Oracle
+                                SQL,
+                                and Soap web services.</p>
+                            <p>In my next position, I am seeking a mid-level engineer role where I can focus extensively
+                                on
+                                daily development with Java, Spring, and SQL. Although I am fully comfortable with the
+                                responsibilities of a senior developer, I am most energized by hands-on problem-solving
+                                within the code itself, a type of work I have had less opportunity to engage in during
+                                recent senior roles.</p>
+                            <p>You can download my latest resume <a href="/VanderburEthan_2025.pdf" target="_blank"
+                                                                    rel="noopener noreferrer">here</a>.</p>
                         </div>
-                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                            <h3>Frameworks & Libraries</h3>
-                            <ul>
-                                <li>Spring MVC</li>
-                                <li>Struts 1.1</li>
-                                <li>Hibernate/JPA</li>
-                                <li>Soap Web Services</li>
-                                <li>jQuery</li>
-                                <li>React</li>
-                            </ul>
-                        </div>
-                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                            <h3>Tools</h3>
-                            <ul>
-                                <li>IntelliJ</li>
-                                <li>Git</li>
-                                <li>Subversion</li>
-                                <li>Maven</li>
-                                <li>Fortify</li>
-                                <li>GitLab</li>
-                                <li>JIRA</li>
-                                <li>JasperSoft Studios</li>
-                                <li>Soap UI</li>
-                                <li>WebStorm</li>
-                            </ul>
-                        </div>
-                        <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                            <h3>Methodologies</h3>
-                            <ul>
-                                <li>Agile</li>
-                                <li>Scrum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section id="mrows" className={styles.section}>
-                    <h2>MROWS</h2>
-                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
-                        <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
-                            certification of orders for reserve Marines.</p>
-                        <h4>Related Projects:</h4>
-                        <ul className={styles.accomplishmentsList}>
-                            <li><span className={styles.accomplishmentTitle}>HP Fortify findings:</span>
-                                <span className={styles.accomplishmentDetails}>Remediated numerous findings to improve
+                    {/* Projects Section */}
+                    <section id="work" className={styles.section}>
+                        <h2>My Work / Projects</h2>
+                        <ProjectCards projects={myProjects}/> {/* Pass your project data here */}
+                    </section>
+
+                    {/* Skills Section */}
+                    <section id="skills" className={styles.section}>
+                        <h2>Skills</h2>
+                        <div className={styles.projectsGrid}>
+                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                                <h3>Programming Languages</h3>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>SQL</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                                <h3>Frameworks & Libraries</h3>
+                                <ul>
+                                    <li>Spring MVC</li>
+                                    <li>Struts 1.1</li>
+                                    <li>Hibernate/JPA</li>
+                                    <li>Soap Web Services</li>
+                                    <li>jQuery</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                                <h3>Tools</h3>
+                                <ul>
+                                    <li>IntelliJ</li>
+                                    <li>Git</li>
+                                    <li>Subversion</li>
+                                    <li>Maven</li>
+                                    <li>Fortify</li>
+                                    <li>GitLab</li>
+                                    <li>JIRA</li>
+                                    <li>JasperSoft Studios</li>
+                                    <li>Soap UI</li>
+                                    <li>WebStorm</li>
+                                </ul>
+                            </div>
+                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+                                <h3>Methodologies</h3>
+                                <ul>
+                                    <li>Agile</li>
+                                    <li>Scrum</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="mrows" className={styles.section}>
+                        <h2>MROWS</h2>
+                        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                            <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
+                                certification of orders for reserve Marines.</p>
+                            <h4>Related Projects:</h4>
+                            <ul className={styles.accomplishmentsList}>
+                                <li><span className={styles.accomplishmentTitle}>HP Fortify findings:</span>
+                                    <span className={styles.accomplishmentDetails}>Remediated numerous findings to improve
                                     application security.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>Struts 1 to Spring 5:</span>
-                                <span className={styles.accomplishmentDetails}>Led the migration from Struts 1 to
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>Struts 1 to Spring 5:</span>
+                                    <span className={styles.accomplishmentDetails}>Led the migration from Struts 1 to
                                     Spring 5 to improve performance and application security.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>Permissions system refactor:</span>
-                                <span className={styles.accomplishmentDetails}>Changed the static Java based permissions system into a
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>Permissions system refactor:</span>
+                                    <span className={styles.accomplishmentDetails}>Changed the static Java based permissions system into a
                                     database driven system, allowing for easier and quicker permissions updates.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>jQuery inbox migration:</span>
-                                <span className={styles.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>jQuery inbox migration:</span>
+                                    <span className={styles.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
                                     JavaScript jQuery framework to improve application performance and reduce duplicate
                                     code.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>Report migration:</span>
-                                <span className={styles.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>Report migration:</span>
+                                    <span className={styles.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
                                     Studio improving our report compile times.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="mcpdt" className={styles.section}>
-                    <h2>MCPDT</h2>
-                    <div className={`${styles.aboutContent} ${styles.infoContent}`}>
-                        <p>MCPDT is a Java 8 web application that owns multiple web services that are called by other
-                            TSO owned systems. It is used to calculate per diem and travel funding lines for PCS and PCA
-                            orders.</p>
-                        <h4>Related Projects:</h4>
-                        <ul className={styles.accomplishmentsList}>
-                            <li><span className={styles.accomplishmentTitle}>End of Year:</span>
-                                <span className={styles.accomplishmentDetails}>End of fiscal year process involves the creation
+                    <section id="mcpdt" className={styles.section}>
+                        <h2>MCPDT</h2>
+                        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+                            <p>MCPDT is a Java 8 web application that owns multiple web services that are called by
+                                other
+                                TSO owned systems. It is used to calculate per diem and travel funding lines for PCS and
+                                PCA
+                                orders.</p>
+                            <h4>Related Projects:</h4>
+                            <ul className={styles.accomplishmentsList}>
+                                <li><span className={styles.accomplishmentTitle}>End of Year:</span>
+                                    <span className={styles.accomplishmentDetails}>End of fiscal year process involves the creation
                                     of numerous database scripts to ensure the next FYs funding lines were properly setup.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>DAI Reconciliation:</span>
-                                <span className={styles.accomplishmentDetails}>Created a new web service in MCPDT to take in
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>DAI Reconciliation:</span>
+                                    <span className={styles.accomplishmentDetails}>Created a new web service in MCPDT to take in
                                     financial data from DTMS and send a reconciliation funding line to DAI. This improves
                                     MCPDTs financial auditability.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>Updates for MROWS PCS travel:</span>
-                                <span className={styles.accomplishmentDetails}>The 'MROWS - Separation Requests (PCS Travel)'
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>Updates for MROWS PCS travel:</span>
+                                    <span className={styles.accomplishmentDetails}>The 'MROWS - Separation Requests (PCS Travel)'
                                     project also caused changes in MCPDT. I updated the application to handle the new logic
                                     flow that existed due to this new process, this was an update to the existing web service.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>Report changes:</span>
-                                <span className={styles.accomplishmentDetails}>Yearly report changes to build new tabs
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>Report changes:</span>
+                                    <span className={styles.accomplishmentDetails}>Yearly report changes to build new tabs
                                     on an excel spreadsheet for the new fiscal year to assist with accounting and estimation of funds.</span>
-                            </li>
-                            <li><span className={styles.accomplishmentTitle}>Low cost funding changes:</span>
-                                <span className={styles.accomplishmentDetails}>Added new funding types to properly account
+                                </li>
+                                <li><span className={styles.accomplishmentTitle}>Low cost funding changes:</span>
+                                    <span className={styles.accomplishmentDetails}>Added new funding types to properly account
                                     for low cost order types. This improved financial auditability and estimation of funds.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                {/* Contact Section */}
-                <section id="contact" className={styles.section}>
-                    <h2>Contact</h2>
-                    <div className={`${styles.contactContent} ${styles.infoContent}`}>
-                        <p>Ethan Vanderbur</p>
-                        <p>Columbus, Indiana</p>
-                        <div className={styles.contactMethods}>
-                            <p>Phone: 812-701-6110</p>
-                            <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
-                            <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
-                                            target="_blank"
-                                            rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a></p>
-                            <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
-                                Resume PDF</a></p>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </section>
+                    </section>
+
+                    {/* Contact Section */}
+                    <section id="contact" className={styles.section}>
+                        <h2>Contact</h2>
+                        <div className={`${styles.contactContent} ${styles.infoContent}`}>
+                            <p>Ethan Vanderbur</p>
+                            <p>Columbus, Indiana</p>
+                            <div className={styles.contactMethods}>
+                                <p>Phone: 812-701-6110</p>
+                                <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
+                                <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
+                                                target="_blank"
+                                                rel="noopener noreferrer">linkedin.com/in/ethan-vanderbur-2797aa260</a>
+                                </p>
+                                <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank" rel="noopener noreferrer">Download
+                                    Resume PDF</a></p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                {/* End .mainContentAndHome */}
+
+                {/* It's a sibling of the main scrolling column */}
+                <aside className={styles.sidebarNav}>
+                    <div><a href="#about">ABOUT</a></div>
+                    <div><a href="#work">WORK</a></div>
+                    <div><a href="#skills">SKILLS</a></div>
+                    <div><a href="#mrows">MROWS</a></div>
+                    <div><a href="#mcpdt">MCPDT</a></div>
+                    <div><a href="#contact">CONTACT</a></div>
+                </aside>
+
             </div>
-            {/* End .mainContentAndHome */}
 
-            {/* It's a sibling of the main scrolling column */}
-            <aside className={styles.sidebarNav}>
-                <div><a href="#about">ABOUT</a></div>
-                <div><a href="#work">WORK</a></div>
-                <div><a href="#skills">SKILLS</a></div>
-                <div><a href="#mrows">MROWS</a></div>
-                <div><a href="#mcpdt">MCPDT</a></div>
-                <div><a href="#contact">CONTACT</a></div>
-            </aside>
-
-        </div>
+        </>
     );
 }
