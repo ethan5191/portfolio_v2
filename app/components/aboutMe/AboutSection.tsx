@@ -4,7 +4,7 @@ import React from "react";
 export default function AboutSection() {
     return (<section id="about" className={styles.section}>
         <h2>About Me</h2>
-        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+        <div className={`${styles.sectionContentWrapper} ${styles.infoContent}`}>
             <p>I transitioned to software development in my sophomore year of college. Having realized
                 graphic design wasn't my path, my high school experience with Visual Basic led me to
                 explore Java and C/C#. I was immediately drawn to coding, finding my stride particularly

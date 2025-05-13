@@ -5,7 +5,7 @@ import React from "react";
 export default function McpdtSection() {
     return (<section id="mcpdt" className={styles.section}>
             <h2>Marine Corps Permanent Duty Travel (MCPDT)</h2>
-            <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+            <div className={`${styles.sectionContentWrapper} ${styles.infoContent}`}>
                 <p>MCPDT is a Java 8 web application that owns multiple web services that are called by
                     other TSO owned systems. It is used to calculate per diem and travel funding lines for PCS and
                     PCA orders.</p>
