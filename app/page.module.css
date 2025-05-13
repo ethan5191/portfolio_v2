@@ -85,7 +85,7 @@
 }
 
 .section:last-child {
-    min-height: calc(100vh);
+    min-height: calc(84vh);
 }
 
 .sidebarNav div a {
@@ -443,5 +443,29 @@
 }
 
 .accomplishmentsList li .accomplishmentDetails {
+    color: #C0C0C0;
+}
+
+.footer {
+    background-color: #000000;
+    color: #C0C0C0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footerQuote {
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #C0C0C0;
+}
+
+.footerQuote cite {
+    display: block;
+    font-size: 0.9em;
     color: #C0C0C0;
 }
