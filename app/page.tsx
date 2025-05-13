@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import React from "react";
+import HomeSection from "@/app/components/home/HomeSection";
 import AboutSection from "../app/components/aboutMe/AboutSection";
 import MrowsSection from "../app/components/mrows/MrowsSection";
 import McpdtSection from "../app/components/mcpdt/McpdtSection";
@@ -12,12 +13,7 @@ export default function Home() {
         <>
             <div className={styles.pageBodyWrapper}>
                 <div className={styles.mainContentAndHome}>
-
-                    <section id="home" className={styles.home}>
-                        <h1>Ethan Vanderbur</h1>
-                        <span>Experienced full-stack web developer working with Java, Spring, SQL, and Soap web services.</span>
-                    </section>
-
+                    <HomeSection/>
                     <AboutSection/>
                     <MrowsSection/>
                     <McpdtSection/>
@@ -25,7 +21,6 @@ export default function Home() {
                     <SkillsSection/>
                     <ContactSection/>
                 </div>
-                {/* End .mainContentAndHome */}
 
                 {/* It's a sibling of the main scrolling column */}
                 <aside className={styles.sidebarNav}>
@@ -36,7 +31,6 @@ export default function Home() {
                     <div><a href="#skills">SKILLS</a></div>
                     <div><a href="#contact">CONTACT</a></div>
                 </aside>
-
             </div>
             <footer className={styles.footer}>
                 <blockquote className={styles.footerQuote}>

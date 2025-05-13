@@ -1,0 +1,26 @@
+.home {
+    text-align: left;
+    color: #C0C0C0;
+    margin-bottom: 0;
+    scroll-margin-top: 150px;
+    min-height: calc(100vh - 100px - (2 * 20px));
+}
+
+.home h1 {
+    font-size: 6em;
+    margin-bottom: -.25em;
+    font-family: "Monotype Corsiva", cursive;
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding-top: 100px;
+        scroll-margin-top: 100px;
+        min-height: auto;
+    }
+
+    .home h1 {
+        font-size: 2.5em;
+        word-break: break-word;
+    }
+}
