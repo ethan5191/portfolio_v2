@@ -1,233 +1,26 @@
 import styles from './page.module.css';
-import ProjectCards from './components/projects/ProjectCards';
 import React from "react";
+import HomeSection from "@/app/components/home/HomeSection";
 import AboutSection from "../app/components/aboutMe/AboutSection";
-
-// Define a type for your project data structure
-interface Project {
-    id: string; // Unique ID for keys
-    title: string;
-    description: string; // Brief
-    role: string; // Full detail
-    technologies: string[];
-    technicalDetails: string; // Full detail
-    impact: string; // Full detail
-}
-
-const myProjects: Project[] = [
-    {
-        id: 'mrows-travel',
-        title: 'MROWS - Travel Claim Module',
-        description: 'Developed a significant module within the MROWS system to automate travel claim processing, integrating with the external DTMS system.',
-        role: 'Collaborated on the full-stack design and implementation. My key contributions included creating new database architecture, developing both the user interface elements (UI) and backend processing logic, building the outgoing SOAP web service integration with DTMS, and designing the incoming reconciliation/rejection web service that received payment information.',
-        technologies: ['Java', 'Spring 5 MVC', 'jQuery', 'SOAP', 'Oracle SQL', 'JSPs'],
-        technicalDetails: 'Designed and implemented new database architecture; developed UI elements and backend processing logic; built the outgoing web service call to DTMS; designed the incoming reconciliation web service.',
-        impact: 'This project significantly streamlined the travel claim submission process, reducing a manual workflow that previously took weeks down to just a couple of hours before a Marine received payment. Between 2019 and 2024, the module successfully processed an average of 2300 travel claims annually.',
-    },
-    {
-        id: 'mrows-dai',
-        title: 'MROWS - SABRS to DAI Transition',
-        description: 'Led the development effort to transition funding information from the MROWS system to the Department of Defense\'s official accounting system, DAI.',
-        role: 'Served as the main developer on this critical transition project.',
-        technologies: ['Java', 'Spring 5 MVC', 'Quartz Scheduler', 'Oracle SQL', 'JSPs'],
-        technicalDetails: 'Designed and implemented the automated process for creating DAI records and securely transmitting this data via XML on a scheduled basis, setting up two distinct scheduled jobs.',
-        impact: 'Successfully enabled MROWS to integrate with the DoD\'s standard accounting system, significantly streamlining the audit process. This transition contributed to the Marine Corps achieving clean financial audits for the past two years.',
-    },
-    {
-        id: 'mcpdt-slo',
-        title: 'MCPDT - Funding Structure Transition (LOA to SFIS SLOA)',
-        description: 'Updated the funding allocation process within the MCPDT system to transition from a legacy LOA structure to the standardized SFIS SLOA.',
-        role: 'Served as the sole developer responsible for designing and implementing this new logical process.',
-        technologies: ['Java', 'Oracle SQL'],
-        technicalDetails: 'Developed the core logic to integrate the new, annually generated SLOA data with each order created in MCPDT, ensuring accurate financial tracking according to the updated structure.',
-        impact: 'Aligned the funding process with the new official financial structure, improving compliance and accuracy. Project is ongoing.',
-        // status: 'Ongoing, expected completion 9/30/2025' // Add status if desired
-    },
-    {
-        id: 'mrows-sep',
-        title: 'MROWS - Separation Requests (PCS Travel)',
-        description: 'Developed an entirely new module within the MROWS system to specifically handle financial accounting for separation requests related to Permanent Change of Station (PCS) travel.',
-        role: 'Served as the sole developer responsible for the full lifecycle of this new module.',
-        technologies: ['Java', 'jQuery', 'Spring 5', 'Oracle SQL', 'SOAP Web Services'],
-        technicalDetails: 'Created the complete new module, including designing the UI, developing backend processes, and establishing a new database structure. Implemented the workflow to send requests to MCPDT and DAI for funding.',
-        impact: 'Provided significantly more accurate financial accounting for funds spent on the return travel portion of PCS orders by enabling precise tracking previously not possible.',
-    },
-    {
-        id: 'mrows-mcpdt-soap',
-        title: 'MROWS & MCPDT - SOAP Web Services Development & Enhancement',
-        description: 'A collection of projects focused on developing and enhancing critical SOAP web services to enable data exchange and process automation between systems.',
-        role: 'Created multiple new web services (three in MROWS, one in MCPDT) and updated business logic for existing services.',
-        technologies: ['Java', 'SOAP Web Services', 'Oracle SQL'],
-        technicalDetails: 'Developed integration services (e.g., MROWS to MCPDT order search, MCPDT to DAI reconciliation) facilitating data exchange and automation.',
-        impact: 'Improved audit compliance by centralizing user access and enhanced financial auditability by automating payment updates.',
-    },
-    {
-        id: 'personal-learning-app',
-        title: 'Full-Stack Learning Application', // Or a functional name
-        description: 'A personal full-stack web application built to explore and gain hands-on experience with modern web development technologies.',
-        role: 'Sole developer.',
-        technologies: ['React', 'Java 17', 'Spring Boot 6', 'Spring Data JPA (Hibernate)', 'RESTful APIs', 'MySQL', 'Tomcat (embedded)'],
-        technicalDetails: 'React frontend with multiple views; Java 17/Spring Boot backend with RESTful APIs; MySQL database with Hibernate; Implemented data display and processing logic.',
-        impact: 'Demonstrates ability to learn and apply modern full-stack technologies and architectural patterns.',
-    },
-];
+import MrowsSection from "../app/components/mrows/MrowsSection";
+import McpdtSection from "../app/components/mcpdt/McpdtSection";
+import ProjectsSection from "@/app/components/projects/ProjectsSection";
+import SkillsSection from "@/app/components/skills/SkillsSection";
+import ContactSection from "@/app/components/contact/ContactSection";
 
 export default function Home() {
     return (
         <>
             <div className={styles.pageBodyWrapper}>
                 <div className={styles.mainContentAndHome}>
-
-                    <section id="home" className={styles.home}>
-                        <h1>Ethan Vanderbur</h1>
-                        <span>Experienced full-stack web developer working with Java, Spring, SQL, and Soap web services.</span>
-                    </section>
-
-                    {/* About Me Section */}
+                    <HomeSection/>
                     <AboutSection/>
-
-                    <section id="mrows" className={styles.section}>
-                        <h2>Marine Resource Order Writing System (MROWS)</h2>
-                        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
-                            <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
-                                certification of orders for reserve Marines.</p>
-                            <h4>Related Projects:</h4>
-                            <ul className={styles.accomplishmentsList}>
-                                <li><span className={styles.accomplishmentTitle}>HP Fortify findings:</span>
-                                    <span className={styles.accomplishmentDetails}>Remediated numerous findings to improve
-                                    application security.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Struts 1 to Spring 5:</span>
-                                    <span className={styles.accomplishmentDetails}>Led the migration from Struts 1 to
-                                    Spring 5 to improve performance and application security.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Permissions system refactor:</span>
-                                    <span className={styles.accomplishmentDetails}>Changed the static Java based permissions system into a
-                                    database driven system, allowing for easier and quicker permissions updates.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>jQuery inbox migration:</span>
-                                    <span className={styles.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
-                                    JavaScript jQuery framework to improve application performance and reduce duplicate
-                                    code.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Report migration:</span>
-                                    <span className={styles.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
-                                    Studio improving our report compile times.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="mcpdt" className={styles.section}>
-                        <h2>Marine Corps Permanent Duty Travel (MCPDT)</h2>
-                        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
-                            <p>MCPDT is a Java 8 web application that owns multiple web services that are called by
-                                other TSO owned systems. It is used to calculate per diem and travel funding lines for PCS and
-                                PCA orders.</p>
-                            <h4>Related Projects:</h4>
-                            <ul className={styles.accomplishmentsList}>
-                                <li><span className={styles.accomplishmentTitle}>End of Year:</span>
-                                    <span className={styles.accomplishmentDetails}>End of fiscal year process involves the creation
-                                    of numerous database scripts to ensure the next FYs funding lines were properly setup.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>DAI Reconciliation:</span>
-                                    <span className={styles.accomplishmentDetails}>Created a new web service in MCPDT to take in
-                                    financial data from DTMS and send a reconciliation funding line to DAI. This improves
-                                    MCPDTs financial auditability.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Updates for MROWS PCS travel:</span>
-                                    <span className={styles.accomplishmentDetails}>The 'MROWS - Separation Requests (PCS Travel)'
-                                    project also caused changes in MCPDT. I updated the application to handle the new logic
-                                    flow that existed due to this new process, this was an update to the existing web service.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Report changes:</span>
-                                    <span className={styles.accomplishmentDetails}>Yearly report changes to build new tabs
-                                    on an excel spreadsheet for the new fiscal year to assist with accounting and estimation of funds.</span>
-                                </li>
-                                <li><span className={styles.accomplishmentTitle}>Low cost funding changes:</span>
-                                    <span className={styles.accomplishmentDetails}>Added new funding types to properly account
-                                    for low cost order types. This improved financial auditability and estimation of funds.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    {/* Projects Section */}
-                    <section id="work" className={styles.section}>
-                        <h2>My Work / Projects</h2>
-                        <ProjectCards projects={myProjects}/>
-                    </section>
-
-                    {/* Skills Section */}
-                    <section id="skills" className={styles.section}>
-                        <h2>Skills</h2>
-                        <div className={styles.projectsGrid}>
-                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                                <h3>Programming Languages</h3>
-                                <ul>
-                                    <li>Java</li>
-                                    <li>JavaScript</li>
-                                    <li>SQL</li>
-                                    <li>MySQL</li>
-                                </ul>
-                            </div>
-                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                                <h3>Frameworks & Libraries</h3>
-                                <ul>
-                                    <li>Spring MVC</li>
-                                    <li>Struts 1.1</li>
-                                    <li>Hibernate/JPA</li>
-                                    <li>Soap Web Services</li>
-                                    <li>jQuery</li>
-                                    <li>React</li>
-                                </ul>
-                            </div>
-                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                                <h3>Tools</h3>
-                                <ul>
-                                    <li>IntelliJ</li>
-                                    <li>Git</li>
-                                    <li>Subversion</li>
-                                    <li>Maven</li>
-                                    <li>Fortify</li>
-                                    <li>GitLab</li>
-                                    <li>JIRA</li>
-                                    <li>JasperSoft Studios</li>
-                                    <li>Soap UI</li>
-                                    <li>WebStorm</li>
-                                </ul>
-                            </div>
-                            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
-                                <h3>Methodologies</h3>
-                                <ul>
-                                    <li>Agile</li>
-                                    <li>Scrum</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Contact Section */}
-                    <section id="contact" className={styles.section}>
-                        <h2>Contact</h2>
-                        <div className={`${styles.contactContent} ${styles.infoContent}`}>
-                            <h3>Ethan Vanderbur</h3>
-                            <p>Columbus, Indiana</p>
-                            <div className={styles.contactMethods}>
-                                <p>Phone: 812-701-6110</p>
-                                <p>Email: <a href="mailto:evanderbur3@gmail.com">evanderbur3@gmail.com</a></p>
-                                <p>Lets Connect: <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">LinkedIn</a>
-                                </p>
-                                <p>Resume: <a href="/VanderburEthan_2025.pdf" target="_blank"
-                                              rel="noopener noreferrer">
-                                    Download my Resume PDF</a></p>
-                            </div>
-                        </div>
-                    </section>
+                    <MrowsSection/>
+                    <McpdtSection/>
+                    <ProjectsSection/>
+                    <SkillsSection/>
+                    <ContactSection/>
                 </div>
-                {/* End .mainContentAndHome */}
 
                 {/* It's a sibling of the main scrolling column */}
                 <aside className={styles.sidebarNav}>
@@ -238,7 +31,6 @@ export default function Home() {
                     <div><a href="#skills">SKILLS</a></div>
                     <div><a href="#contact">CONTACT</a></div>
                 </aside>
-
             </div>
             <footer className={styles.footer}>
                 <blockquote className={styles.footerQuote}>

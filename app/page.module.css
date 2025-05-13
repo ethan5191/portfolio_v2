@@ -21,20 +21,6 @@
     margin-right: 12%; /* This creates the gap for the sidebar */
 }
 
-.home {
-    text-align: left;
-    color: #C0C0C0;
-    margin-bottom: 0;
-    scroll-margin-top: 150px;
-    min-height: calc(100vh - 100px - (2 * 20px));
-}
-
-.home h1 {
-    font-size: 6em;
-    margin-bottom: -.25em;
-    font-family: "Monotype Corsiva", cursive;
-}
-
 .sidebarNav {
     /* This element is a direct flex item sibling of .mainContentAndHome */
     width: 10%; /* **REQUIRED**: Set a fixed width for the sidebar */
@@ -417,28 +403,6 @@
     color: #ffffff;
 }
 
-.accomplishmentsList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.accomplishmentsList li {
-    margin-bottom: 15px;
-    line-height: 1.5;
-    display: block;
-}
-
-.accomplishmentsList li .accomplishmentTitle {
-    font-weight: bold;
-    margin-right: 5px;
-    color: #ffffff;
-}
-
-.accomplishmentsList li .accomplishmentDetails {
-    color: #C0C0C0;
-}
-
 .footer {
     background-color: #000000;
     color: #C0C0C0;
@@ -482,17 +446,6 @@
     .pageBodyWrapper {
         padding: 0 10px;
         flex-direction: column;
-    }
-
-    .home {
-        padding-top: 100px;
-        scroll-margin-top: 100px;
-        min-height: auto;
-    }
-
-    .home h1 {
-        font-size: 2.5em;
-        word-break: break-word;
     }
 
     /* Adjust section padding if needed on mobile */
