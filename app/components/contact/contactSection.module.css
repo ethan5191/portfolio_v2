@@ -1,0 +1,50 @@
+.contactContent {
+    max-width: 40%;
+}
+
+.contactContent p {
+    text-align: center; /* Center name and location */
+    margin-bottom: 5px; /* Less space between name and location */
+}
+
+.contactContent h3 {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+}
+
+.contactMethods {
+    margin-top: 30px; /* Space between location and contact methods */
+
+    /* Use flexbox to lay out the methods vertically with gaps */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between each contact method line */
+
+    /* Optional: Center the text within the methods block */
+    align-items: center;
+}
+
+.contactMethods p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.contactMethods a {
+    color: inherit;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    /* Add hover effect - can reuse global link hover or define here */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contactMethods a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .contactContent {
+        max-width: 95vw;
+    }
+}

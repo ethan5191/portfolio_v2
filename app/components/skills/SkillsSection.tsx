@@ -1,11 +1,13 @@
-import styles from "@/app/page.module.css";
+import cardGrid from "../shared/cardGrid.module.css";
+import skills from "./skillsSection.module.css";
+import sectionStyles from "../shared/sectionContent.module.css";
 import React from "react";
 
 export default function SkillsSection() {
-    return (<section id="skills" className={styles.section}>
+    return (<section id="skills" className={sectionStyles.section}>
         <h2>Skills</h2>
-        <div className={styles.projectsGrid}>
-            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+        <div className={cardGrid.projectsGrid}>
+            <div className={`${skills.skillCategoryCard} ${sectionStyles.infoContent}`}>
                 <h3>Programming Languages</h3>
                 <ul>
                     <li>Java</li>
@@ -14,7 +16,7 @@ export default function SkillsSection() {
                     <li>MySQL</li>
                 </ul>
             </div>
-            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+            <div className={`${skills.skillCategoryCard} ${sectionStyles.infoContent}`}>
                 <h3>Frameworks & Libraries</h3>
                 <ul>
                     <li>Spring MVC</li>
@@ -25,7 +27,7 @@ export default function SkillsSection() {
                     <li>React</li>
                 </ul>
             </div>
-            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+            <div className={`${skills.skillCategoryCard} ${sectionStyles.infoContent}`}>
                 <h3>Tools</h3>
                 <ul>
                     <li>IntelliJ</li>
@@ -40,7 +42,7 @@ export default function SkillsSection() {
                     <li>WebStorm</li>
                 </ul>
             </div>
-            <div className={`${styles.skillCategoryCard} ${styles.infoContent}`}>
+            <div className={`${skills.skillCategoryCard} ${sectionStyles.infoContent}`}>
                 <h3>Methodologies</h3>
                 <ul>
                     <li>Agile</li>

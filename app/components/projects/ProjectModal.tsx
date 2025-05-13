@@ -2,7 +2,7 @@
 'use client';
 
 import React, {useEffect, useRef} from 'react';
-import styles from '../../page.module.css';
+import projectStyles from "./projectSection.module.css";
 
 // Define the Project type again (or import from a shared types file)
 interface Project {
@@ -56,16 +56,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({project, onClose}) => {
     return (
         // *** Modal Overlay ***
         // Clicking on the overlay (outside the content) will close the modal
-        <div className={styles.modalOverlay} onClick={onClose} role="dialog" aria-modal="true"
+        <div className={projectStyles.modalOverlay} onClick={onClose} role="dialog" aria-modal="true"
              aria-labelledby="modal-title">
 
             {/* *** Modal Content Box *** */}
             {/* Clicking inside this div will *not* close the modal due to handleContentClick */}
             {/* tabIndex="-1" makes it programmatically focusable but not part of natural tab order */}
-            <div className={styles.modalContent} onClick={handleContentClick} ref={modalContentRef} tabIndex={-1}>
+            <div className={projectStyles.modalContent} onClick={handleContentClick} ref={modalContentRef} tabIndex={-1}>
                 {/* *** Close Button *** */}
                 {/* Positioned absolutely relative to the modal content box */}
-                <button className={styles.modalCloseButton} onClick={onClose} aria-label="Close modal">
+                <button className={projectStyles.modalCloseButton} onClick={onClose} aria-label="Close modal">
                     &times; {/* HTML entity for multiplication sign (a common close icon) */}
                 </button>
 
@@ -76,21 +76,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({project, onClose}) => {
                 {/* Display the brief description too, or just the full details */}
                 <p>{project.description}</p>
 
-                <p className={styles.projectRole}>My Role: {project.role}</p> {/* Full Role */}
+                <p className={projectStyles.projectRole}>My Role: {project.role}</p> {/* Full Role */}
 
 
-                <div className={styles.projectImpact}>
+                <div className={projectStyles.projectImpact}>
                     <h4>Impact & Results:</h4>
                     <p>{project.impact}</p>
                 </div>
 
-                <div className={styles.projectTechnicalDetails}>
+                <div className={projectStyles.projectTechnicalDetails}>
                     <h4>Technical Details:</h4>
                     <p>{project.technicalDetails}</p>
                 </div>
 
                 {/* Technologies Used (Repeat from card or only show here) */}
-                <div className={styles.projectTech}>
+                <div className={projectStyles.projectTech}>
                     <h4>Technologies:</h4>
                     <ul>
                         {project.technologies.map(tech => (

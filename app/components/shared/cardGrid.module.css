@@ -1,0 +1,25 @@
+.projectsGrid {
+    display: grid; /* Turns the container into a grid */
+    margin-top: -20px;
+    /* Defines the columns: automatically fit as many columns as possible */
+    /* Each column will be at least 300px wide, but no more than 1 fraction of the available space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    /* Adds space between the grid items (the project cards) */
+    gap: 20px; /* Adjust spacing between cards */
+
+    /* Optional: Add some top/bottom padding to the grid area itself */
+    padding: 20px 0;
+    max-width: 75%;
+}
+
+
+@media (max-width: 768px) {
+    /* Adjust the minimum width for project grid cards/skill category cards on mobile */
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 95vw;
+        padding: 0;
+    }
+}

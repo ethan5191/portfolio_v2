@@ -2,7 +2,9 @@
 'use client';
 
 import React, {useState} from 'react';
-import styles from '../../page.module.css';
+import cardGrid from "../shared/cardGrid.module.css";
+import projectStyles from "./projectSection.module.css";
+import sectionStyles from "../shared/sectionContent.module.css";
 import ProjectModal from './ProjectModal';
 
 // Define a type for your project data structure
@@ -48,14 +50,14 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({projects}) => {
         // Use a React Fragment <> to render multiple top-level elements (the grid and the modal)
         <>
             {/* This is the grid container for the project cards */}
-            <div className={styles.projectsGrid}>
+            <div className={cardGrid.projectsGrid}>
                 {/* Map over the projects data array to render each project card */}
                 {projects.map(project => (
                     // Each project card is an article element
                     // Add the onClick handler to open the modal with this project's data
                     <article
                         key={project.id} // Use a unique key for React list rendering
-                        className={`${styles.projectCard} ${styles.infoContent}`}
+                        className={`${projectStyles.projectCard} ${sectionStyles.infoContent}`}
                         onClick={() => openModal(project)} // *** Add onClick handler here ***
                         role="button" // Indicate this element is interactive
                         tabIndex={0} // Make it focusable for keyboard navigation
@@ -63,17 +65,17 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({projects}) => {
                     >
                         {/* *** Content visible on the initial project card (Summary) *** */}
                         {/* This content should be concise */}
-                        <div className={styles.projectSummary}>
+                        <div className={projectStyles.projectSummary}>
                             {/* Project Title */}
                             <h3>{project.title}</h3>
                             {/* Brief Description */}
-                            <p className={styles.projectDescription}>
+                            <p>
                                 {project.description}
                             </p>
 
                             {/* Optional: Include Technologies or Links on the summary card if they fit */}
                             {/* You can reuse styles from the previous attempt */}
-                            <div className={styles.projectTech}>
+                            <div className={projectStyles.projectTech}>
                                 <h4>Technologies:</h4>
                                 <ul>
                                     {project.technologies.map(tech => (

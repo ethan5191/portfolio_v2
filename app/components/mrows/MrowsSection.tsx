@@ -1,11 +1,11 @@
-import styles from "@/app/page.module.css";
 import accomplishments from "../shared/accomplishmentList.module.css";
+import sectionStyles from "../shared/sectionContent.module.css";
 import React from "react";
 
 export default function MrowsSection() {
-    return (<section id="mrows" className={styles.section}>
+    return (<section id="mrows" className={sectionStyles.section}>
         <h2>Marine Resource Order Writing System (MROWS)</h2>
-        <div className={`${styles.aboutContent} ${styles.infoContent}`}>
+        <div className={`${sectionStyles.sectionContentWrapper} ${sectionStyles.infoContent}`}>
             <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
                 certification of orders for reserve Marines.</p>
             <h4>Related Projects:</h4>
