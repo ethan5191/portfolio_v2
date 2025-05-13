@@ -24,9 +24,7 @@
 .home {
     text-align: left;
     color: #C0C0C0;
-    padding: 20px;
     margin-bottom: 0;
-    margin-left: 1em;
     scroll-margin-top: 150px;
     min-height: calc(100vh - 100px - (2 * 20px));
 }
@@ -49,7 +47,7 @@
     right: 20px; /* Stick to the right edge, matching container padding */
 
     /* Ensure it stays above other content */
-    z-index: 999; /* Less than header's z-index (1000) */
+    z-index: 999;
 
     /* Arrange internal links vertically */
     display: flex;
@@ -65,7 +63,7 @@
     padding: 60px 0; /* Add vertical space between sections */
     color: #C0C0C0;
     margin-bottom: 0; /* Remove default margin */
-    scroll-margin-top: 60px;
+    scroll-margin-top: 40px;
     min-height: calc(100vh);
 }
 
@@ -210,7 +208,7 @@
     display: flex; /* Use flexbox to center the modal content */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    z-index: 2000; /* Ensure it's above everything else (header z-index is 1000) */
+    z-index: 2000;
 
     /* Add padding to ensure space around the modal on smaller screens */
     padding: 20px;
@@ -447,6 +445,10 @@
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 950;
 }
 
 .footerQuote {
@@ -461,4 +463,56 @@
     display: block;
     font-size: 0.9em;
     color: #C0C0C0;
+}
+
+@media (max-width: 768px) {
+    /* Hide the fixed sidebar on mobile */
+    .sidebarNav {
+        display: none;
+    }
+
+    /* Remove the right margin from the main content wrapper on mobile */
+    .mainContentAndHome {
+        margin-right: 0;
+    }
+
+    /* Adjust padding on the main page wrapper if needed for small screens */
+    .pageBodyWrapper {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .home {
+        padding-top: 100px;
+        scroll-margin-top: 100px;
+        min-height: auto;
+    }
+
+    .home h1 {
+        font-size: 2.5em;
+        word-break: break-word;
+    }
+
+    /* Adjust section padding if needed on mobile */
+    .section {
+        padding: 40px 0;
+    }
+
+    /* Adjust section heading size on mobile */
+    .section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust the minimum width for project grid cards/skill category cards on mobile */
+    .projectsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    /* Adjust modal max-width on mobile */
+    .modalContent {
+        max-width: 95vw;
+        padding: 20px;
+    }
 }

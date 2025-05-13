@@ -45,10 +45,12 @@ export default function RootLayout({
             <nav>
                 <div>
                     <a href="mailto:evanderbur3@gmail.com"><i
-                        className="fas fa-envelope"></i> E.Vanderbur.3@gmail.com</a> |
+                        className="fas fa-envelope"></i> E.Vanderbur.3@gmail.com</a>
+                    <span className="separator"> | </span>
                     <a href="https://www.linkedin.com/in/ethan-vanderbur-2797aa260" target="_blank"
                        rel="noopener noreferrer" className="linkedin-link">
-                        <i className="fab fa-linkedin-in"></i></a> |
+                        <i className="fab fa-linkedin-in"></i></a>
+                    <span className="separator"> | </span>
                     <span className="phoneNum"><i className="fas fa-phone"></i> 812-701-6110</span>
                 </div>
             </nav>
