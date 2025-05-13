@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import ProjectCards from '../app/components/ProjectCards';
+import ProjectCards from './components/projects/ProjectCards';
 import React from "react";
 
 // Define a type for your project data structure

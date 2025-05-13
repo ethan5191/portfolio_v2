@@ -2,7 +2,7 @@
 'use client';
 
 import React, {useEffect, useRef} from 'react';
-import styles from '../page.module.css';
+import styles from '../../page.module.css';
 
 // Define the Project type again (or import from a shared types file)
 interface Project {
