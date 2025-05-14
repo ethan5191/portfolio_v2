@@ -47,6 +47,32 @@
     background-color: #ffffff;
 }
 
+.toggleButton::after {
+    /* *** Create the arrow shape using borders *** */
+    content: ''; /* Essential for pseudo-elements - leaves the element visually empty */
+    display: inline-block; /* Allows us to set width, height, and margins like a box */
+    width: 0; /* Make the element itself have no dimensions */
+    height: 0;
+
+    /* *** Create the triangle shape using borders *** */
+    /* We give borders on 3 sides. The two opposite borders should be transparent, */
+    /* and the remaining border creates the base of the triangle. */
+    /* To make it point down, border-top is the base, left/right are sides. */
+    /* Adjust the border widths (left/right) and height (top) to control shape and size. */
+    border-left: 8px solid transparent; /* Adjust this value to make the arrow flatter or steeper */
+    border-right: 8px solid transparent; /* Adjust this value to match border-left */
+    border-top: 8px solid currentColor; /* Adjust this value for the size (height) of the arrow */
+
+    /* Positioning and animation */
+    margin-left: 8px; /* Space between button text and the arrow */
+    transition: transform 0.4s ease; /* Smooth animation for rotation */
+    will-change: transform;
+}
+
+.expandedButton::after {
+    transform: rotate(180deg);
+}
+
 .details {
     overflow: hidden;
     transition: max-height 0.4s ease; /* Add/Update: Transition max-height for smooth animation */

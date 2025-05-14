@@ -25,7 +25,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <strong>Technologies:</strong> {project.technologies.join(', ')}
             </p>
 
-            <button className={styles.toggleButton} onClick={toggleDetails}>
+            <button className={`${styles.toggleButton} ${expanded ? styles.expandedButton : ''}`}
+                    onClick={toggleDetails}>
                 {expanded ? 'Show Less' : 'Show More'}
             </button>
 
