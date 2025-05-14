@@ -2,8 +2,8 @@
     text-align: left;
     color: #C0C0C0;
     margin-bottom: 0;
-    scroll-margin-top: 150px;
-    min-height: calc(100vh - 100px - (2 * 20px));
+    scroll-margin-top: 70px;
+    /*min-height: calc(100vh - 100px - (2 * 20px));*/
 }
 
 .home h1 {
@@ -14,8 +14,8 @@
 
 @media (max-width: 768px) {
     .home {
-        padding-top: 100px;
-        scroll-margin-top: 100px;
+        padding-top: 70px;
+        scroll-margin-top: 70px;
         min-height: auto;
     }
 

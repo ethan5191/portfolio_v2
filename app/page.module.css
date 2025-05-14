@@ -127,51 +127,6 @@
     /* min-height: calc(100vh - 70px - 120px); */ /* Example: viewport height minus header/footer */
 }
 
-/*!* Styles for Sections (Based on previous working state before dark theme pivot) *!*/
-/*!* Using the class name that should be on your section tags in page.tsx *!*/
-/*.section {*/
-/*    !* Vertical padding inside the section content block *!*/
-/*    padding: 60px 0;*/
-/*    !* Add margin-bottom to create space *between* section backgrounds *!*/
-/*    margin-bottom: 60px; !* Adjust space between sections *!*/
-
-/*    scroll-margin-top: 70px; !* Match desktop header height for anchor links *!*/
-/*    min-height: auto; !* Allow content height by default *!*/
-
-/*    !* Apply Section Background Color from previous light theme state *!*/
-/*    !* This is the solid light gray that sits on top of the body background *!*/
-/*    background-color: #F5F8FA; !* Very Light Cool Gray *!*/
-
-/*    !* Default text color for sections (inherited from body - will be Light Gray from globals.css) *!*/
-/*    !* color: #0A3A2B; *! !* Deep Forest Green (from previous palette) *!*/
-/*}*/
-
-/*!* Style for the last section - remove margin-bottom *!*/
-/*.section:last-child {*/
-/*    margin-bottom: 0;*/
-/*}*/
-
-/*!* Styles for section headings (h2) - Assuming these are within .section *!*/
-/*.section h2 {*/
-/*    !* Keep existing styles *!*/
-/*    font-style: italic;*/
-/*    margin-top: 0;*/
-/*    margin-bottom: 20px;*/
-/*    font-size: 2.5em;*/
-/*    text-align: left;*/
-/*    !* Apply Heading Color *!*/
-/*    color: #0A3A2B; !* Deep Forest Green (Matches previous main text color) *!*/
-/*}*/
-
-/*!* Styles for paragraphs within sections - Assuming these are within .section *!*/
-/*.section p {*/
-/*    !* Keep existing styles *!*/
-/*    line-height: 1.6;*/
-/*    margin-bottom: 20px;*/
-/*    !* Text color is inherited from section/body (will be Light Gray from globals.css) *!*/
-/*    !* color: #0A3A2B; *!*/
-/*}*/
-
 /* Styles for the Footer Element (Kept as is) */
 /* Using the module class name that is on the <footer> tag */
 .footer {
@@ -325,10 +280,4 @@
         margin-left: auto; /* Keep auto for centering potential slight max-width */
         margin-right: auto; /* Keep auto */
     }
-
-    /* Adjust section scroll-margin-top to match mobile header height */
-    /*.section {*/
-    /*    scroll-margin-top: 60px; !* Match mobile header height *!*/
-    /*    padding: 40px 0; !* Adjust vertical padding *!*/
-    /*}*/
 }
