@@ -67,7 +67,7 @@ export default function RootLayout({
                 <i className="fas fa-home"></i>
             </a>
             <nav className={styles.mainNavDesktop}>
-                {/*<a href="#about">ABOUT</a>*/}
+                <a href="#about">ABOUT</a>
                 <a href="#mrows">MROWS</a>
                 <a href="#mcpdt">MCPDT</a>
                 <a href="#work">WORK</a>
@@ -81,7 +81,7 @@ export default function RootLayout({
             </button>
         </header>
         <nav className={styles.mobileNavPanel}>
-            {/*<a href="#about">ABOUT</a>*/}
+            <a href="#about">ABOUT</a>
             <a href="#mrows">MROWS</a>
             <a href="#mcpdt">MCPDT</a>
             <a href="#work">WORK</a>
