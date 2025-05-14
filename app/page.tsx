@@ -5,7 +5,6 @@ import AboutSection from "../app/components/aboutMe/AboutSection";
 import MrowsSection from "../app/components/mrows/MrowsSection";
 import McpdtSection from "../app/components/mcpdt/McpdtSection";
 import Projects2Section from "@/app/components/projects2/Projects2Section";
-import ProjectsSection from "@/app/components/projects/ProjectsSection";
 import SkillsSection from "@/app/components/skills/SkillsSection";
 import ContactSection from "@/app/components/contact/ContactSection";
 
