@@ -12,6 +12,10 @@
     font-family: "Monotype Corsiva", cursive;
 }
 
+.home p {
+    color: #ffffff;
+}
+
 @media (max-width: 768px) {
     .home {
         padding-top: 70px;
