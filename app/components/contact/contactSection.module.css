@@ -31,16 +31,16 @@
 }
 
 .contactMethods a {
-    color: inherit;
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
     /* Add hover effect - can reuse global link hover or define here */
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    color: #00A3B9;
 }
 
 .contactMethods a:hover {
-    color: #ffffff;
+    color: #C0C0C0;
 }
 
 @media (max-width: 768px) {
