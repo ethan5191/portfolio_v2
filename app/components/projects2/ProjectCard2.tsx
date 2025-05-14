@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import styles from './projects2Section.module.css';
 import Project from "./project";
 
@@ -8,7 +8,7 @@ interface ProjectCardProps {
     project: Project;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
     // *** Each instance of ProjectCard gets its own state and ref ***
     const [expanded, setExpanded] = useState(false);
     const detailsRef = useRef<HTMLDivElement>(null);
@@ -35,7 +35,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             >
                 <div className={styles.detailsInner}>
                     <p><strong>Role:</strong> {project.role}</p>
-                    <p><strong>Technical Highlights:</strong> {project.technicalDetails}</p>
+                    <p><strong>Technical Highlights:</strong></p>
+                    <ul>
+                        {project.technicalDetails.map((detail) => (
+                            <li key={detail}>
+                                {detail}
+                            </li>
+                        ))}
+                    </ul>
                     <p><strong>Impact:</strong> {project.impact}</p>
                 </div>
             </div>

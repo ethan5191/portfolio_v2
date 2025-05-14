@@ -4,7 +4,7 @@ export interface Project {
     description: string; // Brief
     role: string; // Full detail
     technologies: string[];
-    technicalDetails: string; // Full detail
+    technicalDetails: string[]; // Full detail
     impact: string; // Full detail
 }
 
