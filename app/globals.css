@@ -2,8 +2,8 @@
 
 body {
     /* Use background-image for the gradient */
-    background-image: linear-gradient(to bottom right, #4f4f4f, #000000);
-
+    /*background-image: linear-gradient(to bottom, #000000, #C0C0C0 98%);*/
+    background-color: #777777;
     /* Optional: ensure the gradient covers the entire viewport */
     min-height: 100vh;
     margin: 0;
