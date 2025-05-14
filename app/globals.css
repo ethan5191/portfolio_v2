@@ -1,158 +1,18 @@
 @import "tailwindcss";
 
 body {
-  /* Use background-image for the gradient */
-  background-image: linear-gradient(to bottom right, #4f4f4f, #000000);
+    /* Use background-image for the gradient */
+    background-image: linear-gradient(to bottom right, #4f4f4f, #000000);
 
-  /* Optional: ensure the gradient covers the entire viewport */
-  min-height: 100vh;
-  margin: 0;
+    /* Optional: ensure the gradient covers the entire viewport */
+    min-height: 100vh;
+    margin: 0;
 
-  /* Optional: keep the background fixed if the user scrolls */
-  background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
+    /* Optional: keep the background fixed if the user scrolls */
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* *** Styles for the HEADER element itself (the fixed bar) *** */
-/* Moving fixed positioning and background here from nav */
-header {
-  /* Positioning for the fixed bar at the top */
-  position: fixed;
-  top: 0;
-  left: 0; /* Ensure it spans from the left edge */
-  z-index: 1000; /* Ensure it stays above other content */
-  width: 100%;
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-
-  /* Solid black background */
-  background-color: #000000;
-
-  /* Bottom border to separate it */
-  border-bottom: 1px solid #C0C0C0; /* Adjust color/thickness */
-
-  /* Flexbox to arrange its direct children (the Home Link and the Nav) */
-  display: flex;
-  flex-direction: row; /* Arrange children side-by-side horizontally */
-  align-items: center; /* Vertically center direct children (Home Link and Nav) */
-  justify-content: space-between; /* Push Home Link to one side, Nav to the other */
-
-  /* Add padding to the header itself to give it height and space around content */
-  padding: 10px 20px; /* Adjust as needed */
-
-  /* Set a default text color for all content inside the header */
-  color: #C0C0C0;
-}
-
-header a {
-  border: 1px solid transparent;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-/* *** Styles for the NAV element (content *inside* the header) *** */
-/* Remove positioning, background, and bottom border as they are on header now */
-header nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 5px;
-}
-
-header nav div {
-  display: flex; /* Use flexbox for internal layout */
-  gap: 2em; /* Space between email, linkedin, phone */
-  align-items: center;
-}
-
-header nav div a {
-  color: inherit; /* Should inherit color from the parent nav/header */
-  text-decoration: none; /* Remove default underline */
-
-  /* Add a smooth transition for the color change */
-  transition: color 0.3s ease;
-}
-
-header nav div a:hover {
-  color: #000000;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: #C0C0C0;
-}
-
-.header-home-link {
-  text-decoration: none; /* Remove default underline */
-  padding: 2px 20px; /* Add some space around the link */
-  transition: color 0.3s ease;
-}
-
-.header-home-link i {
-  font-size: 1.25em;
-}
-
-.header-home-link:hover {
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 7px;
-}
-
-.linkedin-link i {
-  font-size: 1.25em;
-  padding-top: 2px;
-}
-
-.phoneNum i {
-  font-size: .75em;
-  padding-left: 5px;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 0;
-    height: auto;
-    width: 100%;
-  }
-
-  header .header-home-link {
-    margin-bottom: 10px;
-    margin-right: 0;
-    align-self: flex-start;
-  }
-
-  header nav {
-    width: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0 20px;
-  }
-
-  header nav div {
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-start;
-  }
-
-  header nav div .separator {
-    display: none;
-  }
-
-  header nav div a i,
-  .header-home-link i,
-  header nav div span i {
-    margin-right: 5px;
-    /* Ensure vertical alignment is good */
-    vertical-align: middle;
-  }
-
-  header nav div a[href^="mailto:"] {
-    font-size: 1em;
-    /* Allow the email address to break onto multiple lines if needed */
-    word-break: break-word;
-    text-align: left;
-  }
-
-  header nav div span {
-    text-align: left;
-  }
-}
+/*@media (max-width: 768px) {*/
+/*    */
+/*}*/
