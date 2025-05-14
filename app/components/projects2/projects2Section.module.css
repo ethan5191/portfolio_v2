@@ -1,0 +1,80 @@
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    color: #ffffff;
+    align-items: start;
+}
+
+/* Project card styling */
+.projectCard {
+    border: 1px solid #C0C0C0; /* silver border */
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+    min-height: 360px;
+}
+
+/* Card hover effect */
+.projectCard:hover {
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Header styling */
+.projectCard h3 {
+    color: #C0C0C0;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Button styling */
+.toggleButton {
+    margin-top: 1rem;
+    background-color: #C0C0C0;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+    background-color: #ffffff;
+}
+
+.details {
+    overflow: hidden;
+    transition: max-height 0.4s ease; /* Add/Update: Transition max-height for smooth animation */
+    max-height: 0; /* Add/Update: Hide content by default using max-height */
+    padding: 0; /* Add: Ensure no padding affecting closed height */
+    will-change: max-height; /* Add: Optimize for max-height transition */
+}
+
+/* *** Expandable section styles (Open State)
+/* This class is added/removed by the ProjectCard component's state */
+.detailsExpanded {
+    /* This allows the transition to work smoothly */
+    max-height: 1000px; /* Adjust value if your content is very tall, or use 'none' for instant */
+    /* Alternatively, for instant expansion, use max-height: none; without transition */
+}
+
+.detailsInner {
+    padding-top: 1rem;
+    color: #C0C0C0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .projectGrid {
+        grid-template-columns: repeat(auto-fit, minmax(calc(100vw/2), 1fr));
+    }
+
+    .projectCard {
+        min-height: auto;
+    }
+}
