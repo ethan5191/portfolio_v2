@@ -5,82 +5,170 @@
 }
 
 .toolCirclesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+    /* Remove Flexbox properties that prevent overlap */
+    display: block; /* Change from flex */
+    flex-wrap: wrap; /* Remove */
+    gap: 30px; /* Remove */
+    justify-content: center; /* Remove */
+    align-items: center; /* Remove */
+
+    position: relative; /* Needed so absolute children position relative to this container */
     margin-top: 40px;
+    /* Define a height or min-height that is large enough to contain all absolutely positioned circles */
+    /* Adjust this value based on how far down your lowest circle is positioned */
+    min-height: 800px; /* Example min-height - Adjust as needed */
+    width: 100%; /* Allow container to take full width */
+    /* If you want the container itself centered and not span full width: */
+    /* max-width: 1200px; */
+    /* margin-left: auto; margin-right: auto; */
 }
 
-.toolGroupCircle {
+
+/* *** Styles for the Tool Group Circle Container (Applied to all circles) *** */
+.toolGroupCircle { /* Style the container div into a circle */
     width: 225px;
     height: 225px;
     border-radius: 50%;
     border: 1px solid #C0C0C0;
     background-color: rgba(9, 46, 36, 0.8);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
+    /* *** Position circles absolutely within their container (.toolCirclesContainer) *** */
+    position: absolute; /* Change from static or relative */
+    /* Remove margin as absolute positioning uses top/left */
     margin: 0;
     overflow: hidden;
     padding-top: 2px;
+    /* Add transitions for smooth hover effects */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, z-index 0s ease 0.3s; /* z-index transition needs a delay to work correctly when moving away */
+    z-index: 0; /* Default stacking order */
 }
 
-.groupHeader {
+/* *** Add Modifier Classes for Positioning Each Circle *** */
+/* These classes will set the top and left position for each specific circle */
+/* Adjust these top/left values to create your desired overlapped layout */
+.languagesCircle { height: 300px; width: 300px; top: 0; left: 485px; z-index: 1; } /* Programming Languages */
+.frameworksCircle { top: 200px; left: 865px; z-index: 4; } /* Frameworks */
+.idesCircle { top: 30px; left: 745px; z-index: 2; } /* IDEs (Highest z-index in this cluster) */
 
-    position: absolute;
+.specializedCircle { top: 45px; left: 940px; z-index: 3; } /* Specialized Dev Tools */
+.agileCircle { top: 10px; left: 90px; z-index: 1; }
+.pmCircle { top: 200px; left: 0; z-index: 2; } /* Project Management */
+
+.securityCircle { top: 30px; left: 290px; z-index: 2; } /* Security Tool */
+.vcCircle { top: 210px; left: 550px; z-index: 5; } /* Version Control */
+.codeHostingCircle { top: 210px; left: 360px; z-index: 5; } /* Code Hosting */
+.appServerCircle { top: 220px; left: 200px; z-index: 4; } /* Application Server */
+.buildCircle { top: 165px; left: 700px; z-index: 5; } /* Build Tool */
+
+/* *** Hover Effect for Circle Focus *** */
+/* Apply styles when a tool group circle is hovered */
+.toolGroupCircle:hover {
+    z-index: 10; /* Bring the hovered circle to the front */
+    border-color: #00A3B9; /* Highlight border color (Teal Accent) */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+    transform: scale(1.08); /* Slightly enlarge the circle on hover */
+    /* Adjust transition for z-index when hovering */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, z-index 0s ease 0s; /* z-index changes immediately when hovered */
+}
+
+
+/* Styles for the group header (keep this as is) */
+.groupHeader {
+    position: absolute; /* Needs to be absolute to position within the circle */
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-
     color: #C0C0C0;
     font-size: 1.2em;
     font-weight: bold;
-    z-index: 1;
+    z-index: 1; /* Ensure header is above tool items within the circle */
     text-align: center;
     white-space: nowrap;
 }
 
+/* Styles for individual tool items (keep this as is) */
 .toolItem {
-    position: absolute;
-    top: 80px;
-    left: 50px;
-
+    position: absolute; /* Needs to be absolute for random positioning within the circle */
+    /* top and left will be set by JS */
     color: #ffffff;
     font-size: 0.9em;
     font-weight: normal;
-    z-index: 0;
+    z-index: 0; /* Below header */
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
+/* Style for the icon within a tool item (keep this as is) */
 .toolItem i {
     color: #00A3B9;
     font-size: 1em;
 }
 
+/* *** Mobile Adjustments - IMPORTANT! *** */
 @media (max-width: 768px) {
+    /* Revert container to a non-absolute layout like Flexbox (column) on mobile */
     .toolCirclesContainer {
-        gap: 20px;
+        display: flex; /* Use flexbox */
+        flex-direction: row; /* Arrange circles in rows (they will wrap) */
+        flex-wrap: wrap; /* Allow circles to wrap to the next row if they don't fit */
+        justify-content: center; /* Center rows horizontally within the container */
+        align-items: center; /* Center items within their rows vertically */
+        position: static; /* Remove absolute positioning context from container */
+        min-height: auto; /* Remove fixed desktop min-height */
+        gap: 20px; /* Gap between circles */
+        margin-top: 20px; /* Adjust top margin */
+        padding-left: 10px; /* Add some horizontal padding */
+        padding-right: 10px;
+        box-sizing: border-box; /* Include padding in element's total width/height */
     }
 
+    /* Individual circles: Static in the flex flow, BUT keep position: relative */
     .toolGroupCircle {
-        width: 180px;
-        height: 180px;
-        margin: 0;
+        /* Set a fixed width and height for the circles on mobile */
+        /* Choose a width that allows two circles to fit side-by-side within the 768px range, */
+        /* considering the gap and padding. A width of 150px with 20px gap and 10px padding */
+        /* results in (150*2) + (1*20) + (2*10) = 300 + 20 + 20 = 340px needed horizontally for 2 circles. */
+        /* This fits well within 768px, and even within many screens narrower than that. */
+        width: 150px; /* Adjust this value if you want them bigger or smaller */
+        height: 150px;
+        margin: 0; /* Remove auto margin from single column view if it was set */
+        position: relative; /* <<< CRITICAL: Keep relative for item positioning within the circle */
+        top: auto; /* Ensure these override desktop absolute positions */
+        left: auto; /* Ensure these override desktop absolute positions */
+        transform: none !important; /* Override potential hover transform */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Keep default shadow */
+        z-index: auto; /* Revert hover z-index effect */
+        transition: none !important; /* Disable transitions on mobile */
+        padding-top: initial; /* Revert padding-top if needed */
     }
 
+    /* Modifier classes: Ensure they override desktop absolute positioning ONLY */
+    /* They should NOT interfere with the position: relative on .toolGroupCircle */
+    .vcCircle, .codeHostingCircle, .idesCircle, .specializedCircle,
+    .buildCircle, .pmCircle, .appServerCircle, .securityCircle,
+    .languagesCircle, .frameworksCircle, .agileCircle {
+        top: auto !important; /* Override desktop absolute top */
+        left: auto !important; /* Override desktop absolute left */
+        /*position: static !important; !* <<< Explicitly set to static in Flexbox flow *!*/
+        z-index: auto !important; /* Revert z-index from desktop */
+    }
+
+    /* Header and Tool items: Adjust font sizes for smaller circles */
     .groupHeader {
-        font-size: 1.1em;
-        top: 15px;
+        font-size: 0.9em; /* Smaller header font size */
+        top: 8px; /* Adjust header position within the smaller circle */
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: normal; /* Allow text to wrap */
     }
 
     .toolItem {
-        font-size: 0.8em;
+        font-size: 0.7em; /* Smaller tool item text font size */
+        position: absolute; /* Keep absolute relative to .toolGroupCircle */
     }
 
     .toolItem i {
-        font-size: 0.9em;
+        font-size: 0.75em; /* Smaller icon size */
     }
 }

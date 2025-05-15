@@ -1,29 +1,80 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import styles from './skillsSection2.module.css';
 import sectionStyles from "@/app/components/shared/sectionContent.module.css";
 
 import ToolGroupCircle from './ToolGroupCircle';
 
-interface Tool { name: string; iconClass?: string; }
+interface Tool {
+    name: string;
+    iconClass?: string;
+}
+
 interface ToolGroupData {
     header: string[];
     tools: Tool[];
+    modifierClassName?: string;
 }
 
 const toolGroupsData: ToolGroupData[] = [
-    { header: ['Programming', 'Languages'], tools: [ { name: 'Java', iconClass: 'fab fa-java' }, { name: 'SQL', iconClass: 'fas fa-database' }, { name: 'JavaScript', iconClass: 'fab fa-js' }, { name: 'MySQL', iconClass: 'fas fa-database'}], },
-    { header: ['Frameworks'], tools: [ { name: 'Spring', iconClass: 'fas fa-leaf' }, { name: 'Struts 1', iconClass: 'fas fa-cog' }, { name: 'Hibernate/JPA', iconClass: 'fas fa-database' }, { name: 'SOAP', iconClass: 'fas fa-code'}, { name: 'jQuery', iconClass: 'fas fa-code'}, { name: 'React', iconClass: 'fab fa-react'}], },
-    { header: ['IDEs'], tools: [ { name: 'IntelliJ IDEA', iconClass: 'fas fa-terminal' }, { name: 'WebStorm', iconClass: 'fas fa-terminal' }, ], },
-    { header: ['Version Control'], tools: [ { name: 'Git', iconClass: 'fab fa-git' }, { name: 'Subversion', iconClass: 'fas fa-code-branch' }, ] },
-    { header: ['Code Hosting'], tools: [ { name: 'GitLab', iconClass: 'fab fa-gitlab' }, { name: 'BitBucket', iconClass: 'fab fa-bitbucket' }, { name: 'GitHub', iconClass: 'fab fa-gitlab' }], },
-    { header: ['Specialized', 'Dev Tools'], tools: [ { name: 'JasperSoft Studio', iconClass: 'fas fa-file-code' }, { name: 'Pl/SQL Developer', iconClass: 'fas fa-database' }, { name: 'Soap UI', iconClass: 'fas fa-vial' }, ], },
-    { header: ['Build Tool'], tools: [ { name: 'Maven', iconClass: 'fas fa-hammer' }], },
-    { header: ['Project', 'Management'], tools: [ { name: 'Jira', iconClass: 'fab fa-jira' }], },
-    { header: ['App Server'], tools: [ { name: 'WebLogic', iconClass: 'fas fa-server' }], },
-    { header: ['Security Tool'], tools: [ { name: 'Fortify', iconClass: 'fas fa-shield-alt' }], },
-    { header: ['Methodologies'], tools: [ { name: 'Agile', iconClass: 'fas fa-tasks' }, { name: 'Scrum', iconClass: 'fas fa-users' }], }
+    {
+        header: ['Programming', 'Languages'],
+        tools: [{name: 'Java', iconClass: 'fab fa-java'}, {
+            name: 'SQL',
+            iconClass: 'fas fa-database'
+        }, {name: 'JavaScript', iconClass: 'fab fa-js'}, {name: 'MySQL', iconClass: 'fas fa-database'}],
+        modifierClassName: 'languagesCircle',
+    },
+    {
+        header: ['Frameworks'],
+        tools: [{name: 'Spring', iconClass: 'fas fa-leaf'}, {
+            name: 'Struts 1',
+            iconClass: 'fas fa-cog'
+        }, {name: 'Hibernate/JPA', iconClass: 'fas fa-database'}, {
+            name: 'SOAP',
+            iconClass: 'fas fa-code'
+        }, {name: 'jQuery', iconClass: 'fas fa-code'}, {name: 'React', iconClass: 'fab fa-react'}],
+        modifierClassName: 'frameworksCircle',
+    },
+    {
+        header: ['IDEs'],
+        tools: [{name: 'IntelliJ IDEA', iconClass: 'fas fa-terminal'}, {
+            name: 'WebStorm',
+            iconClass: 'fas fa-terminal'
+        },],
+        modifierClassName: 'idesCircle',
+    },
+    {
+        header: ['Version Control'],
+        tools: [{name: 'Git', iconClass: 'fab fa-git'}, {name: 'Subversion', iconClass: 'fas fa-code-branch'},],
+        modifierClassName: 'vcCircle',
+    },
+    {
+        header: ['Code Hosting'],
+        tools: [{name: 'GitLab', iconClass: 'fab fa-gitlab'}, {
+            name: 'BitBucket',
+            iconClass: 'fab fa-bitbucket'
+        }, {name: 'GitHub', iconClass: 'fab fa-gitlab'}],
+        modifierClassName: 'codeHostingCircle',
+    },
+    {
+        header: ['Specialized', 'Dev Tools'],
+        tools: [{name: 'JasperSoft Studio', iconClass: 'fas fa-file-code'}, {
+            name: 'Pl/SQL Developer',
+            iconClass: 'fas fa-database'
+        }, {name: 'Soap UI', iconClass: 'fas fa-vial'},],
+        modifierClassName: 'specializedCircle',
+    },
+    {header: ['Build Tool'], tools: [{name: 'Maven', iconClass: 'fas fa-hammer'}], modifierClassName: 'buildCircle',},
+    {header: ['Project', 'Management'], tools: [{name: 'Jira', iconClass: 'fab fa-jira'}], modifierClassName: 'pmCircle',},
+    {header: ['App Server'], tools: [{name: 'WebLogic', iconClass: 'fas fa-server'}], modifierClassName: 'appServerCircle',},
+    {header: ['Security Tool'], tools: [{name: 'Fortify', iconClass: 'fas fa-shield-alt'}], modifierClassName: 'securityCircle',},
+    {
+        header: ['Methodologies'],
+        tools: [{name: 'Agile', iconClass: 'fas fa-tasks'}, {name: 'Scrum', iconClass: 'fas fa-users'}],
+        modifierClassName: 'agileCircle',
+    }
 ];
 
 const SkillsSection = () => {
@@ -32,7 +83,12 @@ const SkillsSection = () => {
     useEffect(() => {
         console.log("useEffect running. circlesContainerRef.current:", circlesContainerRef.current);
 
-        const checkCollision = (rect1: { top: number; left: number; right: number; bottom: number; }, rect2: { top: number; left: number; right: number; bottom: number; }) => {
+        const checkCollision = (rect1: { top: number; left: number; right: number; bottom: number; }, rect2: {
+            top: number;
+            left: number;
+            right: number;
+            bottom: number;
+        }) => {
 
             return !(
                 rect1.right < rect2.left ||
@@ -103,7 +159,7 @@ const SkillsSection = () => {
                             Math.pow(potentialItemLeft + itemWidth / 2 - circleCenterX, 2) +
                             Math.pow(potentialItemTop + itemHeight / 2 - circleCenterY, 2)
                         );
-                        const itemHalfDiagonal = Math.sqrt(Math.pow(itemWidth/2, 2) + Math.pow(itemHeight/2, 2));
+                        const itemHalfDiagonal = Math.sqrt(Math.pow(itemWidth / 2, 2) + Math.pow(itemHeight / 2, 2));
                         const isInsideCircle = (distFromCircleCenterToItemCenter + itemHalfDiagonal) <= circleRadius;
                         let hasCollision = false;
                         const potentialItemRect = {
@@ -148,7 +204,9 @@ const SkillsSection = () => {
             });
         };
         const animationFrameId = requestAnimationFrame(setRandomPositions);
-        const handleResize = () => { requestAnimationFrame(setRandomPositions); };
+        const handleResize = () => {
+            requestAnimationFrame(setRandomPositions);
+        };
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -167,6 +225,7 @@ const SkillsSection = () => {
                         key={group.header.join(' ')}
                         headerText={group.header}
                         tools={group.tools}
+                        modifierClassName={group.modifierClassName}
                     />
                 ))}
             </div>

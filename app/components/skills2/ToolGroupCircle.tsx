@@ -9,12 +9,13 @@ interface Tool {
 interface ToolGroupCircleProps {
     headerText: string[];
     tools: Tool[];
+    modifierClassName?: string;
 }
 
-const ToolGroupCircle: React.FC<ToolGroupCircleProps> = ({headerText, tools /* , modifierClassName */}) => {
+const ToolGroupCircle: React.FC<ToolGroupCircleProps> = ({headerText, tools , modifierClassName}) => {
 
     return (
-        <div className={styles.toolGroupCircle}>
+        <div className={`${styles.toolGroupCircle} ${modifierClassName ? styles[modifierClassName] : ''}`}>
             <div className={styles.groupHeader}>
                 <h3>
                     {headerText.map((line, index) => (
