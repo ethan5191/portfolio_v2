@@ -6,7 +6,7 @@ import {Analytics} from "@vercel/analytics/next"
 import "./globals.css";
 import styles from "@/app/page.module.css";
 import React, {useEffect} from 'react';
-
+import ScrollIndicator from "@/app/components/scroll/ScrollIndicator";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -92,6 +92,7 @@ export default function RootLayout({
             {children}
         </main>
         <Analytics/>
+        <ScrollIndicator/>
         <footer className={styles.footer}>
             <blockquote className={styles.footerQuote}>
                 "The winner ain't the one with the fastest car, it's the one who refuses to lose."
