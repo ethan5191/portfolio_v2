@@ -1,0 +1,86 @@
+.skillsSectionContainer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    scroll-margin-top: 70px;
+}
+
+.toolCirclesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.toolGroupCircle {
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    border: 1px solid #C0C0C0;
+    background-color: rgba(9, 46, 36, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+}
+
+.groupHeader {
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #C0C0C0;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.toolItem {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: normal;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toolItem i {
+    color: #00A3B9;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .toolCirclesContainer {
+        gap: 20px;
+    }
+
+    .toolGroupCircle {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+    }
+
+    .groupHeader {
+        font-size: 1.1em;
+        top: 15px;
+    }
+
+    .toolItem {
+        font-size: 0.8em;
+    }
+
+    .toolItem i {
+        font-size: 0.9em;
+    }
+}
