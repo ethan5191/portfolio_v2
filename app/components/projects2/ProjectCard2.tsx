@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                  className={`${styles.details} ${expanded ? styles.detailsExpanded : ''}`}
             >
                 <div className={styles.detailsInner}>
-                    <p><strong>Role:</strong> {project.role}</p>
+                    {/*<p><strong>Role:</strong> {project.role}</p>*/}
                     <p><strong>Technical Highlights:</strong></p>
                     <ul>
                         {project.technicalDetails.map((detail) => (
