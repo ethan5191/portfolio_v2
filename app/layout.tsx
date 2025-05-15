@@ -70,7 +70,7 @@ export default function RootLayout({
                 <a href="#about">ABOUT</a>
                 <a href="#mrows">MROWS</a>
                 <a href="#mcpdt">MCPDT</a>
-                <a href="#work">WORK</a>
+                <a href="#work">HIGHLIGHTS</a>
                 <a href="#skills">SKILLS</a>
                 <a href="#contact">CONTACT</a>
             </nav>
@@ -84,7 +84,7 @@ export default function RootLayout({
             <a href="#about">ABOUT</a>
             <a href="#mrows">MROWS</a>
             <a href="#mcpdt">MCPDT</a>
-            <a href="#work">WORK</a>
+            <a href="#work">HIGHLIGHTS</a>
             <a href="#skills">SKILLS</a>
             <a href="#contact">CONTACT</a>
         </nav>

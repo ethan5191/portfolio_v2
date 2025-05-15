@@ -81,7 +81,7 @@ const myProjects = [
 const Projects2Section = () => {
     return (
         <section id="work" className={sectionStyles.section}>
-            <h2>My Work / Projects</h2>
+            <h2>Notable Development Work</h2>
             <div className={styles.projectGrid}>
                 {myProjects.map(project => (
                     <ProjectCard key={project.id} project={project}/>
