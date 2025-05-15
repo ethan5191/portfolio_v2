@@ -13,7 +13,7 @@
     border-radius: 5px;
     transition: box-shadow 0.2s ease;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
-    min-height: 390px;
+    min-height: 362px;
 }
 
 /* Card hover effect */
