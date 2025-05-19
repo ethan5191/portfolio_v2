@@ -15,7 +15,7 @@ export default function ContactSection() {
                                         target="_blank"
                                         rel="noopener noreferrer">LinkedIn</a>
                     </p>
-                    <p><i className="fas fa-file-pdf"></i> <a href="/VanderburEthan_2025.pdf" target="_blank"
+                    <p><i className="fas fa-file-pdf"></i> <a href="/VanderburEthan_2025_V3.pdf" target="_blank"
                                                               rel="noopener noreferrer">
                         Download my Resume PDF</a></p>
                 </div>
