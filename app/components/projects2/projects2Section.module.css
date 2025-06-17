@@ -1,0 +1,122 @@
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    color: #ffffff;
+    align-items: start;
+}
+
+/* Project card styling */
+.projectCard {
+    border: 1px solid #C0C0C0; /* silver border */
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+    min-height: 362px;
+}
+
+/* Card hover effect */
+.projectCard:hover {
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Header styling */
+.projectCard h3 {
+    color: #C0C0C0;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Button styling */
+.toggleButton {
+    margin-top: 1rem;
+    background-color: #C0C0C0;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+    background-color: #ffffff;
+}
+
+.toggleButton::after {
+    /* *** Create the arrow shape using borders *** */
+    content: ''; /* Essential for pseudo-elements - leaves the element visually empty */
+    display: inline-block; /* Allows us to set width, height, and margins like a box */
+    width: 0; /* Make the element itself have no dimensions */
+    height: 0;
+
+    /* *** Create the triangle shape using borders *** */
+    /* We give borders on 3 sides. The two opposite borders should be transparent, */
+    /* and the remaining border creates the base of the triangle. */
+    /* To make it point down, border-top is the base, left/right are sides. */
+    /* Adjust the border widths (left/right) and height (top) to control shape and size. */
+    border-left: 8px solid transparent; /* Adjust this value to make the arrow flatter or steeper */
+    border-right: 8px solid transparent; /* Adjust this value to match border-left */
+    border-top: 8px solid currentColor; /* Adjust this value for the size (height) of the arrow */
+
+    /* Positioning and animation */
+    margin-left: 8px; /* Space between button text and the arrow */
+    transition: transform 0.4s ease; /* Smooth animation for rotation */
+    will-change: transform;
+}
+
+.expandedButton::after {
+    transform: rotate(180deg);
+}
+
+.details {
+    overflow: hidden;
+    transition: max-height 0.4s ease; /* Add/Update: Transition max-height for smooth animation */
+    max-height: 0; /* Add/Update: Hide content by default using max-height */
+    padding: 0; /* Add: Ensure no padding affecting closed height */
+    will-change: max-height; /* Add: Optimize for max-height transition */
+}
+
+/* *** Expandable section styles (Open State)
+/* This class is added/removed by the ProjectCard component's state */
+.detailsExpanded {
+    /* This allows the transition to work smoothly */
+    max-height: 1000px; /* Adjust value if your content is very tall, or use 'none' for instant */
+    /* Alternatively, for instant expansion, use max-height: none; without transition */
+}
+
+.detailsInner {
+    padding-top: 1rem;
+    color: #C0C0C0;
+    font-size: 0.95rem;
+}
+
+.detailsInner ul {
+    list-style: disc;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    padding-left: 20px;
+}
+
+.detailsInner li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.detailsInner li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .projectGrid {
+        grid-template-columns: repeat(auto-fit, minmax(calc(100vw/2), 1fr));
+    }
+
+    .projectCard {
+        min-height: auto;
+    }
+}

@@ -6,30 +6,23 @@ export default function MrowsSection() {
     return (<section id="mrows" className={sectionStyles.section}>
         <h2>Marine Resource Order Writing System (MROWS)</h2>
         <div className={`${sectionStyles.sectionContentWrapper} ${sectionStyles.infoContent}`}>
-            <p>MROWS is a monolith Java 8 web application, its main purposes is for the creation and
-                certification of orders for reserve Marines.</p>
+            <p>MROWS is a monolithic Java 8 web application used to create and certify orders for reserve Marines.</p>
             <h4>Related Projects:</h4>
             <ul className={accomplishments.accomplishmentsList}>
-                <li><span className={accomplishments.accomplishmentTitle}>HP Fortify findings:</span>
-                    <span className={accomplishments.accomplishmentDetails}>Remediated numerous findings to improve
-                                    application security.</span>
+                <li><span className={accomplishments.accomplishmentTitle}>Security Remediation:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Resolved multiple HP Fortify findings to strengthen application security.</span>
                 </li>
-                <li><span className={accomplishments.accomplishmentTitle}>Struts 1 to Spring 5:</span>
-                    <span className={accomplishments.accomplishmentDetails}>Led the migration from Struts 1 to
-                                    Spring 5 to improve performance and application security.</span>
+                <li><span className={accomplishments.accomplishmentTitle}>Framework Migration:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Led migration from Struts 1 to Spring 5, improving performance and maintainability.</span>
                 </li>
-                <li><span className={accomplishments.accomplishmentTitle}>Permissions system refactor:</span>
-                    <span className={accomplishments.accomplishmentDetails}>Changed the static Java based permissions system into a
-                                    database driven system, allowing for easier and quicker permissions updates.</span>
+                <li><span className={accomplishments.accomplishmentTitle}>Permissions Refactor:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Rebuilt static permission logic into a dynamic, database-driven system for easier management.</span>
                 </li>
-                <li><span className={accomplishments.accomplishmentTitle}>jQuery inbox migration:</span>
-                    <span className={accomplishments.accomplishmentDetails}>Led the migration effort to update all inboxes to utilize the
-                                    JavaScript jQuery framework to improve application performance and reduce duplicate
-                                    code.</span>
+                <li><span className={accomplishments.accomplishmentTitle}>Inbox Optimization:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Upgraded all inbox components to jQuery for better performance and reduced code duplication..</span>
                 </li>
-                <li><span className={accomplishments.accomplishmentTitle}>Report migration:</span>
-                    <span className={accomplishments.accomplishmentDetails}>Led the migration of our reports from iReport 1.2 to JasperSoft
-                                    Studio improving our report compile times.</span>
+                <li><span className={accomplishments.accomplishmentTitle}>Reporting Upgrade:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Migrated legacy reports from iReport 1.2 to JasperSoft Studio, cutting compile times and improving reliability.</span>
                 </li>
             </ul>
         </div>

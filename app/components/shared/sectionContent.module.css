@@ -1,13 +1,12 @@
 .section {
-    padding: 60px 0; /* Add vertical space between sections */
-    color: #C0C0C0;
+    padding: 80px 0; /* Add vertical space between sections */
+    color: #ffffff;
     margin-bottom: 0; /* Remove default margin */
-    scroll-margin-top: 40px;
     min-height: calc(100vh);
 }
 
 .section h2 {
-    color: #000000;
+    color: #ffffff;
     font-style: italic;
     margin-top: 0;
     font-size: 2.5em;
@@ -32,23 +31,24 @@
 }
 
 .sectionContentWrapper {
-    max-width: 75%;
+    max-width: 85%;
 }
 
 .sectionContentWrapper a {
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
+    color: #00A3B9;
 }
 
 .sectionContentWrapper a:hover {
-    color: #ffffff;
+    color: #C0C0C0;
 }
 
 @media (max-width: 768px) {
     /* Adjust section padding if needed on mobile */
     .section {
-        padding: 40px 0;
+        padding: 65px 0;
     }
 
     /* Adjust section heading size on mobile */
