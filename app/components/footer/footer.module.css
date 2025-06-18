@@ -1,0 +1,27 @@
+.footer {
+    background-color: var(--color-background-header);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-xs) var(--spacing-xl);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: background-color var(--transition-speed-normal) var(--transition-easing-default),
+    color var(--transition-speed-normal) var(--transition-easing-default);
+}
+
+.footerQuote {
+    font-style: italic;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+}
+
+.footerQuote cite {
+    display: block;
+    font-style: normal;
+    margin-top: var(--spacing-xs);
+    font-size: 0.9em;
+    color: var(--color-text-secondary);
+}

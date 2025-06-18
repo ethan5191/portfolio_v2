@@ -1,0 +1,44 @@
+:root {
+    --color-accent-primary: #2C7B47;
+    --color-accent-hover: #66B08A;
+
+    --color-background-header: #FFFFFF;
+    --color-text-primary: #212529;
+    --color-text-secondary: #495057;
+    --color-text-subtle: #ADB5BD;
+    --color-border-default: #DEE2E6;
+    --color-shadow-default: rgba(0, 0, 0, 0.1);
+    --color-background-secondary: #F8F9FA;
+
+    --font-family-name: "Monotype Corsiva", cursive;
+    --font-family-body: "Inter", sans-serif; /* Or Roboto, Open Sans, etc. */
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 1.75rem;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+
+    --transition-speed-fast: 0.2s;
+    --transition-speed-normal: 0.3s;
+    --transition-easing-default: ease-in-out;
+}
+
+body.dark-mode {
+    --color-accent-primary: #48BB78;
+    --color-accent-hover: #68D391;
+    --color-background-header: #1A202C;
+    --color-text-primary: #E2E8F0;
+    --color-text-secondary: #A0AEC0;
+    --color-text-subtle: #718096;
+    --color-border-default: #4A5568;
+    --color-background-secondary: #2D3748;
+    --color-background-secondary: rgba(0, 0, 0, 0.3);
+}
