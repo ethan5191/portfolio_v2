@@ -33,7 +33,10 @@
     --header-height: 60px;
     --footer-height: 50px;
 
-    --color-background-mobile-nav: rgba(44, 123, 71, .90);
+    --color-background-hamburger-line: #2C7B47;
+    --color-background-mobile-nav: rgba(72, 187, 120, .90);
+    --color-text-mobile-nav: #212529;
+    --color-border-mobile-nav: #212529;
 }
 
 body.dark-mode {
@@ -46,5 +49,8 @@ body.dark-mode {
     --color-border-default: #4A5568;
     --color-background-secondary: #2D3748;
     --color-background-secondary: rgba(0, 0, 0, 0.3);
-    --color-background-mobile-nav: rgba(72, 187, 120, .90);
+    --color-background-hamburger-line: #48BB78;
+    --color-background-mobile-nav: rgba(44, 123, 71, .90);
+    --color-text-mobile-nav: #C0C0C0;
+    --color-border-mobile-nav: #C0C0C0;
 }

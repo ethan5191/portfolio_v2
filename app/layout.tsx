@@ -4,11 +4,16 @@
 import {Geist, Geist_Mono} from "next/font/google";
 import {Analytics} from "@vercel/analytics/next"
 import "./globals.css";
-import React, {useEffect} from 'react';
+import React from 'react';
 import ScrollIndicator from "@/app/components/scroll/ScrollIndicator";
 import './variables.css';
 import Header from "@/app/components/header/Header";
 import Footer from "@/app/components/footer/Footer";
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import {config} from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false;
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -39,7 +44,7 @@ export default function RootLayout({
                 referrerPolicy="no-referrer"
             />
         </head>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark-mode`}>
         <Header/>
         <main>
             {children}
