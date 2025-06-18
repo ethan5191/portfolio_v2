@@ -1,59 +1,126 @@
-.home {
-    text-align: left;
-    color: #C0C0C0;
-    margin-bottom: 0;
-    scroll-margin-top: 70px;
-    min-height: calc(100vh - 100px - (2 * 20px));
+.homeSection {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    transition: background-color var(--transition-speed-normal) var(--transition-easing-default),
+    color var(--transition-speed-normal) var(--transition-easing-default);
+    scroll-margin-top: calc(var(--header-height) + var(--spacing-md));
 }
 
-.home h1 {
-    font-size: 6em;
-    margin-bottom: -.25em;
-    font-family: "Monotype Corsiva", cursive;
+.homeContent {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
 }
 
-.home p {
-    color: #ffffff;
-    margin-bottom: 20px;
+.myName {
+    font-family: var(--font-family-name);
+    font-size: 4rem;
+    font-weight: normal;
+    color: var(--color-accent-primary);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    transition: color var(--transition-speed-normal) var(--transition-easing-default);
+}
+
+.roleTagline {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.4;
+    transition: color var(--transition-speed-normal) var(--transition-easing-default);
+}
+
+.roleIcon {
+    margin-left: var(--spacing-xs);
+    color: var(--color-accent-primary);
+    font-size: 1.5rem;
+    vertical-align: middle;
 }
 
 .summaryParagraph {
-    padding-top: calc(100vh / 6);
-    font-size: 1.1em;
+    font-size: 1.15rem;
     line-height: 1.6;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100vw / 2);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xl);
+    transition: color var(--transition-speed-normal) var(--transition-easing-default);
+}
+
+.callToAction {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.primaryButton,
+.secondaryButton {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed-normal) var(--transition-easing-default);
+}
+
+.primaryButton {
+    background-color: var(--color-accent-primary);
+    color: #FFFFFF;
+    border: 2px solid var(--color-accent-primary);
+}
+
+.primaryButton:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: var(--color-accent-primary);
+    border: 2px solid var(--color-accent-primary);
+}
+
+.secondaryButton:hover {
+    background-color: var(--color-accent-primary);
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
-    .home {
-        padding-top: 30px;
-        scroll-margin-top: 70px;
-        min-height: auto;
+    .homeSection {
+        padding: var(--spacing-lg);
+        padding-top: calc(var(--header-height) + var(--spacing-lg));
+        padding-bottom: calc(var(--footer-height) + var(--spacing-lg));
     }
 
-    .home h1 {
-        font-size: 3em;
-        word-break: break-word;
+    .myName {
+        font-size: 2.8rem;
     }
 
-    .home p {
-        color: #ffffff;
+    .roleTagline {
+        font-size: 1.4rem;
     }
 
-    .home p:first-of-type {
-        margin-bottom: 10px;
+    .summaryParagraph {
+        font-size: 1rem;
     }
 
-    .home .summaryParagraph {
-        padding-top: 10px;
-        margin-top: 0;
-        font-size: 1em;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
+    .callToAction {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .myName {
+        font-size: 2.2rem;
+    }
+    .roleTagline {
+        font-size: 1.2rem;
     }
 }

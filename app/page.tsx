@@ -1,5 +1,5 @@
-import styles from './page.module.css';
 import React from "react";
+import styles from "@/app/page.module.css";
 import HomeSection from "@/app/components/home/HomeSection";
 import AboutSection from "../app/components/aboutMe/AboutSection";
 import MrowsSection from "../app/components/mrows/MrowsSection";
@@ -11,8 +11,8 @@ import ContactSection from "@/app/components/contact/ContactSection";
 export default function Home() {
     return (
         <>
-            <div className={styles.pageBodyWrapper}>
-                <div className={styles.mainContentAndHome}>
+            <div className={styles.mainContentArea}>
+                <div>
                     <HomeSection/>
                     <AboutSection/>
                     <MrowsSection/>

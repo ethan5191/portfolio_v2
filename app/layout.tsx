@@ -4,7 +4,6 @@
 import {Geist, Geist_Mono} from "next/font/google";
 import {Analytics} from "@vercel/analytics/next"
 import "./globals.css";
-import styles from "@/app/page.module.css";
 import React, {useEffect} from 'react';
 import ScrollIndicator from "@/app/components/scroll/ScrollIndicator";
 import './variables.css';
@@ -42,7 +41,7 @@ export default function RootLayout({
         </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header/>
-        <main className={styles.mainContentArea}>
+        <main>
             {children}
         </main>
         <Analytics/>

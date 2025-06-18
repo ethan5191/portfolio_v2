@@ -1,12 +1,9 @@
 @import "tailwindcss";
 
 body {
-    background-color: #000000;
-    background-image: linear-gradient(to bottom left,
-    transparent 0%, /* Start fully transparent */ rgba(255, 255, 255, 0.15) 5%, /* Fade in semi-transparent white quickly */ rgba(255, 255, 255, 0.15) 10%, /* Keep semi-transparent white for a short band */ transparent 20%, /* Fade out to transparent quickly */ transparent 100%);
-    background-size: cover;
-    min-height: 100vh;
-    margin: 0;
-    background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-background-header);
+}
+
+html {
+    scroll-behavior: smooth;
 }

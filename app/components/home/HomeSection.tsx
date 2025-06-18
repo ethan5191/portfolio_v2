@@ -1,16 +1,27 @@
 import styles from "./HomeSection.module.css";
 import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faLaptopCode} from "@fortawesome/free-solid-svg-icons/faLaptopCode";
 
 export default function HomeSection() {
     return (<>
-        <section id="home" className={styles.home}>
-            <h1>Ethan Vanderbur</h1>
-            <p>Full-Stack Web Developer with 10 Years of Experience.</p>
-            <p className={styles.summaryParagraph}>
-                I'm a passionate full-stack developer with professional experience in the United States Marine
-                Corps. I'm driven by solving complex problems and building scalable systems, leveraging expertise in
-                Java, Spring, and SQL to create software that has real-world impact.
-            </p>
+        <section id="home" className={styles.homeSection}>
+            <div className={styles.homeContent}>
+                <h1 className={styles.myName}>Ethan Vanderbur</h1>
+                <p className={styles.roleTagline}>
+                    Full-Stack Web Developer with 10 Years of Experience.
+                    <FontAwesomeIcon icon={faLaptopCode} className={styles.roleIcon}/>
+                </p>
+                <p className={styles.summaryParagraph}>
+                    I'm a passionate full-stack developer with professional experience in the United States Marine
+                    Corps. I'm driven by solving complex problems and building scalable systems, leveraging expertise in
+                    Java, Spring, and SQL to create software that has real-world impact.
+                </p>
+                {/* <div className={styles.callToAction}>
+                    <a href="#work" className={styles.primaryButton}>View My Work</a>
+                    <a href="#contact" className={styles.secondaryButton}>Get In Touch</a>
+                </div> */}
+            </div>
         </section>
     </>);
 }

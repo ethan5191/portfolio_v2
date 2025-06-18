@@ -1,46 +1,3 @@
-/* app/page.module.css */
-.pageHeader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px; /* Desktop header height */
-    z-index: 999; /* Ensure it's above content */
-
-    /* Use flexbox to arrange content (Home link, Nav, Hamburger) */
-    display: flex;
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Vertically center items */
-
-    /* Add padding on the sides */
-    box-sizing: border-box; /* Include padding in the width */
-    padding: 0 20px; /* Adjust side padding as needed */
-
-    /* *** Apply Header Background Color (from recent dark theme work) *** */
-    background-color: #092E24; /* Slightly Darker Forest Green */
-    /* *** Apply Header Bottom Border (from recent dark theme work) *** */
-    border-bottom: 2px solid #00A3B9; /* Teal Accent Border */
-}
-
-.pageHeader a i {
-    text-decoration: none;
-    font-size: 1.5em; /* Adjust size */
-    display: flex;
-    align-items: center;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 5px;
-    transition: color 0.3s ease, border-color 0.3s ease;
-    color: #C0C0C0;
-}
-
-/* Hover effect for the Home link */
-.pageHeader a i:hover {
-    /* Apply Hover Color from recent dark theme work */
-    color: #00A3B9; /* Teal Accent */
-    border-color: #00A3B9; /* Teal Accent */
-}
-
 /* Styles for the desktop navigation links container (<nav> tag) - Use module class */
 /* Styling the <nav> tag using the module class, nested under the header module class */
 .pageHeader .mainNavDesktop {
@@ -83,7 +40,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: relative; z-index: 1000;
+    position: relative;
+    z-index: 1000;
 }
 
 /* Style the individual lines of the hamburger icon - Use the correct module class name in the selector */
@@ -103,66 +61,21 @@
     display: none;
 }
 
-/* Styles for the Main Content Area (Kept as is) */
-/* Using the module class name that is on the <main> tag */
 .mainContentArea {
-    /* Add top margin to push content below the fixed header */
-    margin-top: 70px; /* Must match desktop header height */
-    /* Add padding-bottom to create space above the fixed footer */
-    padding-bottom: 120px; /* Match footer height (adjust if your footer height is different) */
-
-    /* Add max-width and auto margins to center the whole block of sections */
-    /* Adjust max-width based on desired overall content width */
-    max-width: 1400px;
-    margin-left: auto; /* Center the block */
-    margin-right: auto; /* Center the block */
-
-    box-sizing: border-box; /* Include padding in width */
-
-    /* Add side padding for the whole block of sections inside its max-width */
-    padding-left: 20px;
-    padding-right: 20px;
-
-    /* Optional: Ensure it has a minimum height if content is short */
-    /* min-height: calc(100vh - 70px - 120px); */ /* Example: viewport height minus header/footer */
+    max-width: 80%;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    margin: calc(var(--header-height) + var(--spacing-md)) auto calc(var(--footer-height) + var(--spacing-md));
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    box-shadow: 0 4px 15px var(--color-shadow-default);
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-speed-normal) var(--transition-easing-default),
+    color var(--transition-speed-normal) var(--transition-easing-default),
+    box-shadow var(--transition-speed-normal) var(--transition-easing-default);
 }
-
-/* Styles for the Footer Element (Kept as is) */
-/* Using the module class name that is on the <footer> tag */
-.footer {
-    /* Existing layout properties */
-    color: #C0C0C0; /* Silver (Text color within footer) */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 950;
-
-    /* *** Apply Footer Background Color (from recent dark theme work) *** */
-    background-color: #000000; /* Black */
-    /* *** Apply Footer Top Border (from recent dark theme work) *** */
-    border-top: 2px solid #00A3B9; /* Teal Accent Border */
-}
-
-/* Styles for the footer quote and cite (text color is inherited from footer) */
-.footerQuote, .footerQuote cite {
-    /* Existing styles - color inherited from footer */
-    color: #C0C0C0; /* Silver */
-}
-
 
 /* *** Mobile Styles - Apply when screen width is 768px or less *** */
 @media (max-width: 768px) {
-    /* Adjust header height on mobile - Use module class */
-    .pageHeader {
-        height: 60px; /* Mobile header height */
-        padding: 0 10px; /* Adjust side padding */
-    }
-
     /* Hide the desktop navigation on mobile - Use module class */
     .pageHeader .mainNavDesktop {
         display: none;
