@@ -10,7 +10,7 @@ export default function Header() {
     useEffect(() => {
         // Use the styles object within a template literal to get the hashed class name string
         // document.querySelector needs the exact string from the DOM
-        const hamburgerButton = document.querySelector(`.${styles.hamburgerIcon}`) as HTMLButtonElement | null; // Corrected line
+        const hamburgerButton = document.querySelector(`.${styles2.hamburgerIcon}`) as HTMLButtonElement | null; // Corrected line
 
         const body = document.body; // Reference to the body element
 
@@ -51,14 +51,14 @@ export default function Header() {
                         {/*<FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />*/}
                         <FontAwesomeIcon icon={faMoon} />
                     </div>
-                    <button className={styles.hamburgerIcon} aria-label="Toggle navigation">
-                        <span className={styles.hamburgerLine}></span>
-                        <span className={styles.hamburgerLine}></span>
-                        <span className={styles.hamburgerLine}></span>
+                    <button className={styles2.hamburgerIcon} aria-label="Toggle navigation">
+                        <span className={styles2.hamburgerLine}></span>
+                        <span className={styles2.hamburgerLine}></span>
+                        <span className={styles2.hamburgerLine}></span>
                     </button>
                 </div>
             </header>
-            <nav className={styles.mobileNavPanel}>
+            <nav className={styles2.mobileNavPanel}>
                 <a href="#about">ABOUT</a>
                 <a href="#mrows">MROWS</a>
                 <a href="#mcpdt">MCPDT</a>
