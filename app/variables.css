@@ -11,7 +11,7 @@
     --color-background-secondary: #F8F9FA;
 
     --font-family-name: "Monotype Corsiva", cursive;
-    --font-family-body: "Inter", sans-serif; /* Or Roboto, Open Sans, etc. */
+    /*--font-family-body: var(--font-inter), sans-serif; !* Or Roboto, Open Sans, etc. *!*/
     --font-size-base: 1rem;
     --line-height-base: 1.5;
 
