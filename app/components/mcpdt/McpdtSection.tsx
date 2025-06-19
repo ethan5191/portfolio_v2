@@ -1,14 +1,16 @@
 import accomplishments from "../shared/accomplishmentList.module.css";
-import sectionStyles from "../shared/sectionContent.module.css";
 import React from "react";
+import sectionBase from "@/app/components/shared/sectionBase.module.css";
+import styles from "./mcpdtSection.module.css";
 
 export default function McpdtSection() {
-    return (<section id="mcpdt" className={sectionStyles.section}>
-        <h2>Marine Corps Permanent Duty Travel (MCPDT)</h2>
-        <div className={`${sectionStyles.sectionContentWrapper} ${sectionStyles.infoContent}`}>
-            <p>MCPDT is a Java 8 web application that provides per diem and travel funding calculations for Permanent
-                Change of Station (PCS)
-                and Permanent Change of Assignment (PCA) orders.</p>
+    return (<section id="mcpdt" className={`${sectionBase.sectionBase} ${styles.mcpdtSection}`}>
+        <h2>MCPDT
+            <span className={styles.acronymTooltip}>Marine Corps Permanent Duty Travel</span>
+        </h2>
+        <div className={styles.contentColumn}>
+            <p className={styles.contentColumn}>MCPDT is a Java 8 web application that provides per diem and travel funding calculations for Permanent
+                Change of Station (PCS) and Permanent Change of Assignment (PCA) orders.</p>
             <h4>Related Projects:</h4>
             <ul className={accomplishments.accomplishmentsList}>
                 <li><span className={accomplishments.accomplishmentTitle}>End-of-Year Setup:</span>
