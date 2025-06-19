@@ -1,5 +1,6 @@
 .footer {
-    background-color: var(--color-background-header);
+    background-color: var(--color-background-primary-transparent);
+    backdrop-filter: blur(10px);
     color: var(--color-text-secondary);
     padding: var(--spacing-xs) var(--spacing-xl);
     text-align: center;
@@ -9,6 +10,7 @@
     left: 0;
     transition: background-color var(--transition-speed-normal) var(--transition-easing-default),
     color var(--transition-speed-normal) var(--transition-easing-default);
+    z-index: 999;
 }
 
 .footerQuote {

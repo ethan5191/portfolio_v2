@@ -17,7 +17,6 @@ let currentTheme: Theme = 'light';
 const mockToggleTheme = () => {
     currentTheme = currentTheme === 'light' ? 'dark' : 'light';
     document.body.classList.toggle('dark-mode', currentTheme === 'dark');
-    console.log("Theme toggled to:", currentTheme);
 };
 
 export default function Header() {

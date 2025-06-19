@@ -1,5 +1,6 @@
 .pageHeader {
-    background-color: var(--color-background-header);
+    background-color: var(--color-background-primary-transparent);
+    backdrop-filter: blur(10px);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
