@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 import projectEntryStyles from './projectEntry.module.css';
 import { Project } from './project';
 
@@ -7,8 +9,45 @@ interface ProjectEntryProps {
 }
 
 const ProjectEntry: React.FC<ProjectEntryProps> = ({ project }) => {
+
+    const [isVisible, setIsVisible] = useState(false);
+    const projectRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        // if (projectRef.current) {
+                        //     observer.unobserve(projectRef.current);
+                        // }
+                    } else {
+                        setIsVisible(false);
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1,
+            }
+        );
+        if (projectRef.current) {
+            observer.observe(projectRef.current);
+        }
+        return () => {
+            if (projectRef.current) {
+                observer.unobserve(projectRef.current);
+            }
+            observer.disconnect();
+        }
+    }, []);
+
     return (
-        <div id={`project-${project.id}`} className={projectEntryStyles.projectEntry}>
+        <div id={`project-${project.id}`}
+             ref={projectRef}
+             className={`${projectEntryStyles.projectEntry} ${isVisible ? projectEntryStyles.fadeIn : ''}`}>
             <div className={projectEntryStyles.projectNameColumn}>
                 <h3 className={projectEntryStyles.projectTitleWithTooltip}>
                     {project.shortName}
