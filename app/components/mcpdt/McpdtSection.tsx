@@ -13,6 +13,10 @@ export default function McpdtSection() {
                 Change of Station (PCS) and Permanent Change of Assignment (PCA) orders.</p>
             <h4>Related Projects:</h4>
             <ul className={accomplishments.accomplishmentsList}>
+                <li><span className={accomplishments.accomplishmentTitle}>LOA to SFIS (SLOA):</span>
+                    <span className={accomplishments.accomplishmentDetails}>Modernized MCPDT’s funding logic by transitioning from legacy LOA to the SFIS-compliant SLOA structure, significantly improving compliance and auditability with DoD financial standards.{" "}
+                        <a href="#project-mcpdt-slo">View Project Details</a></span>
+                </li>
                 <li><span className={accomplishments.accomplishmentTitle}>End-of-Year Setup:</span>
                     <span className={accomplishments.accomplishmentDetails}>Developed annual database scripts to prepare funding lines for the new fiscal year.</span>
                 </li>

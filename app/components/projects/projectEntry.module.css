@@ -1,37 +1,38 @@
 .projectEntry {
     display: flex;
-    flex-wrap: wrap; /* Allow columns to stack on mobile */
-    gap: var(--spacing-xl); /* Space between left and right columns */
-    align-items: flex-start; /* Align content to the top */
-    margin-bottom: 0; /* No margin here, the divider handles spacing */
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+    margin-bottom: 0;
+    scroll-margin-top: calc(var(--header-height) + var(--spacing-md));
 }
 
 .projectNameColumn {
-    flex: 0 0 200px; /* Fixed width for the project name column */
-    min-width: 150px; /* Ensure it doesn't collapse too much */
-    text-align: right; /* Right-align the project name */
+    flex: 0 0 200px;
+    min-width: 150px;
+    text-align: right;
 }
 
 .projectNameColumn h3 {
-    font-size: 1.8rem; /* Adjust size for project name */
-    color: var(--color-accent-primary); /* Use accent color for project name */
-    margin-top: 0; /* Remove default h3 top margin */
-    margin-bottom: 0; /* Remove default h3 bottom margin */
+    font-size: 1.8rem;
+    color: var(--color-accent-primary);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .projectDetailsColumn {
-    flex: 1; /* Takes up remaining space */
-    min-width: 300px; /* Ensure content column doesn't get too small */
+    flex: 1;
+    min-width: 300px;
 }
 
 .projectDetailsColumn p {
-    margin-bottom: var(--spacing-md); /* Consistent spacing for paragraphs */
-    font-size: 1.1rem; /* Adjust paragraph size if needed */
-    color: var(--color-text-secondary); /* Text color for details */
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
 }
 
 .projectDetailsColumn p strong {
-    color: var(--color-text-primary); /* Make labels stand out */
+    color: var(--color-text-primary);
 }
 
 .projectTitleWithTooltip {
@@ -68,27 +69,27 @@
 }
 
 .technicalHighlightsList {
-    list-style: disc; /* Or none, if you want custom styling */
-    padding-left: var(--spacing-lg); /* Indent list items */
+    list-style: disc;
+    padding-left: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
-    color: var(--color-text-secondary); /* Default text color for list items */
+    color: var(--color-text-secondary);
     font-size: 1.1rem;
 }
 
 .technicalHighlightsList li {
-    margin-bottom: var(--spacing-xs); /* Tighter spacing for list items */
+    margin-bottom: var(--spacing-xs);
     line-height: 1.5;
 }
 
 @media (max-width: 768px) {
     .projectEntry {
-        flex-direction: column; /* Stack columns on mobile */
-        gap: var(--spacing-lg); /* Adjust gap for mobile */
+        flex-direction: column;
+        gap: var(--spacing-lg);
     }
     .projectNameColumn {
         flex: none;
         width: 100%;
-        text-align: center; /* Center project name on mobile */
+        text-align: center;
     }
     .projectNameColumn h3 {
         font-size: 1.5rem;
@@ -100,7 +101,7 @@
     }
     .projectDetailsColumn p,
     .technicalHighlightsList {
-        font-size: 0.95rem; /* Adjust text size for mobile */
+        font-size: 0.95rem;
     }
     .technicalHighlightsList {
         padding-left: var(--spacing-md);

@@ -8,7 +8,7 @@ interface ProjectEntryProps {
 
 const ProjectEntry: React.FC<ProjectEntryProps> = ({ project }) => {
     return (
-        <div className={projectEntryStyles.projectEntry}>
+        <div id={`project-${project.id}`} className={projectEntryStyles.projectEntry}>
             <div className={projectEntryStyles.projectNameColumn}>
                 <h3 className={projectEntryStyles.projectTitleWithTooltip}>
                     {project.shortName}

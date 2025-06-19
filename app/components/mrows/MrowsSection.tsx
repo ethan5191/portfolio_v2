@@ -13,6 +13,18 @@ export default function MrowsSection() {
                 certify orders for reserve Marines.</p>
             <h4>Related Projects:</h4>
             <ul className={accomplishments.accomplishmentsList}>
+                <li><span className={accomplishments.accomplishmentTitle}>Travel Claim Module:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Implemented a new process, streamlining travel claim submissions for Marines.{" "}
+                        <a href="#project-mrows-travel">View Project Details</a></span>
+                </li>
+                <li><span className={accomplishments.accomplishmentTitle}>SABRS to DAI Transition:</span>
+                    <span className={accomplishments.accomplishmentDetails}>As the lead developer, I directed the transition from SABRS to the DAI accounting system, building upon the established MCPDT process.{" "}
+                        <a href="#project-mrows-dai">View Project Details</a></span>
+                </li>
+                <li><span className={accomplishments.accomplishmentTitle}>MROWS Separation Requests:</span>
+                    <span className={accomplishments.accomplishmentDetails}>Developed a new process, enabling Marines to efficiently submit and certify their separation-related PCS orders.{" "}
+                        <a href="#project-mrows-sep">View Project Details</a></span>
+                </li>
                 <li><span className={accomplishments.accomplishmentTitle}>Framework Migration:</span>
                     <span className={accomplishments.accomplishmentDetails}>Led migration from Struts 1 to Spring 5, improving performance and maintainability.</span>
                 </li>

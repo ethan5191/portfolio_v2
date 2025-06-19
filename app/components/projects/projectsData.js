@@ -25,19 +25,6 @@ export const projectsData = [
         impact: 'Enabled seamless DAI integration, improving audit readiness and supporting two consecutive clean financial audits for the Marine Corps.',
     },
     {
-        id: 'mcpdt-slo',
-        title: 'Funding Structure Transition (LOA to SFIS SLOA)',
-        shortName: 'MCPDT - SLOA',
-        description: 'Modernized MCPDT’s funding logic by transitioning from legacy LOA to the SFIS-compliant SLOA structure.',
-        // role: 'Served as the sole developer responsible for designing, implementing, and integrating the new funding logic..',
-        technologies: ['Java', 'Oracle SQL'],
-        technicalDetails: ['Integrated annually generated SLOA data into MCPDT order workflows.',
-            'Ensured accurate financial tracking aligned with DoD standards.',
-            'Designed for seamless yearly updates with minimal manual effort.'],
-        impact: 'Improved compliance and auditability by aligning funding processes with DoD financial standards. Project remains in active development with phased rollouts.',
-        // status: 'Ongoing, expected completion 9/30/2025' // Add status if desired
-    },
-    {
         id: 'mrows-sep',
         title: 'Separation Requests (PCS Travel)',
         shortName: 'MROWS - Seps',
@@ -48,6 +35,18 @@ export const projectsData = [
             'Implemented workflow to send funding requests to MCPDT and DAI.',
             'Ensured accurate integration with existing financial systems.'],
         impact: 'Improved visibility and accuracy in tracking separation-related PCS travel funding, enabling more precise financial estimates and better alignment with actual spending.',
+    },
+    {
+        id: 'mcpdt-slo',
+        title: 'Funding Structure Transition (LOA to SFIS SLOA)',
+        shortName: 'MCPDT - SLOA',
+        description: 'Modernized MCPDT’s funding logic by transitioning from legacy LOA to the SFIS-compliant SLOA structure.',
+        // role: 'Served as the sole developer responsible for designing, implementing, and integrating the new funding logic..',
+        technologies: ['Java', 'Oracle SQL'],
+        technicalDetails: ['Integrated annually generated SLOA data into MCPDT order workflows.',
+            'Ensured accurate financial tracking aligned with DoD standards.',
+            'Designed for seamless yearly updates with minimal manual effort.'],
+        impact: 'Improved compliance and auditability by aligning funding processes with DoD financial standards. Project remains in active development with phased rollouts.',
     },
     {
         id: 'mrows-mcpdt-soap',
