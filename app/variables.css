@@ -10,7 +10,8 @@
     --color-shadow-default: rgba(0, 0, 0, 0.15);
     --color-background-secondary: #F8F9FA;
 
-    --color-background-primary-transparent: rgba(255, 255, 255, 0.7);
+    --color-background-primary-transparent: rgba(255, 255, 255, 0.8);
+    --background-blur: 7px;
 
     --font-family-name: "Monotype Corsiva", cursive;
     /*--font-family-body: var(--font-inter), sans-serif; !* Or Roboto, Open Sans, etc. *!*/
@@ -48,6 +49,7 @@ body.dark-mode {
     --color-accent-hover: #68D391;
     --color-background-header: #1A202C;
     --color-background-primary-transparent: rgba(26, 32, 44, 0.7);
+    --background-blur: 10px;
     --color-text-primary: #E2E8F0;
     --color-text-secondary: #A0AEC0;
     --color-text-subtle: #718096;
