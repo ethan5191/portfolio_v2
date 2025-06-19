@@ -1,0 +1,125 @@
+.projectEntry {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to stack on mobile */
+    gap: var(--spacing-xl); /* Space between left and right columns */
+    align-items: flex-start; /* Align content to the top */
+    margin-bottom: 0; /* No margin here, the divider handles spacing */
+}
+
+.projectNameColumn {
+    flex: 0 0 200px; /* Fixed width for the project name column */
+    min-width: 150px; /* Ensure it doesn't collapse too much */
+    text-align: right; /* Right-align the project name */
+}
+
+.projectNameColumn h3 {
+    font-size: 1.8rem; /* Adjust size for project name */
+    color: var(--color-accent-primary); /* Use accent color for project name */
+    margin-top: 0; /* Remove default h3 top margin */
+    margin-bottom: 0; /* Remove default h3 bottom margin */
+}
+
+.projectDetailsColumn {
+    flex: 1; /* Takes up remaining space */
+    min-width: 300px; /* Ensure content column doesn't get too small */
+}
+
+.projectDetailsColumn p {
+    margin-bottom: var(--spacing-md); /* Consistent spacing for paragraphs */
+    font-size: 1.1rem; /* Adjust paragraph size if needed */
+    color: var(--color-text-secondary); /* Text color for details */
+}
+
+.projectDetailsColumn p strong {
+    color: var(--color-text-primary); /* Make labels stand out */
+}
+
+.projectTitleWithTooltip {
+    position: relative;
+    cursor: help;
+    display: inline-block;
+}
+
+.projectTooltip {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background-header);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 2px 8px var(--color-shadow-default);
+
+    white-space: normal;
+    max-width: 300px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    z-index: 100;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.projectTitleWithTooltip:hover .projectTooltip {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.technicalHighlightsList {
+    list-style: disc; /* Or none, if you want custom styling */
+    padding-left: var(--spacing-lg); /* Indent list items */
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-secondary); /* Default text color for list items */
+    font-size: 1.1rem;
+}
+
+.technicalHighlightsList li {
+    margin-bottom: var(--spacing-xs); /* Tighter spacing for list items */
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .projectEntry {
+        flex-direction: column; /* Stack columns on mobile */
+        gap: var(--spacing-lg); /* Adjust gap for mobile */
+    }
+    .projectNameColumn {
+        flex: none;
+        width: 100%;
+        text-align: center; /* Center project name on mobile */
+    }
+    .projectNameColumn h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    .projectDetailsColumn {
+        flex: none;
+        width: 100%;
+    }
+    .projectDetailsColumn p,
+    .technicalHighlightsList {
+        font-size: 0.95rem; /* Adjust text size for mobile */
+    }
+    .technicalHighlightsList {
+        padding-left: var(--spacing-md);
+    }
+    .projectTitleWithTooltip .projectTooltip {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+        color: var(--color-text-secondary);
+        box-shadow: none;
+        padding: 0;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: var(--spacing-xs);
+        white-space: normal;
+        display: block;
+    }
+    .projectTitleWithTooltip {
+        cursor: default;
+    }
+}

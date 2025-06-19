@@ -4,7 +4,7 @@ import HomeSection from "@/app/components/home/HomeSection";
 import AboutSection from "../app/components/aboutMe/AboutSection";
 import MrowsSection from "../app/components/mrows/MrowsSection";
 import McpdtSection from "../app/components/mcpdt/McpdtSection";
-import Projects2Section from "@/app/components/projects2/Projects2Section";
+import ProjectSection from "@/app/components/projects/ProjectsSection";
 import SkillsSection2 from "@/app/components/skills2/SkillsSection2";
 import ContactSection from "@/app/components/contact/ContactSection";
 
@@ -17,7 +17,7 @@ export default function Home() {
                     <AboutSection/>
                     <MrowsSection/>
                     <McpdtSection/>
-                    <Projects2Section/>
+                    <ProjectSection/>
                     <SkillsSection2/>
                     <ContactSection/>
                 </div>

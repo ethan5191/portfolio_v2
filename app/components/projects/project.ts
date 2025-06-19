@@ -1,6 +1,7 @@
 export interface Project {
     id: string; // Unique ID for keys
     title: string;
+    shortName: string;
     description: string; // Brief
     // role: string; // Full detail
     technologies: string[];
