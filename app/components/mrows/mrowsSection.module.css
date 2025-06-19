@@ -1,0 +1,101 @@
+.mrowsSection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+    text-align: left;
+}
+
+.mrowsSection h2 {
+    flex: 0 0 200px;
+    min-width: 150px;
+    text-align: right;
+    margin-bottom: 0;
+    position: relative;
+    cursor: help;
+}
+
+.contentColumn {
+    flex: 1;
+    min-width: 300px;
+}
+
+.acronymTooltip {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background-header);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 2px 8px var(--color-shadow-default);
+    white-space: normal;
+    z-index: 100;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    max-width: 250px;
+    font-size: 1rem;
+}
+
+.mrowsSection h2:hover .acronymTooltip {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.acronymDefinition {
+    font-weight: normal;
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-secondary);
+}
+
+.contentColumn h4 {
+    font-size: 1.2rem;
+    color: var(--color-text-primary);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .mrowsSection {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    .mrowsSection h2 {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: var(--spacing-md);
+        font-size: 2.5rem;
+    }
+    .contentColumn {
+        flex: none;
+        width: 100%;
+    }
+    .mrowsSection h2 .acronymTooltip {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+        color: var(--color-text-secondary);
+        box-shadow: none;
+        padding: 0;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: var(--spacing-xs);
+        white-space: normal;
+        display: block;
+    }
+    .acronymDefinition {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-lg);
+        text-align: left;
+    }
+    .contentColumn h4 {
+        font-size: 1rem;
+    }
+}

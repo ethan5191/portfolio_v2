@@ -5,17 +5,26 @@
 }
 
 .accomplishmentsList li {
-    margin-bottom: 15px;
-    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
     display: block;
+    color: var(--color-text-secondary);
+    font-size: 1.15rem;
 }
 
 .accomplishmentsList li .accomplishmentTitle {
     font-weight: bold;
-    margin-right: 5px;
-    color: #ffffff;
+    margin-right: var(--spacing-xs);
+    color: var(--color-text-primary);
 }
 
 .accomplishmentsList li .accomplishmentDetails {
-    color: #C0C0C0;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .accomplishmentsList li {
+        font-size: 0.95rem;
+        margin-bottom: var(--spacing-sm);
+    }
 }
