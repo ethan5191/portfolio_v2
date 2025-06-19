@@ -1,10 +1,11 @@
-import sectionStyles from "../shared/sectionContent.module.css";
+import styles from './aboutSection.module.css';
 import React from "react";
+import sectionBase from "@/app/components/shared/sectionBase.module.css";
 
 export default function AboutSection() {
-    return (<section id="about" className={sectionStyles.section}>
+    return (<section id="about" className={`${sectionBase.sectionBase} ${styles.aboutSectionSideBySide}`}>
         <h2>About Me</h2>
-        <div className={`${sectionStyles.sectionContentWrapper} ${sectionStyles.infoContent}`}>
+        <div className={styles.aboutContentSideBySide}>
             <p>I began my journey into software development during my sophomore year of college, after realizing that
                 graphic design wasn't the right fit for me. Drawing on my early exposure to Visual Basic in high school,
                 I pivoted toward programming and quickly developed a strong interest in Java and C#. Java, in
@@ -20,8 +21,8 @@ export default function AboutSection() {
                 development, especially with Java, Spring, and SQL. While I’m fully capable of taking on senior-level
                 responsibilities, I’m most energized when I’m writing code, solving real problems, and making software
                 work better.</p>
-            <p>You can <a href="/VanderburEthan_2025_V3.pdf" target="_blank"
-                          rel="noopener noreferrer">Download my Resume PDF</a>.</p>
+            <p><a href="/VanderburEthan_2025_V3.pdf" target="_blank" rel="noopener noreferrer">Download My Resume
+                (PDF)</a></p>
         </div>
     </section>);
 }

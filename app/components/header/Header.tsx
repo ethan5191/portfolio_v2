@@ -87,7 +87,8 @@ export default function Header() {
                         onClick={toggleTheme}
                         aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                     >
-                        <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun}/>
+                        {/*Added classname here to prevent minor position adjustments to the header when changing modes*/}
+                        <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} className="fa-fw"/>
                     </button>
                     <button className={styles.hamburgerIcon} aria-label="Toggle navigation">
                         <span className={styles.hamburgerLine}></span>

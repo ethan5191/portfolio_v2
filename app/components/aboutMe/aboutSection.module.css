@@ -1,0 +1,37 @@
+.aboutSectionSideBySide {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+    text-align: left;
+}
+
+.aboutSectionSideBySide h2 {
+    flex: 0 0 200px;
+    min-width: 150px;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.aboutContentSideBySide {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Mobile adjustments for side-by-side */
+@media (max-width: 768px) {
+    .aboutSectionSideBySide {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        gap: var(--spacing-lg); /* Adjust gap for mobile */
+    }
+    .aboutSectionSideBySide h2 {
+        flex: none; /* Remove flex sizing */
+        width: 100%; /* Take full width */
+        text-align: center; /* Center heading on mobile */
+        margin-bottom: var(--spacing-md); /* Add some margin back for stacking */
+    }
+    .aboutContentSideBySide {
+        flex: none; /* Remove flex sizing */
+        width: 100%; /* Take full width */
+    }
+}
