@@ -26,6 +26,10 @@
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 1.75rem;
+    --spacing-xxl: 2rem;
+
+    /*used to help set the last section to be a little shorter than the rest */
+    --last-section-size-cutoff: 2.2rem;
 
     --margin-bottom-sections: 30px;
 

@@ -1,6 +1,5 @@
 .sectionBase {
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    /*display: flex;*/
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--spacing-md));
     background-color: var(--color-background-secondary);
     color: var(--color-text-primary);
     box-shadow: 0 4px 15px var(--color-shadow-default);
@@ -35,6 +34,10 @@
     a:hover {
         color: var(--color-accent-hover);
     }
+}
+
+.sectionBase:last-of-type {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--last-section-size-cutoff));
 }
 
 .sectionBase p:last-child {
