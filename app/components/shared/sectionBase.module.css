@@ -1,5 +1,5 @@
 .sectionBase {
-    min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--spacing-md));
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--spacing-xxl));
     background-color: var(--color-background-secondary);
     color: var(--color-text-primary);
     box-shadow: 0 4px 15px var(--color-shadow-default);
