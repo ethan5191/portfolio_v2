@@ -16,6 +16,8 @@
     --font-family-name: "Monotype Corsiva", cursive;
     /*--font-family-body: var(--font-inter), sans-serif; !* Or Roboto, Open Sans, etc. *!*/
     --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
     --line-height-base: 1.5;
 
     /* Spacing */
@@ -25,11 +27,12 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 1.75rem;
 
-    --margin-bottom-sections: 20px;
+    --margin-bottom-sections: 30px;
 
     /* Border Radius */
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
+    --border-radius-lg: 12px;
 
     --transition-speed-fast: 0.2s;
     --transition-speed-normal: 0.3s;
@@ -42,6 +45,8 @@
     --color-background-mobile-nav: rgba(72, 187, 120, .90);
     --color-text-mobile-nav: #212529;
     --color-border-mobile-nav: #212529;
+
+    --max-content-width: 100%;
 }
 
 body.dark-mode {

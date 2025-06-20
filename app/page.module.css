@@ -12,9 +12,9 @@
 
 @media (max-width: 768px) {
     .mainContentArea {
+        max-width: 95%;
         margin-top: 60px;
         padding-bottom: 120px;
-        max-width: 90%;
         padding-left: 10px;
         padding-right: 10px;
         margin-left: auto;
