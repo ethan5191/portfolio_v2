@@ -48,19 +48,11 @@ export default function Header() {
     const [theme, setTheme] = useState<Theme>('dark');
     useEffect(() => {
         document.body.classList.toggle('dark-mode', theme === 'dark');
-        const savedTheme = localStorage.getItem('theme') as Theme;
-        if (savedTheme) {
-            setTheme(savedTheme);
-            document.body.classList.toggle('dark-mode', savedTheme === 'dark');
-        } else {
-            document.body.classList.add('dark-mode');
-        }
     }, []);
     const toggleTheme = () => {
         setTheme(prevTheme => {
             const newTheme = prevTheme === 'light' ? 'dark' : 'light';
             document.body.classList.toggle('dark-mode', newTheme === 'dark');
-            localStorage.setItem('theme', newTheme);
             return newTheme;
         });
     };
