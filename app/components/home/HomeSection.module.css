@@ -63,28 +63,6 @@
     transition: all var(--transition-speed-normal) var(--transition-easing-default);
 }
 
-.primaryButton {
-    background-color: var(--color-accent-primary);
-    color: #FFFFFF;
-    border: 2px solid var(--color-accent-primary);
-}
-
-.primaryButton:hover {
-    background-color: var(--color-accent-hover);
-    border-color: var(--color-accent-hover);
-}
-
-.secondaryButton {
-    background-color: transparent;
-    color: var(--color-accent-primary);
-    border: 2px solid var(--color-accent-primary);
-}
-
-.secondaryButton:hover {
-    background-color: var(--color-accent-primary);
-    color: #FFFFFF;
-}
-
 @media (max-width: 768px) {
     .homeSection {
         padding: var(--spacing-sm);

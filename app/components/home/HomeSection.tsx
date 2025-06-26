@@ -18,10 +18,6 @@ export default function HomeSection() {
                     Corps. I'm driven by solving complex problems and building scalable systems, leveraging expertise in
                     Java, Spring, and SQL to create software that has real-world impact.
                 </p>
-                {/* <div className={styles.callToAction}>
-                    <a href="#work" className={styles.primaryButton}>View My Work</a>
-                    <a href="#contact" className={styles.secondaryButton}>Get In Touch</a>
-                </div> */}
             </div>
         </section>
     </>);
