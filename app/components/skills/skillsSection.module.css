@@ -16,8 +16,7 @@
 }
 
 .skillCard {
-    background-color: var(--color-background-header);
-    /*border: 1px solid var(--color-accent-hover);*/
+    background-color: var(--color-background-base);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
@@ -29,7 +28,7 @@
 
 .cardHeader {
     font-size: var(--font-size-xl);
-    color: var(--color-accent-primary);
+    color: var(--color-card-project-header);
     margin-bottom: var(--spacing-md);
     font-weight: bold;
 }
@@ -45,24 +44,9 @@
 .toolItem {
     display: flex;
     align-items: center;
-    /*background-color: var(--color-tag-background);*/
     color: var(--color-text-secondary);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-base);
     white-space: nowrap;
 }
-
-.toolItem i {
-    margin-right: var(--spacing-xs);
-    font-size: var(--font-size-lg);
-    color: var(--color-accent-primary);
-}
-
-/* Example of how modifierClassName could be used for specific card styles (optional) */
-/* .languagesCard {
-    border-color: var(--color-primary);
-} */
-/* .frameworksCard {
-    background-color: var(--color-secondary);
-} */

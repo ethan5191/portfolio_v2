@@ -21,7 +21,6 @@
 
 .homeLink {
     text-decoration: none;
-    color: var(--color-text-primary);
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
@@ -29,7 +28,7 @@
 
 .homeIcon {
     font-size: 1.25rem;
-    color: var(--color-accent-primary);
+    color: var(--color-header-accent);
     transition: color var(--transition-speed-fast) var(--transition-easing-default);
 }
 
@@ -55,7 +54,7 @@
 }
 
 .headerMiddle a:hover {
-    color: var(--color-accent-primary);
+    color: var(--color-header-accent);
 }
 
 .headerMiddle a::after {
@@ -65,7 +64,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-accent-primary);
+    background-color: var(--color-header-accent);
     transition: width var(--transition-speed-normal) var(--transition-easing-default);
 }
 

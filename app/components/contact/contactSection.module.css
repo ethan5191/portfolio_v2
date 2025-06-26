@@ -17,12 +17,6 @@
     margin-bottom: var(--spacing-sm);
 }
 
-.contactMethods i {
-    margin-right: var(--spacing-sm);
-    color: var(--color-accent-primary);
-    font-size: 1.2rem;
-}
-
 .contactMethods p:last-child {
     margin-bottom: 0;
 }

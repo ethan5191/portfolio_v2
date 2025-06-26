@@ -32,7 +32,7 @@
     }
 
     a:hover {
-        color: var(--color-accent-hover);
+        color: var(--color-a-hover);
     }
 }
 
