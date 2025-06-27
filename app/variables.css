@@ -1,7 +1,6 @@
 :root {
     --color-accent-primary: #2C7B47;
     --color-a-hover: #66B08A;
-
     --color-background-base: #FFFFFF;
     --color-background-base-transparent: rgba(255, 255, 255, 0.8);
     --color-background-header-section: #F8F9FA;
@@ -9,6 +8,25 @@
     --color-text-secondary: #495057;
     --color-projects-divider: #DEE2E6;
     --color-shadow-default: rgba(0, 0, 0, 0.15);
+    --color-background-hamburger-line: #2C7B47;
+    --color-background-mobile-nav: rgba(72, 187, 120, .90);
+    --color-text-mobile-nav: #212529;
+    --color-border-mobile-nav: #212529;
+
+    --color-name-role-color: var(--color-accent-primary);
+    --color-header-accent: var(--color-accent-primary);
+    --color-card-project-header: var(--color-accent-primary);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
+    --color-text-summ-par: var(--color-text-secondary);
+    --color-text-footer: var(--color-text-secondary);
+    --color-text-acronym-tooltip: var(--color-text-secondary);
+    --color-text-accomplishments: var(--color-text-secondary);
+    --color-text-project-details-tech-high: var(--color-text-secondary);
+    --color-section-p: var(--color-text-secondary);
+
 
     --background-blur: 7px;
 
@@ -44,22 +62,7 @@
     --header-height: 60px;
     --footer-height: 50px;
 
-    --color-background-hamburger-line: #2C7B47;
-    --color-background-mobile-nav: rgba(72, 187, 120, .90);
-    --color-text-mobile-nav: #212529;
-    --color-border-mobile-nav: #212529;
-
     --max-content-width: 100%;
-
-    --color-name-role-color: var(--color-accent-primary);
-    --color-header-accent:  var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
-    --color-text-summ-par: var(--color-text-secondary);
-    --color-text-footer: var(--color-text-secondary);
-    --color-text-acronym-tooltip: var(--color-text-secondary);
-    --color-text-accomplishments: var(--color-text-secondary);
-    --color-text-project-details-tech-high: var(--color-text-secondary);
-    --color-section-p: var(--color-text-secondary);
 }
 
 body.dark-mode {
@@ -76,9 +79,14 @@ body.dark-mode {
     --color-background-mobile-nav: rgba(44, 123, 71, .90);
     --color-text-mobile-nav: #C0C0C0;
     --color-border-mobile-nav: #C0C0C0;
+    --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-accent-primary);
-    --color-header-accent:  var(--color-accent-primary);
+    --color-header-accent: var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
     --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
@@ -101,9 +109,14 @@ body.ferrari {
     --color-background-hamburger-line: #FFF200;
     --color-text-mobile-nav: #FFF200;
     --color-border-mobile-nav: #FFF200;
+    --color-shadow-default: rgba(0, 0, 0, 0.15);
     --color-name-role-color: var(--color-accent-primary);
-    --color-header-accent:  var(--color-accent-primary);
+    --color-header-accent: var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
     --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
@@ -126,9 +139,14 @@ body.sauber {
     --color-background-hamburger-line: #474F54;
     --color-text-mobile-nav: #0B0E0F;
     --color-border-mobile-nav: #474F54;
+    --color-shadow-default: rgba(0, 0, 0, 0.15);
     --color-name-role-color: var(--color-accent-primary);
-    --color-header-accent:  var(--color-accent-primary);
+    --color-header-accent: var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
     --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
@@ -151,9 +169,14 @@ body.haas {
     --color-background-hamburger-line: #E6002B;
     --color-text-mobile-nav: #E6002B;
     --color-border-mobile-nav: #E6002B;
+    --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-accent-primary);
-    --color-header-accent:  var(--color-accent-primary);
+    --color-header-accent: var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
     --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);

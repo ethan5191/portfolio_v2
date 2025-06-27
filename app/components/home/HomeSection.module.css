@@ -24,7 +24,7 @@
 .roleTagline {
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: var(--color-text-footer-role-tag);
     margin-bottom: var(--spacing-lg);
     line-height: 1.4;
     transition: color var(--transition-speed-normal) var(--transition-easing-default);

@@ -1,7 +1,7 @@
 .sectionBase {
     min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--spacing-xxl));
     background-color: var(--color-background-header-section);
-    color: var(--color-text-primary);
+    color: var(--color-text-main-content);
     box-shadow: 0 4px 15px var(--color-shadow-default);
     border-radius: var(--border-radius-md);
     transition: background-color var(--transition-speed-normal) var(--transition-easing-default),
@@ -13,7 +13,7 @@
 
     h2 {
         font-size: 2.2rem;
-        color: var(--color-text-primary);
+        color: var(--color-text-main-content);
         margin-top: 0;
         margin-bottom: var(--spacing-lg);
         font-style: italic;
@@ -27,7 +27,7 @@
     }
 
     a {
-        color: var(--color-text-primary);
+        color: var(--color-text-main-content);
         text-decoration: underline;
     }
 

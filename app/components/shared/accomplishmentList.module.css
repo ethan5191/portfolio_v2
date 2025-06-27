@@ -15,7 +15,7 @@
 .accomplishmentsList li .accomplishmentTitle {
     font-weight: bold;
     margin-right: var(--spacing-xs);
-    color: var(--color-text-primary);
+    color: var(--color-text-column-title);
 }
 
 .accomplishmentsList li .accomplishmentDetails {

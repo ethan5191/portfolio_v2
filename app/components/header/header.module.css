@@ -46,7 +46,7 @@
 
 .headerMiddle a {
     text-decoration: none;
-    color: var(--color-text-primary);
+    color: var(--color-text-header-content);
     font-weight: 500;
     transition: color var(--transition-speed-fast) var(--transition-easing-default);
     padding: 0.5rem 0;
@@ -75,7 +75,7 @@
 .toggleThemeButton {
     background: none;
     border: none;
-    color: var(--color-text-primary);
+    color: var(--color-text-header-content);
     font-size: 1.4rem; /* Icon size */
     cursor: pointer;
     padding: var(--spacing-sm);

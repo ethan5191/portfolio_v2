@@ -54,7 +54,7 @@
 
 .contentColumn h4 {
     font-size: 1.2rem;
-    color: var(--color-text-primary);
+    color: var(--color-text-column-title);
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
     text-align: left;
