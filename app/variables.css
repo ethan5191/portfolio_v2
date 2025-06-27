@@ -54,6 +54,7 @@
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent:  var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
     --color-text-accomplishments: var(--color-text-secondary);
@@ -78,6 +79,7 @@ body.dark-mode {
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent:  var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
     --color-text-accomplishments: var(--color-text-secondary);
@@ -102,6 +104,7 @@ body.ferrari {
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent:  var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
     --color-text-accomplishments: var(--color-text-secondary);
@@ -126,6 +129,7 @@ body.sauber {
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent:  var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
     --color-text-accomplishments: var(--color-text-secondary);
@@ -150,6 +154,7 @@ body.haas {
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent:  var(--color-accent-primary);
     --color-card-project-header: var(--color-accent-primary);
+    --color-text-summ-par: var(--color-text-secondary);
     --color-text-footer: var(--color-text-secondary);
     --color-text-acronym-tooltip: var(--color-text-secondary);
     --color-text-accomplishments: var(--color-text-secondary);

@@ -40,7 +40,7 @@
 .summaryParagraph {
     font-size: 1.15rem;
     line-height: 1.6;
-    color: var(--color-text-secondary);
+    color: var(--color-text-summ-par);
     margin-bottom: var(--spacing-xl);
     transition: color var(--transition-speed-normal) var(--transition-easing-default);
 }
