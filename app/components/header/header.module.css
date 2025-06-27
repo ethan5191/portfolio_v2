@@ -1,5 +1,5 @@
 .pageHeader {
-    background-color: var(--color-background-primary-transparent);
+    background-color: var(--color-background-base-transparent);
     backdrop-filter: blur(var(--background-blur));
     display: flex;
     flex-flow: row nowrap;
@@ -33,7 +33,7 @@
 }
 
 .headerMiddle {
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-header-section);
     border-radius: var(--border-radius-md);
     padding: var(--spacing-xs) var(--spacing-lg);
     box-shadow: 0 2px 4px var(--color-shadow-default);

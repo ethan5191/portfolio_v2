@@ -3,14 +3,13 @@
     --color-a-hover: #66B08A;
 
     --color-background-base: #FFFFFF;
+    --color-background-base-transparent: rgba(255, 255, 255, 0.8);
+    --color-background-header-section: #F8F9FA;
     --color-text-primary: #212529;
     --color-text-secondary: #495057;
-    --color-text-subtle: #C0C0C0;
-    --color-border-default: #DEE2E6;
+    --color-projects-divider: #DEE2E6;
     --color-shadow-default: rgba(0, 0, 0, 0.15);
-    --color-background-secondary: #F8F9FA;
 
-    --color-background-primary-transparent: rgba(255, 255, 255, 0.8);
     --background-blur: 7px;
 
     --font-family-name: "Monotype Corsiva", cursive;
@@ -61,13 +60,12 @@ body.dark-mode {
     --color-accent-primary: #48BB78;
     --color-a-hover: #68D391;
     --color-background-base: #1A202C;
-    --color-background-primary-transparent: rgba(26, 32, 44, 0.7);
+    --color-background-base-transparent: rgba(26, 32, 44, 0.7);
+    --color-background-header-section: #11161B;
     --background-blur: 10px;
     --color-text-primary: #E2E8F0;
     --color-text-secondary: #A0AEC0;
-    --color-text-subtle: #718096;
-    --color-border-default: #4A5568;
-    --color-background-secondary: #11161B;
+    --color-projects-divider: #4A5568;
     --color-background-hamburger-line: #48BB78;
     --color-background-mobile-nav: rgba(44, 123, 71, .90);
     --color-text-mobile-nav: #C0C0C0;
@@ -81,14 +79,13 @@ body.ferrari {
     --color-accent-primary: #FFF200;
     --color-a-hover: #FFF200;
     --color-background-base: #C00000;
-    --color-background-primary-transparent: rgba(192, 0, 0, 0.7);
-    --color-background-secondary: #DC0000;
+    --color-background-base-transparent: rgba(192, 0, 0, 0.7);
+    --color-background-header-section: #DC0000;
     --color-background-mobile-nav: rgba(220, 0, 0, .90);
     --background-blur: 10px;
     --color-text-primary: #1C1C1C;
     --color-text-secondary: #000000;
-    --color-text-subtle: #000000;
-    --color-border-default: #1C1C1C;
+    --color-projects-divider: #1C1C1C;
     --color-background-hamburger-line: #FFF200;
     --color-text-mobile-nav: #FFF200;
     --color-border-mobile-nav: #FFF200;
@@ -101,14 +98,13 @@ body.sauber {
     --color-accent-primary: #474F54;
     --color-a-hover: #474F54;
     --color-background-base: #00E701;
-    --color-background-primary-transparent: rgba(0, 231, 1, 0.7);
-    --color-background-secondary: #52E252;
+    --color-background-base-transparent: rgba(0, 231, 1, 0.7);
+    --color-background-header-section: #52E252;
     --color-background-mobile-nav: rgba(82, 226, 82, .90);
     --background-blur: 10px;
     --color-text-primary: #0B0E0F;
     --color-text-secondary: #474F54;
-    --color-text-subtle: #474F54;
-    --color-border-default: #474F54;
+    --color-projects-divider: #474F54;
     --color-background-hamburger-line: #474F54;
     --color-text-mobile-nav: #0B0E0F;
     --color-border-mobile-nav: #474F54;
@@ -121,14 +117,13 @@ body.haas {
     --color-accent-primary: #FFFFFF;
     --color-a-hover: #FFFFFF;
     --color-background-base: #000000;
-    --color-background-primary-transparent: rgba(0, 0, 0, 0.7);
-    --color-background-secondary: #1C1C1C;
+    --color-background-base-transparent: rgba(0, 0, 0, 0.7);
+    --color-background-header-section: #1C1C1C;
     --color-background-mobile-nav: rgba(28, 28, 28, .90);
     --background-blur: 10px;
     --color-text-primary: #E6002B;
     --color-text-secondary: #E6002B;
-    --color-text-subtle: #FFFFFF;
-    --color-border-default: #FFFFFF;
+    --color-projects-divider: #FFFFFF;
     --color-background-hamburger-line: #E6002B;
     --color-text-mobile-nav: #E6002B;
     --color-border-mobile-nav: #E6002B;
