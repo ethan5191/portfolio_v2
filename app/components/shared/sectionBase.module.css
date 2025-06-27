@@ -22,7 +22,7 @@
     p {
         line-height: 1.6;
         margin-bottom: var(--spacing-md);
-        color: var(--color-text-secondary);
+        color: var(--color-section-p);
         font-size: 1.15rem;
     }
 

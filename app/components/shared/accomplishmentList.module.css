@@ -8,7 +8,7 @@
     margin-bottom: var(--spacing-md);
     line-height: 1.7;
     display: block;
-    color: var(--color-text-secondary);
+    color: var(--color-text-accomplishments);
     font-size: 1.15rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .accomplishmentsList li .accomplishmentDetails {
-    color: var(--color-text-secondary);
+    color: var(--color-text-accomplishments);
 }
 
 @media (max-width: 768px) {

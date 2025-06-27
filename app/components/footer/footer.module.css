@@ -1,7 +1,7 @@
 .footer {
     background-color: var(--color-background-base-transparent);
     backdrop-filter: blur(var(--background-blur));
-    color: var(--color-text-secondary);
+    color: var(--color-text-footer);
     padding: var(--spacing-xs) var(--spacing-xl);
     text-align: center;
     width: 100%;
@@ -25,5 +25,5 @@
     font-style: normal;
     margin-top: var(--spacing-xs);
     font-size: 0.9em;
-    color: var(--color-text-secondary);
+    color: var(--color-text-footer);
 }
