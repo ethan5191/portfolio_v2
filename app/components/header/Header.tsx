@@ -8,17 +8,6 @@ import {faHome, faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
 
 type Theme = 'light' | 'dark';
 
-interface ThemeContextType {
-    theme: Theme;
-    toggleTheme: () => void;
-}
-
-let currentTheme: Theme = 'light';
-const mockToggleTheme = () => {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.body.classList.toggle('dark-mode', currentTheme === 'dark');
-};
-
 export default function Header() {
 
     useEffect(() => {
@@ -79,7 +68,7 @@ export default function Header() {
                         aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                     >
                         {/*Added classname here to prevent minor position adjustments to the header when changing modes*/}
-                        <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} className="fa-fw"/>
+                        <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="fa-fw"/>
                     </button>
                     <button className={styles.hamburgerIcon} aria-label="Toggle navigation">
                         <span className={styles.hamburgerLine}></span>
