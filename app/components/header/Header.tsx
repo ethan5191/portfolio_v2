@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHome} from '@fortawesome/free-solid-svg-icons';
 import ThemeButtons from "@/app/components/themeButtons/ThemeButtons";
 import ThemePalette from '../themeButtons/ThemePalette';
+import {f1Teams} from '../themeButtons/types/f1Teams';
 
 import {AllThemes} from "@/app/components/types/Theme";
 
@@ -43,6 +44,11 @@ export default function Header() {
     }, []);
     const toggleTheme = () => {
         setTheme(prevTheme => {
+            {f1Teams.forEach(team => {
+                if (document.body.classList.contains(team)) {
+                    document.body.classList.remove(team);
+                }
+            })}
             const newTheme = prevTheme === 'light' ? 'dark' : 'light';
             document.body.classList.toggle('dark-mode', newTheme === 'dark');
             return newTheme;

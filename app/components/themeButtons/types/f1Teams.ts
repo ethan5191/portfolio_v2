@@ -17,3 +17,7 @@ export const f1TeamsData: f1Teams[] = [
     {id: 'mclaren', value: 'mclaren', label: 'McLaren'},
     {id: 'williams', value: 'williams', label: 'Williams'},
 ];
+
+export const f1Teams: string[] = [
+    'ferrari', 'sauber', 'haas', 'mercedes', 'alpine', 'redBull', 'racingBulls', 'aston', 'mclaren', 'williams'
+];

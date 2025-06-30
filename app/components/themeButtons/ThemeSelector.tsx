@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import styles from './themeSelector.module.css';
-import {f1TeamsData} from "@/app/components/themeButtons/types/f1Teams";
+import {f1Teams, f1TeamsData} from "@/app/components/themeButtons/types/f1Teams";
 
 interface F1TeamSelectorProps {
     onSelectThemePalette: (themeValue: string) => void;
@@ -16,6 +16,16 @@ const F1TeamSelector: React.FC<F1TeamSelectorProps> = ({ onSelectThemePalette, i
         const newThemeValue = event.target.value;
         setSelectedThemePalette(newThemeValue);
         onSelectThemePalette(newThemeValue);
+        {f1Teams.forEach(team => {
+            if (document.body.classList.contains(team)) {
+                document.body.classList.remove(team);
+            }
+        })}
+        if (newThemeValue !== 'default') {
+            document.body.classList.toggle(newThemeValue);
+        } else {
+            document.body.classList.add('dark-mode');
+        }
     };
     const defaultThemeOption = f1TeamsData.find(option => option.id === 'default');
     const customThemeOptions = f1TeamsData.filter(option => option.id !== 'default');
