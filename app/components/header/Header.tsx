@@ -8,21 +8,7 @@ import {faHome} from '@fortawesome/free-solid-svg-icons';
 import ThemeButtons from "@/app/components/themeButtons/ThemeButtons";
 import ThemePalette from '../themeButtons/ThemePalette';
 import {f1Teams} from '../themeButtons/types/f1Teams';
-
-import {AllThemes} from "@/app/components/types/Theme";
-
-type ColorPaletteName =
-    'default'
-    | 'ferrari'
-    | 'sauber'
-    | 'haas'
-    | 'mercedes'
-    | 'alpine'
-    | 'redBull'
-    | 'racingBulls'
-    | 'aston'
-    | 'mclaren'
-    | 'williams';
+import {AllThemes, ColorPaletteName} from "@/app/components/types/Theme";
 
 export default function Header() {
     const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -77,8 +63,10 @@ export default function Header() {
 
     const toggleTheme = () => {
         setTheme(prevTheme => {
+            console.log('Header: toggleTheme called. Current activeColorPalette before reset:', activeColorPalette);
             const newTheme = prevTheme === 'light' ? 'dark' : 'light';
             setActiveColorPalette('default');
+            console.log(activeColorPalette);
             return newTheme;
         });
     };
@@ -119,7 +107,9 @@ export default function Header() {
                         <span className={styles.hamburgerLine}></span>
                     </button>
                 </div>
-                <ThemePalette isOpen={isPanelOpen} onClose={handleClosePanel}/>
+                <ThemePalette isOpen={isPanelOpen} onClose={handleClosePanel}
+                              activeColorPalette={activeColorPalette}
+                              onUpdateColorPalette={handleUpdateColorPalette}/>
             </header>
             <nav className={styles.mobileNavPanel}>
                 <a href="#about">ABOUT</a>

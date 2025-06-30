@@ -3,13 +3,16 @@
 import React, {useEffect, useRef} from 'react';
 import styles from './themePalette.module.css';
 import ThemeSelector from "@/app/components/themeButtons/ThemeSelector";
+import {ColorPaletteName} from "@/app/components/types/Theme";
 
 interface ThemePaletteProps {
     isOpen: boolean;
     onClose: () => void;
+    activeColorPalette: ColorPaletteName;
+    onUpdateColorPalette: (newPalette: ColorPaletteName) => void;
 }
 
-const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose}) => {
+const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose, activeColorPalette, onUpdateColorPalette}) => {
     const paletteRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         if (paletteRef.current) {
@@ -49,13 +52,10 @@ const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose}) => {
         };
     }, [isOpen, onClose]);
 
-    const handleThemeChange = () => {
-
-    }
-
     return (<>
             <div className={styles.paletteContainer} ref={paletteRef}>
-                <ThemeSelector initialSelectedThemePalette={'default'} onSelectThemePalette={handleThemeChange} />
+                <ThemeSelector initialSelectedThemePalette={activeColorPalette}
+                               onSelectThemePalette={onUpdateColorPalette}/>
             </div>
         </>
     )

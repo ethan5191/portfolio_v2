@@ -20,4 +20,4 @@ export const f1TeamsData: f1Teams[] = [
 
 export const f1Teams: string[] = [
     'ferrari', 'sauber', 'haas', 'mercedes', 'alpine', 'redBull', 'racingBulls', 'aston', 'mclaren', 'williams'
-];
+] as const;
