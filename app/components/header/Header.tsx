@@ -11,6 +11,19 @@ import {f1Teams} from '../themeButtons/types/f1Teams';
 
 import {AllThemes} from "@/app/components/types/Theme";
 
+type ColorPaletteName =
+    'default'
+    | 'ferrari'
+    | 'sauber'
+    | 'haas'
+    | 'mercedes'
+    | 'alpine'
+    | 'redBull'
+    | 'racingBulls'
+    | 'aston'
+    | 'mclaren'
+    | 'williams';
+
 export default function Header() {
     const [isPanelOpen, setIsPanelOpen] = useState(false);
 
@@ -39,20 +52,39 @@ export default function Header() {
     }, [styles.hamburgerIcon]);
 
     const [theme, setTheme] = useState<AllThemes>('dark');
+    const [activeColorPalette, setActiveColorPalette] = useState<ColorPaletteName>(() => {
+        if (typeof window !== 'undefined') {
+            return (localStorage.getItem('activeColorPalette') as ColorPaletteName) || 'default';
+        }
+        return 'default';
+    });
+
     useEffect(() => {
-        document.body.classList.toggle('dark-mode', theme === 'dark');
-    }, []);
+        const bodyClassList = document.body.classList;
+        // 1. Clean up ALL potential custom theme classes from the body
+        f1Teams.forEach(className => {
+            bodyClassList.remove(className);
+        });
+        // 2. Apply the current custom theme class, if one is selected (i.e., not 'default')
+        if (activeColorPalette !== 'default') {
+            bodyClassList.add(activeColorPalette);
+        }
+        // 3. Apply/remove the 'dark-mode' class based on the 'theme' state
+        bodyClassList.toggle('dark-mode', theme === 'dark');
+        localStorage.setItem('theme', theme);
+        localStorage.setItem('activeColorPalette', activeColorPalette);
+    }, [theme, activeColorPalette]);
+
     const toggleTheme = () => {
         setTheme(prevTheme => {
-            {f1Teams.forEach(team => {
-                if (document.body.classList.contains(team)) {
-                    document.body.classList.remove(team);
-                }
-            })}
             const newTheme = prevTheme === 'light' ? 'dark' : 'light';
-            document.body.classList.toggle('dark-mode', newTheme === 'dark');
+            setActiveColorPalette('default');
             return newTheme;
         });
+    };
+
+    const handleUpdateColorPalette = (newPalette: ColorPaletteName) => {
+        setActiveColorPalette(newPalette);
     };
 
     const handlePaletteButtonClick = () => {
