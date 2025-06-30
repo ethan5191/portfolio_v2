@@ -11,7 +11,7 @@ import ThemePalette from '../themeButtons/ThemePalette';
 import {AllThemes} from "@/app/components/types/Theme";
 
 export default function Header() {
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isPanelOpen, setIsPanelOpen] = useState(false);
 
     useEffect(() => {
         // Use the styles object within a template literal to get the hashed class name string
@@ -49,13 +49,13 @@ export default function Header() {
         });
     };
 
-    const togglePalette = () => {
-        setIsOpen(true);
+    const handlePaletteButtonClick = () => {
+        setIsPanelOpen(prev => !prev);
     }
 
-    const closePalette = () => {
-        setIsOpen(false);
-    }
+    const handleClosePanel = () => {
+        setIsPanelOpen(false);
+    };
 
     return (<>
             <header className={styles.pageHeader}>
@@ -73,14 +73,15 @@ export default function Header() {
                     <a href="#contact">CONTACT</a>
                 </div>
                 <div className={styles.headerRight}>
-                    <ThemeButtons currentMode={theme} onToggleMode={toggleTheme} onPaletteClick={togglePalette}/>
+                    <ThemeButtons currentMode={theme} onToggleMode={toggleTheme}
+                                  onPaletteClick={handlePaletteButtonClick} isPaletteOpen={isPanelOpen}/>
                     <button className={styles.hamburgerIcon} aria-label="Toggle navigation">
                         <span className={styles.hamburgerLine}></span>
                         <span className={styles.hamburgerLine}></span>
                         <span className={styles.hamburgerLine}></span>
                     </button>
                 </div>
-                <ThemePalette isOpen={isOpen} onClose={closePalette}/>
+                <ThemePalette isOpen={isPanelOpen} onClose={handleClosePanel}/>
             </header>
             <nav className={styles.mobileNavPanel}>
                 <a href="#about">ABOUT</a>

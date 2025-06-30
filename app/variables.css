@@ -60,6 +60,7 @@
     --transition-easing-default: ease-in-out;
 
     --header-height: 60px;
+    --header-height-mobile: 53px;
     --footer-height: 50px;
 
     --max-content-width: 100%;

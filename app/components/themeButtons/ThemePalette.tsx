@@ -2,8 +2,6 @@
 
 import React, {useEffect, useRef} from 'react';
 import styles from './themePalette.module.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 interface ThemePaletteProps {
     isOpen: boolean;
@@ -52,9 +50,6 @@ const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose}) => {
 
     return (<>
             <div className={styles.paletteContainer} ref={paletteRef}>
-                <button onClick={onClose} className={styles.closeButton} aria-label="Close panel">
-                    <FontAwesomeIcon icon={faTimes}/>
-                </button>
                 <h3>Theme Options</h3>
             </div>
         </>

@@ -37,12 +37,19 @@
 
 @media (max-width: 768px) {
     .paletteContainer {
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: var(--color-background-mobile-nav);
         z-index: 990;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing:  border-box;
+        margin-top: var(--header-height-mobile);
     }
 
     .closeButton {

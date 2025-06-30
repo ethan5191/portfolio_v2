@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from "../header/header.module.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMoon, faPalette, faSun} from '@fortawesome/free-solid-svg-icons';
+import {faMoon, faPalette, faSun, faXmark} from '@fortawesome/free-solid-svg-icons';
 
 import {AllThemes} from '../types/Theme';
 
@@ -11,13 +11,21 @@ interface ThemeToggleButtonsProps {
     currentMode: AllThemes;
     onToggleMode: () => void;
     onPaletteClick: () => void;
+    isPaletteOpen: boolean;
 }
 
 const ThemeToggleButtons: React.FC<ThemeToggleButtonsProps> = ({
                                                                    currentMode,
                                                                    onToggleMode,
                                                                    onPaletteClick,
+                                                                   isPaletteOpen
                                                                }) => {
+
+    const handlePaletteButtonClick = (event: React.MouseEvent) => {
+        event.stopPropagation();
+        onPaletteClick();
+    };
+
     return (
         <>
             <button
@@ -29,10 +37,10 @@ const ThemeToggleButtons: React.FC<ThemeToggleButtonsProps> = ({
             </button>
             <button
                 className={styles.toggleThemeButton}
-                onClick={onPaletteClick}
-                aria-label={'Select a different theme'}
+                onMouseDown={handlePaletteButtonClick}
+                aria-label={isPaletteOpen ? 'Close theme selection panel' : 'Select a different theme'}
             >
-                <FontAwesomeIcon icon={faPalette} className="fa-fw"/>
+                <FontAwesomeIcon icon={isPaletteOpen ? faXmark : faPalette} className="fa-fw"/>
             </button>
         </>
     );
