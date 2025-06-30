@@ -2,6 +2,7 @@
 
 import React, {useEffect, useRef} from 'react';
 import styles from './themePalette.module.css';
+import ThemeSelector from "@/app/components/themeButtons/ThemeSelector";
 
 interface ThemePaletteProps {
     isOpen: boolean;
@@ -48,9 +49,13 @@ const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose}) => {
         };
     }, [isOpen, onClose]);
 
+    const handleThemeChange = () => {
+
+    }
+
     return (<>
             <div className={styles.paletteContainer} ref={paletteRef}>
-                <h3>Theme Options</h3>
+                <ThemeSelector initialSelectedThemePalette={'default'} onSelectThemePalette={handleThemeChange} />
             </div>
         </>
     )

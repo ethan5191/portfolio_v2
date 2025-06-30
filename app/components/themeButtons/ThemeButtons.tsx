@@ -26,11 +26,16 @@ const ThemeToggleButtons: React.FC<ThemeToggleButtonsProps> = ({
         onPaletteClick();
     };
 
+    const handleToggleModeInteraction = (event: React.MouseEvent) => {
+        event.stopPropagation();
+        onToggleMode();
+    };
+
     return (
         <>
             <button
                 className={styles.toggleThemeButton}
-                onClick={onToggleMode}
+                onMouseDown={handleToggleModeInteraction}
                 aria-label={`Switch to ${currentMode === 'light' ? 'dark' : 'light'} mode`}
             >
                 <FontAwesomeIcon icon={currentMode === 'dark' ? faSun : faMoon} className="fa-fw"/>
