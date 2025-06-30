@@ -1,0 +1,57 @@
+.paletteContainer {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 300px;
+    color: var(--color-text-primary);
+    background-color: var(--color-background-header-section);
+    box-shadow: -4px 0 15px var(--color-shadow-default);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(var(--spacing-md));
+}
+
+.sidePanelOpen {
+    transform: translateX(0);
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-xl);
+    color: var(--color-text-primary);
+    z-index: 1002;
+    transition: color var(--transition-speed-fast) var(--transition-easing-default);
+}
+
+.closeButton:hover {
+    color: var(--color-accent-primary);
+}
+
+@media (max-width: 768px) {
+    .paletteContainer {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-background-mobile-nav);
+        z-index: 990;
+    }
+
+    .closeButton {
+        left: 0;
+        right: auto;
+    }
+
+    :global(body.paletteContainer) .paletteContainer {
+        visibility: visible;
+        opacity: 1;
+    }
+}

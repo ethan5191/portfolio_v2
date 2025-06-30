@@ -4,11 +4,14 @@ import styles from "./header.module.css";
 import React, {useEffect, useState} from "react";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faHome, faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
+import {faHome} from '@fortawesome/free-solid-svg-icons';
+import ThemeButtons from "@/app/components/themeButtons/ThemeButtons";
+import ThemePalette from '../themeButtons/ThemePalette';
 
-type Theme = 'light' | 'dark';
+import {AllThemes} from "@/app/components/types/Theme";
 
 export default function Header() {
+    const [isOpen, setIsOpen] = React.useState(false);
 
     useEffect(() => {
         // Use the styles object within a template literal to get the hashed class name string
@@ -34,7 +37,7 @@ export default function Header() {
         }
     }, [styles.hamburgerIcon]);
 
-    const [theme, setTheme] = useState<Theme>('dark');
+    const [theme, setTheme] = useState<AllThemes>('dark');
     useEffect(() => {
         document.body.classList.toggle('dark-mode', theme === 'dark');
     }, []);
@@ -45,6 +48,14 @@ export default function Header() {
             return newTheme;
         });
     };
+
+    const togglePalette = () => {
+        setIsOpen(true);
+    }
+
+    const closePalette = () => {
+        setIsOpen(false);
+    }
 
     return (<>
             <header className={styles.pageHeader}>
@@ -62,20 +73,14 @@ export default function Header() {
                     <a href="#contact">CONTACT</a>
                 </div>
                 <div className={styles.headerRight}>
-                    <button
-                        className={styles.toggleThemeButton}
-                        onClick={toggleTheme}
-                        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-                    >
-                        {/*Added classname here to prevent minor position adjustments to the header when changing modes*/}
-                        <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="fa-fw"/>
-                    </button>
+                    <ThemeButtons currentMode={theme} onToggleMode={toggleTheme} onPaletteClick={togglePalette}/>
                     <button className={styles.hamburgerIcon} aria-label="Toggle navigation">
                         <span className={styles.hamburgerLine}></span>
                         <span className={styles.hamburgerLine}></span>
                         <span className={styles.hamburgerLine}></span>
                     </button>
                 </div>
+                <ThemePalette isOpen={isOpen} onClose={closePalette}/>
             </header>
             <nav className={styles.mobileNavPanel}>
                 <a href="#about">ABOUT</a>
