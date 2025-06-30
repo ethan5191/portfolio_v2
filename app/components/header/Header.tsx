@@ -77,6 +77,7 @@ export default function Header() {
 
     const handlePaletteButtonClick = () => {
         setIsPanelOpen(prev => !prev);
+        document.body.classList.remove('mobile-nav-open');
     }
 
     const handleClosePanel = () => {
