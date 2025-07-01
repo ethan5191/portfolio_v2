@@ -23,7 +23,7 @@
 
 .projectNameColumn h3 {
     font-size: 1.8rem;
-    color: var(--color-card-project-header);
+    color: var(--color-project-header);
     margin-top: 0;
     margin-bottom: 0;
 }

@@ -28,7 +28,7 @@
 
 .cardHeader {
     font-size: var(--font-size-xl);
-    color: var(--color-card-project-header);
+    color: var(--color-card-header);
     margin-bottom: var(--spacing-md);
     font-weight: bold;
 }

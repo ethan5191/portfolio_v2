@@ -15,7 +15,8 @@
 
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-text-header-content);
     --color-text-main-content: var(--color-text-primary);
@@ -89,7 +90,8 @@ body.dark-mode {
     --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-text-header-content);
     --color-text-main-content: var(--color-text-primary);
@@ -124,7 +126,8 @@ body.ferrari {
     --color-shadow-default: rgba(0, 0, 0, 0.15);
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-text-header-content);
     --color-text-main-content: var(--color-text-primary);
@@ -159,7 +162,8 @@ body.sauber {
     --color-shadow-default: rgba(0, 0, 0, 0.15);
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-text-header-content);
     --color-text-main-content: var(--color-text-primary);
@@ -194,7 +198,8 @@ body.haas {
     --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-text-header-content);
     --color-text-main-content: var(--color-text-primary);
@@ -229,7 +234,8 @@ body.mercedes {
     --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-accent-primary);
-    --color-card-project-header: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-accent-primary);
     --color-text-main-content: var(--color-text-primary);
@@ -264,7 +270,8 @@ body.alpine {
     --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-accent-primary);
     --color-header-accent: var(--color-a-hover);
-    --color-card-project-header: #E12319;
+    --color-project-header: #E12319;
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: var(--color-text-primary);
     --color-text-header-theme-buttons: var(--color-accent-primary);
     --color-text-main-content: var(--color-text-primary);
@@ -299,7 +306,8 @@ body.redBull {
     --color-shadow-default: rgba(0, 0, 0, 0.4);
     --color-name-role-color: var(--color-a-hover);
     --color-header-accent: var(--color-a-hover);
-    --color-card-project-header: #E30118;
+    --color-project-header: #E30118;
+    --color-card-header: var(--color-project-header);
     --color-text-header-content: #4D4D4C;
     --color-text-header-theme-buttons: var(--color-a-hover);
     --color-text-main-content: var(--color-text-primary);
@@ -315,4 +323,40 @@ body.redBull {
     --color-fieldset-radio-border: #E30118;
     --color-text-legend: #FFFFFF;
     --color-text-radio-label: var(--color-text-legend);
+}
+
+body.racingBulls {
+    --color-accent-primary: #FFFFFF;
+    --color-a-hover: #4E7C9B;
+    --color-background-base: #FFFFFF;
+    --color-background-base-transparent: rgba(255, 255, 255, 0.7);
+    --color-background-header-section: #20394C;
+    --color-background-mobile-nav: rgba(32, 57, 76, .90);
+    --background-blur: 10px;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #FFFFFF;
+    --color-projects-divider: #E30118;
+    --color-background-hamburger-line: var(--color-a-hover);
+    --color-text-mobile-nav: var(--color-accent-primary);
+    --color-border-mobile-nav: #E12319;
+    --color-shadow-default: rgba(0, 0, 0, 0.4);
+    --color-name-role-color: #E30118;
+    --color-header-accent: var(--color-a-hover);
+    --color-project-header: #000000;
+    --color-card-header: var(--color-background-header-section);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-header-theme-buttons: var(--color-a-hover);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-main-content-a: var(--color-accent-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-a-hover);
+    --color-text-summ-par: var(--color-text-secondary);
+    --color-text-footer: #E30118;
+    --color-text-acronym-tooltip: #000000;
+    --color-text-accomplishments: var(--color-text-secondary);
+    --color-text-project-details-tech-high: var(--color-text-secondary);
+    --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-a-hover);
+    --color-text-legend: var(--color-a-hover);
+    --color-text-radio-label: #E30118;
 }
