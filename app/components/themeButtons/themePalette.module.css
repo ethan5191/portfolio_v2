@@ -36,13 +36,10 @@
         justify-content: center;
         box-sizing:  border-box;
         margin-top: var(--header-height-mobile);
-        visibility: hidden;
-        transition: transform 0.3s ease-out, visibility 0s linear 0.3s;
     }
 
     :global(body.paletteContainer) .paletteContainer {
         visibility: visible;
-        transition: transform 0.3s ease-out, visibility 0s linear 0s;
         opacity: 1;
     }
 }
