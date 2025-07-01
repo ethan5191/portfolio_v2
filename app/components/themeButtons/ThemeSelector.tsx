@@ -1,32 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import styles from './themeSelector.module.css';
-import {f1Teams, f1TeamsData} from "@/app/components/themeButtons/types/f1Teams";
+import {f1TeamsData} from "@/app/components/themeButtons/types/f1Teams";
+import ThemeSelectorInput from "@/app/components/themeButtons/ThemeSelectorInput";
 
 interface F1TeamSelectorProps {
     onSelectThemePalette: (themeValue: string) => void;
     initialSelectedThemePalette: string;
 }
 
-const F1TeamSelector: React.FC<F1TeamSelectorProps> = ({ onSelectThemePalette, initialSelectedThemePalette }) => {
-    const [selectedThemePalette, setSelectedThemePalette] = useState<string>(initialSelectedThemePalette);
-    useEffect(() => {
-        setSelectedThemePalette(initialSelectedThemePalette);
-    }, [initialSelectedThemePalette]);
-    const handleThemePaletteChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const newThemeValue = event.target.value;
-        setSelectedThemePalette(newThemeValue);
-        onSelectThemePalette(newThemeValue);
-        {f1Teams.forEach(team => {
-            if (document.body.classList.contains(team)) {
-                document.body.classList.remove(team);
-            }
-        })}
-        if (newThemeValue !== 'default') {
-            document.body.classList.toggle(newThemeValue);
-        } else {
-            document.body.classList.add('dark-mode');
-        }
-    };
+const F1TeamSelector: React.FC<F1TeamSelectorProps> = ({onSelectThemePalette, initialSelectedThemePalette}) => {
     const defaultThemeOption = f1TeamsData.find(option => option.id === 'default');
     const customThemeOptions = f1TeamsData.filter(option => option.id !== 'default');
     const column1Options = customThemeOptions.slice(0, 5);
@@ -34,49 +16,18 @@ const F1TeamSelector: React.FC<F1TeamSelectorProps> = ({ onSelectThemePalette, i
     return (<>
             <fieldset className={styles.fieldset}>
                 <legend className={styles.legend}>Choose a Theme:</legend>
-                {defaultThemeOption && (
-                    <div key={defaultThemeOption.id} className={styles.defaultOption}>
-                        <input
-                            type="radio"
-                            id={defaultThemeOption.id}
-                            name="themePalette"
-                            value={defaultThemeOption.value}
-                            checked={selectedThemePalette === defaultThemeOption.value}
-                            onChange={handleThemePaletteChange}
-                        />
-                        <label htmlFor={defaultThemeOption.id}>{defaultThemeOption.label}</label>
-                    </div>
-                )}
+                <ThemeSelectorInput defaultThemeOption={defaultThemeOption} onSelectThemePalette={onSelectThemePalette}
+                                    initialSelectedThemePalette={initialSelectedThemePalette} themeOptions={null}/>
                 <div className={styles.columnsContainer}>
                     <div className={styles.column}>
-                        {column1Options.map((themeOption) => (
-                            <div key={themeOption.id} className={styles.optionItem}>
-                                <input
-                                    type="radio"
-                                    id={themeOption.id}
-                                    name="themePalette"
-                                    value={themeOption.value}
-                                    checked={selectedThemePalette === themeOption.value}
-                                    onChange={handleThemePaletteChange}
-                                />
-                                <label htmlFor={themeOption.id}>{themeOption.label}</label>
-                            </div>
-                        ))}
+                        <ThemeSelectorInput defaultThemeOption={undefined} onSelectThemePalette={onSelectThemePalette}
+                                            initialSelectedThemePalette={initialSelectedThemePalette}
+                                            themeOptions={column1Options}/>
                     </div>
                     <div className={styles.column}>
-                        {column2Options.map((themeOption) => (
-                            <div key={themeOption.id} className={styles.optionItem}>
-                                <input
-                                    type="radio"
-                                    id={themeOption.id}
-                                    name="themePalette"
-                                    value={themeOption.value}
-                                    checked={selectedThemePalette === themeOption.value}
-                                    onChange={handleThemePaletteChange}
-                                />
-                                <label htmlFor={themeOption.id}>{themeOption.label}</label>
-                            </div>
-                        ))}
+                        <ThemeSelectorInput defaultThemeOption={undefined} onSelectThemePalette={onSelectThemePalette}
+                                            initialSelectedThemePalette={initialSelectedThemePalette}
+                                            themeOptions={column2Options}/>
                     </div>
                 </div>
             </fieldset>
