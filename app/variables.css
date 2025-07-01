@@ -243,8 +243,8 @@ body.mercedes {
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
     --color-fieldset-radio-border: var(--color-accent-primary);
-    --color-text-legend: var(--color-text-primary);
-    --color-text-radio-label: var(--color-text-primary);
+    --color-text-legend: #C8CCCE;
+    --color-text-radio-label: var(--color-text-legend);
 }
 
 body.alpine {
