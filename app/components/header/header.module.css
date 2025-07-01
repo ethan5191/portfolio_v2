@@ -28,7 +28,7 @@
 
 .homeIcon {
     font-size: 1.25rem;
-    color: var(--color-header-accent);
+    color: var(--color-home-icon);
     transition: color var(--transition-speed-fast) var(--transition-easing-default);
 }
 
