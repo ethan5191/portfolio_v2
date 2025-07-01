@@ -39,9 +39,6 @@ export default function Header() {
 
     const [theme, setTheme] = useState<AllThemes>('dark');
     const [activeColorPalette, setActiveColorPalette] = useState<ColorPaletteName>(() => {
-        if (typeof window !== 'undefined') {
-            return (localStorage.getItem('activeColorPalette') as ColorPaletteName) || 'default';
-        }
         return 'default';
     });
 
@@ -57,16 +54,12 @@ export default function Header() {
         }
         // 3. Apply/remove the 'dark-mode' class based on the 'theme' state
         bodyClassList.toggle('dark-mode', theme === 'dark');
-        localStorage.setItem('theme', theme);
-        localStorage.setItem('activeColorPalette', activeColorPalette);
     }, [theme, activeColorPalette]);
 
     const toggleTheme = () => {
         setTheme(prevTheme => {
-            console.log('Header: toggleTheme called. Current activeColorPalette before reset:', activeColorPalette);
             const newTheme = prevTheme === 'light' ? 'dark' : 'light';
             setActiveColorPalette('default');
-            console.log(activeColorPalette);
             return newTheme;
         });
     };
