@@ -443,3 +443,40 @@ body.mclaren {
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
 }
+
+body.williams {
+    --color-accent-primary: #00A0DE;
+    --color-a-hover: var(--color-accent-primary);
+    --color-background-base: #00A0DE;
+    --color-background-base-transparent: rgba(0, 160, 222, 0.7);
+    --color-background-header-section: #041E42;
+    --color-background-mobile-nav: rgba(0, 160, 222, .90);
+    --background-blur: 10px;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #FFFFFF;
+    --color-projects-divider: #FFFFFF;
+    --color-background-hamburger-line: var(--color-background-header-section);
+    --color-text-mobile-nav: var(--color-text-primary);
+    --color-border-mobile-nav: var(--color-accent-primary);
+    --color-shadow-default: rgba(0, 0, 0, 0.4);
+    --color-name-role-color: var(--color-background-base);
+    --color-header-accent: var(--color-accent-primary);
+    --color-home-icon: var(--color-background-header-section);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-background-header-section);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-header-theme-buttons: var(--color-text-header-content);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-main-content-a: var(--color-text-main-content);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
+    --color-text-summ-par: var(--color-text-secondary);
+    --color-text-footer: var(--color-text-secondary);
+    --color-text-acronym-tooltip: var(--color-text-primary);
+    --color-text-accomplishments: var(--color-text-secondary);
+    --color-text-project-details-tech-high: var(--color-text-secondary);
+    --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-background-header-section);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
+}
