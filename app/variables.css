@@ -233,7 +233,7 @@ body.mercedes {
     --color-background-base: #000000;
     --color-background-base-transparent: rgba(0, 0, 0, 0.7);
     --color-background-header-section: #C8CCCE;
-    --color-background-mobile-nav: rgba(200, 204, 206, .90);
+    --color-background-mobile-nav: rgba(0, 0, 0, .90);
     --background-blur: 10px;
     --color-text-primary: #565F64;
     --color-text-secondary: #565F64;
