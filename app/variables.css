@@ -360,3 +360,39 @@ body.racingBulls {
     --color-text-legend: var(--color-a-hover);
     --color-text-radio-label: #E30118;
 }
+
+body.aston {
+    --color-accent-primary: #CBA258;
+    --color-a-hover: #FFFFFF;
+    --color-background-base: #004036;
+    --color-background-base-transparent: rgba(0, 64, 54, 0.7);
+    --color-background-header-section: #005F46;
+    --color-background-mobile-nav: rgba(28, 28, 28, .90);
+    --background-blur: 10px;
+    --color-text-primary: #A5ACAF;
+    --color-text-secondary: #000000;
+    --color-projects-divider: #FFFFFF;
+    --color-background-hamburger-line: #CBA258;
+    --color-text-mobile-nav: #CBA258;
+    --color-border-mobile-nav: #CBA258;
+    --color-shadow-default: rgba(0, 0, 0, 0.4);
+    --color-name-role-color: var(--color-accent-primary);
+    --color-header-accent: var(--color-accent-primary);
+    --color-project-header: var(--color-accent-primary);
+    --color-card-header: var(--color-project-header);
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-header-theme-buttons: var(--color-accent-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-main-content-a: var(--color-text-main-content);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-text-primary);
+    --color-text-summ-par: var(--color-text-secondary);
+    --color-text-footer: var(--color-accent-primary);
+    --color-text-acronym-tooltip: #FFFFFF;
+    --color-text-accomplishments: var(--color-text-secondary);
+    --color-text-project-details-tech-high: var(--color-text-secondary);
+    --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
+}
