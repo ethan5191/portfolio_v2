@@ -21,6 +21,37 @@
     transition: transform 0.3s ease-out, visibility 0s linear 0s;
 }
 
+.floatingDescriptionPanel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: var(--color-background-header-section);
+    color: var(--color-text-theme-descritpion);
+    border-top: 1px solid var(--color-fieldset-radio-border);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s linear 0.3s;
+}
+
+.floatingPanelVisible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s linear 0s;
+}
+
 @media (max-width: 768px) {
     .paletteContainer {
         position: fixed;
@@ -41,5 +72,11 @@
     :global(body.paletteContainer) .paletteContainer {
         visibility: visible;
         opacity: 1;
+    }
+
+    .floatingDescriptionPanel {
+        font-size: 1em;
+        padding: 18px;
+        min-height: 100px;
     }
 }

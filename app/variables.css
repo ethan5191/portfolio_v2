@@ -33,6 +33,7 @@
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 
     --background-blur: 7px;
 
@@ -109,6 +110,7 @@ body.dark-mode {
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.ferrari {
@@ -146,6 +148,7 @@ body.ferrari {
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.sauber {
@@ -183,6 +186,7 @@ body.sauber {
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.haas {
@@ -220,6 +224,7 @@ body.haas {
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.mercedes {
@@ -257,6 +262,7 @@ body.mercedes {
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: #C8CCCE;
     --color-text-radio-label: var(--color-text-legend);
+    --color-text-theme-descritpion: var(--color-background-base);
 }
 
 body.alpine {
@@ -294,6 +300,7 @@ body.alpine {
     --color-fieldset-radio-border: #E12319;
     --color-text-legend: #FFFFFF;
     --color-text-radio-label: var(--color-text-legend);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.redBull {
@@ -331,6 +338,7 @@ body.redBull {
     --color-fieldset-radio-border: #E30118;
     --color-text-legend: #FFFFFF;
     --color-text-radio-label: var(--color-text-legend);
+    --color-text-theme-descritpion: var(--color-text-secondary);
 }
 
 body.racingBulls {
@@ -368,6 +376,7 @@ body.racingBulls {
     --color-fieldset-radio-border: var(--color-a-hover);
     --color-text-legend: var(--color-a-hover);
     --color-text-radio-label: #E30118;
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.aston {
@@ -405,6 +414,7 @@ body.aston {
     --color-fieldset-radio-border: var(--color-accent-primary);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-a-hover);
 }
 
 body.mclaren {
@@ -442,6 +452,7 @@ body.mclaren {
     --color-fieldset-radio-border: var(--color-card-header);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }
 
 body.williams {
@@ -479,4 +490,5 @@ body.williams {
     --color-fieldset-radio-border: var(--color-background-header-section);
     --color-text-legend: var(--color-text-primary);
     --color-text-radio-label: var(--color-text-primary);
+    --color-text-theme-descritpion: var(--color-text-primary);
 }

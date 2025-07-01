@@ -1,9 +1,10 @@
 'use client';
 
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styles from './themePalette.module.css';
 import ThemeSelector from "@/app/components/themeButtons/ThemeSelector";
 import {ColorPaletteName} from "@/app/components/types/Theme";
+import {f1TeamsData} from "@/app/components/themeButtons/types/f1Teams";
 
 interface ThemePaletteProps {
     isOpen: boolean;
@@ -14,6 +15,32 @@ interface ThemePaletteProps {
 
 const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose, activeColorPalette, onUpdateColorPalette}) => {
     const paletteRef = useRef<HTMLDivElement>(null);
+    const [hoveredThemeId, setHoveredThemeId] = useState<string | null>(null);
+    const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    const handleMouseEnterOption = (id: string) => {
+        if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+            hoverTimeoutRef.current = null;
+        }
+        setHoveredThemeId(id);
+    };
+
+    const handleMouseLeaveOption = () => {
+        hoverTimeoutRef.current = setTimeout(() => {
+            setHoveredThemeId(null);
+            hoverTimeoutRef.current = null;
+        }, 200);
+    };
+
+    useEffect(() => {
+        return () => {
+            if (hoverTimeoutRef.current) {
+                clearTimeout(hoverTimeoutRef.current);
+            }
+        };
+    }, []);
+
     useEffect(() => {
         if (paletteRef.current) {
             if (isOpen) {
@@ -52,10 +79,18 @@ const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose, activeColor
         };
     }, [isOpen, onClose]);
 
+    const hoveredDescription = hoveredThemeId
+        ? f1TeamsData.find(option => option.id === hoveredThemeId)?.description
+        : null;
+
     return (<>
             <div className={styles.paletteContainer} ref={paletteRef}>
                 <ThemeSelector initialSelectedThemePalette={activeColorPalette}
-                               onSelectThemePalette={onUpdateColorPalette}/>
+                               onSelectThemePalette={onUpdateColorPalette} onMouseEnterOption={handleMouseEnterOption}
+                               onMouseLeaveOption={handleMouseLeaveOption}/>
+                <div className={`${styles.floatingDescriptionPanel} ${hoveredThemeId ? styles.floatingPanelVisible : ''}`}>
+                    {hoveredDescription}
+                </div>
             </div>
         </>
     )
