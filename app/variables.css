@@ -28,7 +28,9 @@
     --color-text-accomplishments: var(--color-text-secondary);
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
-
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
 
     --background-blur: 7px;
 
@@ -100,6 +102,9 @@ body.dark-mode {
     --color-text-accomplishments: var(--color-text-secondary);
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
 }
 
 body.ferrari {
@@ -132,6 +137,9 @@ body.ferrari {
     --color-text-accomplishments: var(--color-text-secondary);
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
 }
 
 body.sauber {
@@ -164,6 +172,9 @@ body.sauber {
     --color-text-accomplishments: var(--color-text-secondary);
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
 }
 
 body.haas {
@@ -196,6 +207,9 @@ body.haas {
     --color-text-accomplishments: var(--color-text-secondary);
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
 }
 
 body.mercedes {
@@ -228,4 +242,42 @@ body.mercedes {
     --color-text-accomplishments: var(--color-text-secondary);
     --color-text-project-details-tech-high: var(--color-text-secondary);
     --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: var(--color-accent-primary);
+    --color-text-legend: var(--color-text-primary);
+    --color-text-radio-label: var(--color-text-primary);
+}
+
+body.alpine {
+    --color-accent-primary: #FFFFFF;
+    --color-a-hover: #E12319;
+    --color-background-base: #02192B;
+    --color-background-base-transparent: rgba(2, 25, 43, 0.7);
+    --color-background-header-section: #217388;
+    --color-background-mobile-nav: rgba(33, 115, 184, .90);
+    --background-blur: 10px;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #000000;
+    --color-projects-divider: #E12319;
+    --color-background-hamburger-line: #E12319;
+    --color-text-mobile-nav: var(--color-accent-primary);
+    --color-border-mobile-nav: #E12319;
+    --color-shadow-default: rgba(0, 0, 0, 0.4);
+    --color-name-role-color: var(--color-accent-primary);
+    --color-header-accent: var(--color-a-hover);
+    --color-card-project-header: #E12319;
+    --color-text-header-content: var(--color-text-primary);
+    --color-text-header-theme-buttons: var(--color-accent-primary);
+    --color-text-main-content: var(--color-text-primary);
+    --color-text-main-content-a: var(--color-accent-primary);
+    --color-text-column-title: var(--color-text-primary);
+    --color-text-footer-role-tag: var(--color-accent-primary);
+    --color-text-summ-par: var(--color-text-secondary);
+    --color-text-footer: var(--color-accent-primary);
+    --color-text-acronym-tooltip: #FFFFFF;
+    --color-text-accomplishments: var(--color-text-secondary);
+    --color-text-project-details-tech-high: var(--color-text-secondary);
+    --color-section-p: var(--color-text-secondary);
+    --color-fieldset-radio-border: #E12319;
+    --color-text-legend: #FFFFFF;
+    --color-text-radio-label: var(--color-text-legend);
 }
