@@ -27,7 +27,7 @@
     }
 
     a {
-        color: var(--color-text-main-content);
+        color: var(--color-text-main-content-a);
         text-decoration: underline;
     }
 

@@ -75,7 +75,7 @@
 .toggleThemeButton {
     background: none;
     border: none;
-    color: var(--color-text-header-content);
+    color: var(--color-text-header-theme-buttons);
     font-size: 1.4rem; /* Icon size */
     cursor: pointer;
     padding: var(--spacing-sm);
