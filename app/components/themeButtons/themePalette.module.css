@@ -1,9 +1,8 @@
 .paletteContainer {
     position: fixed;
-    top: var(--header-height);
+    top: calc(var(--header-height) + var(--spacing-md));
     right: 0;
     width: 300px;
-    color: var(--color-text-primary);
     background-color: var(--color-background-base);
     box-shadow: -4px 0 15px var(--color-shadow-default);
     z-index: 1001;
@@ -12,7 +11,8 @@
     transition: transform 0.3s ease-out, visibility 0s linear 0.3s;
     display: flex;
     flex-direction: column;
-    margin-top: calc(var(--spacing-md));
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 .sidePanelOpen {
@@ -23,15 +23,14 @@
 
 .floatingDescriptionPanel {
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     padding: 15px;
-    background-color: var(--color-background-header-section);
+    background-color: var(--color-background-mobile-nav);
     color: var(--color-text-theme-descritpion);
     border-top: 1px solid var(--color-fieldset-radio-border);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
     white-space: pre-wrap;
     font-size: 0.9em;
     min-height: 80px;
@@ -39,10 +38,28 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(100%);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s linear 0.3s;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s 0.3s;
+}
+
+.floatingDescriptionPanel.slideFromTop {
+    bottom: 0;
+    top: auto;
+    transform: translateY(0);
+    border-top: 1px solid var(--color-fieldset-radio-border);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.floatingDescriptionPanel.slideFromBottom {
+    top: calc(var(--header-height) + var(--spacing-lg));
+    bottom: auto;
+    transform: translateY(-100%);
+    border-bottom: 1px solid var(--color-fieldset-radio-border);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .floatingPanelVisible {
@@ -55,7 +72,7 @@
 @media (max-width: 768px) {
     .paletteContainer {
         position: fixed;
-        top: 0;
+        top: calc(var(--header-height));
         left: 0;
         width: 100%;
         height: 100vh;
@@ -65,18 +82,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        box-sizing:  border-box;
-        margin-top: var(--header-height-mobile);
-    }
-
-    :global(body.paletteContainer) .paletteContainer {
-        visibility: visible;
-        opacity: 1;
+        box-sizing: border-box;
     }
 
     .floatingDescriptionPanel {
         font-size: 1em;
         padding: 18px;
         min-height: 100px;
+    }
+
+    .floatingDescriptionPanel.slideFromTop {
+        top: 100px;
+        bottom: auto;
+        transform: translateY(-100%);
+        border-bottom: 1px solid var(--color-fieldset-radio-border);
+        border-radius: 8px 8px 0 0;
+    }
+
+    .floatingDescriptionPanel.slideFromBottom {
+        top: 100px;
     }
 }

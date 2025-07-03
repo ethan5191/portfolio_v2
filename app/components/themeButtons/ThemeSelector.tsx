@@ -6,7 +6,7 @@ import ThemeSelectorInput from "@/app/components/themeButtons/ThemeSelectorInput
 interface F1TeamSelectorProps {
     onSelectThemePalette: (themeValue: string) => void;
     initialSelectedThemePalette: string;
-    onMouseEnterOption: (id: string) => void;
+    onMouseEnterOption: (id: string, positionCategory: 'top' | 'bottom') => void;
     onMouseLeaveOption: () => void;
 }
 

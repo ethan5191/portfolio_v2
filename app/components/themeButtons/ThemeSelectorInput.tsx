@@ -7,7 +7,7 @@ interface ThemeSelectorInputProps {
     themeOptions: f1Teams[] | null;
     onSelectThemePalette: (themeValue: string) => void;
     initialSelectedThemePalette: string;
-    onMouseEnterOption: (id: string) => void;
+    onMouseEnterOption: (id: string, positionCategory: 'top' | 'bottom') => void;
 }
 
 const ThemeSelectorInput: React.FC<ThemeSelectorInputProps> = ({
@@ -25,7 +25,7 @@ const ThemeSelectorInput: React.FC<ThemeSelectorInputProps> = ({
         <div
             key={themeOption.id}
             className={themeOption.id === 'default' ? styles.defaultOption : styles.optionItem}
-            onMouseEnter={() => onMouseEnterOption(themeOption.id)}
+            onMouseEnter={() => onMouseEnterOption(themeOption.id, themeOption.positionCategory)}
         >
             <input
                 type="radio"

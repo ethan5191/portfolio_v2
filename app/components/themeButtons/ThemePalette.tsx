@@ -17,13 +17,15 @@ const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose, activeColor
     const paletteRef = useRef<HTMLDivElement>(null);
     const [hoveredThemeId, setHoveredThemeId] = useState<string | null>(null);
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const [slideDirection, setSlideDirection] = useState<'top' | 'bottom'>('bottom');
 
-    const handleMouseEnterOption = (id: string) => {
+    const handleMouseEnterOption = (id: string, positionCategory: 'top' | 'bottom') => {
         if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current);
             hoverTimeoutRef.current = null;
         }
         setHoveredThemeId(id);
+        setSlideDirection(positionCategory);
     };
 
     const handleMouseLeaveOption = () => {
@@ -84,11 +86,13 @@ const ThemePalette: React.FC<ThemePaletteProps> = ({isOpen, onClose, activeColor
         : null;
 
     return (<>
-            <div className={styles.paletteContainer} ref={paletteRef}>
+            <div className={`${styles.paletteContainer} ${isOpen ? styles.sidePanelOpen : ''}`} ref={paletteRef}>
                 <ThemeSelector initialSelectedThemePalette={activeColorPalette}
                                onSelectThemePalette={onUpdateColorPalette} onMouseEnterOption={handleMouseEnterOption}
                                onMouseLeaveOption={handleMouseLeaveOption}/>
-                <div className={`${styles.floatingDescriptionPanel} ${hoveredThemeId ? styles.floatingPanelVisible : ''}`}>
+                <div className={`${styles.floatingDescriptionPanel}
+                    ${hoveredThemeId ? styles.floatingPanelVisible : ''}
+                    ${slideDirection === 'top' ? styles.slideFromTop : styles.slideFromBottom}`}>
                     {hoveredDescription}
                 </div>
             </div>
