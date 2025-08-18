@@ -72,4 +72,17 @@ export const projectsData = [
             'Integrated MySQL with Spring Data JPA (Hibernate) for data persistence.'],
         impact: 'Showcases proficiency in full-stack development and the ability to architect, implement, and deploy a complete web application independently.',
     },
+    {
+        id: 'f1-telemetry-data',
+        title: 'F1 Telemetry Data Dashboard',
+        shortName: 'F1 Telemetry Project',
+        description: 'Built a real-time telemetry dashboard that receives and displays UDP data from F1 video games, providing live racing information through toggleable panels during gameplay.',
+        technologies: ['Java 17', 'JavaFX', 'UDP Networking', 'Real-time Data Processing'],
+        technicalDetails: [
+            'Implemented UDP packet reception and parsing for F1 2020 and F1 2024 telemetry protocols.',
+            'Developed 6 toggleable display panels showing speed trap, setup, latest lap, and run data.',
+            'Created real-time data processing system to handle continuous telemetry streams.'
+        ],
+        impact: 'Demonstrates self-directed learning, network programming skills, and ability to work with real-time data systems while creating practical tools for personal use.',
+    }
 ];
