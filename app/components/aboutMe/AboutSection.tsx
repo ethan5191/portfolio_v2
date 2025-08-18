@@ -23,6 +23,7 @@ export default function AboutSection() {
                 work better.</p>
             <p><a href="/Vanderbur_Ethan_2025.pdf" target="_blank" rel="noopener noreferrer">Download My Resume
                 (PDF)</a></p>
+            <p><a href="/Vanderbur_Ethan_2025.html" target="_blank" rel="noopener noreferrer">View My Resume (HTML)</a></p>
         </div>
     </section>);
 }

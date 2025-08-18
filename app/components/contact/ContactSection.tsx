@@ -3,7 +3,7 @@ import React from "react";
 import sectionBase from "@/app/components/shared/sectionBase.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faFilePdf, faPhone} from "@fortawesome/free-solid-svg-icons";
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faHtml5, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import styles from "@/app/components/home/HomeSection.module.css";
 
 export default function ContactSection() {
@@ -23,6 +23,8 @@ export default function ContactSection() {
                 <p><FontAwesomeIcon icon={faFilePdf}/> <a href="/Vanderbur_Ethan_2025.pdf" target="_blank"
                                                           rel="noopener noreferrer">
                     Download my Resume PDF</a></p>
+                <p><FontAwesomeIcon icon={faHtml5}/> <a href="/Vanderbur_Ethan_2025.html" target="_blank"
+                                                        rel="noopener noreferrer">View My Resume (HTML)</a></p>
             </div>
         </div>
     </section>);
