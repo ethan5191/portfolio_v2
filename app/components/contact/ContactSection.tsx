@@ -20,10 +20,10 @@ export default function ContactSection() {
                                                            target="_blank"
                                                            rel="noopener noreferrer">LinkedIn</a>
                 </p>
-                <p><FontAwesomeIcon icon={faFilePdf}/> <a href="/Vanderbur_Ethan_2025.pdf" target="_blank"
+                <p><FontAwesomeIcon icon={faFilePdf}/> <a href="/Vanderbur_Ethan_2026.pdf" target="_blank"
                                                           rel="noopener noreferrer">
                     Download my Resume PDF</a></p>
-                <p><FontAwesomeIcon icon={faHtml5}/> <a href="/Vanderbur_Ethan_2025.html" target="_blank"
+                <p><FontAwesomeIcon icon={faHtml5}/> <a href="/VanderburEthan.html" target="_blank"
                                                         rel="noopener noreferrer">View My Resume (HTML)</a></p>
             </div>
         </div>

@@ -21,9 +21,9 @@ export default function AboutSection() {
                 development, especially with Java, Spring, and SQL. While I’m fully capable of taking on senior-level
                 responsibilities, I’m most energized when I’m writing code, solving real problems, and making software
                 work better.</p>
-            <p><a href="/Vanderbur_Ethan_2025.pdf" target="_blank" rel="noopener noreferrer">Download My Resume
+            <p><a href="/Vanderbur_Ethan_2026.pdf" target="_blank" rel="noopener noreferrer">Download My Resume
                 (PDF)</a></p>
-            <p><a href="/Vanderbur_Ethan_2025.html" target="_blank" rel="noopener noreferrer">View My Resume (HTML)</a></p>
+            <p><a href="/VanderburEthan.html" target="_blank" rel="noopener noreferrer">View My Resume (HTML)</a></p>
         </div>
     </section>);
 }
